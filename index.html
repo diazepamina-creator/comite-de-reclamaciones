@@ -1,0 +1,2042 @@
+<!doctype html>
+<html lang="es" data-tema="hollin" data-texto="normal" data-fuente="legible" data-movimiento="normal">
+<head>
+<!--
+  El comité de reclamaciones
+  © Andrés Asensio · CC BY-NC-ND 4.0 · https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es
+  Versión de aula generada el 2026-10-07 a partir del original 5fecf15.
+-->
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Andrés Asensio">
+<meta name="description" content="Estadística y gráficos para 1.º y 2.º de ESO: la carpeta de las reclamaciones, el tablero de dibujo, el interrogatorio, el reparto y la gráfica que miente.">
+<meta name="theme-color" content="#1E1B1B">
+<title>El comité de reclamaciones</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Space+Mono:wght@400;700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --fondo:#1E1B1B; --panel:#292424; --panel2:#332C2C; --linea:#4E4444;
+  --tinta:#EFE7D6; --tenue:#B8AAA0;
+  --ladrillo:#C98A98; --ladrilloO:#8E5A67; --laton:#DDB35C; --latonO:#9A7A2E; --botella:#7BAA92; --botellaO:#3E6B5A;
+  --hierro:#9AA0AA; --lacre:#D45A4A; --lacreO:#8E2F2F; --pizarra:#7D9BC0; --gaceta:#EFE7D6; --hollin:#1E1B1B;
+  --acento:var(--ladrillo); --acentoO:#8E5A67; --acentoT:#1E1B1B; --mal:#E0604A; --bien:#8FB07A;
+  --figura:#EFE7D6; --figuraO:#B8AAA0; --hueco:#1E1B1B;
+  --sombra:rgba(0,0,0,.55); --cuenta:#DDB35C; --texto:15px;
+}
+[data-tema="gaceta"]{
+  --fondo:#E9DCC3; --panel:#F3EBDC; --panel2:#DFD0B4; --linea:#C4B497;
+  --tinta:#2B2626; --tenue:#6A5E58;
+  --ladrillo:#A9707E; --ladrilloO:#7E4F5B; --laton:#B8902E; --latonO:#8A6A2A; --botella:#3E6B5A; --botellaO:#2A4A3E;
+  --hierro:#6B6F78; --lacre:#8E2F2F; --lacreO:#6A2020; --pizarra:#3F5C7E; --gaceta:#F3EBDC; --hollin:#2B2626;
+  --acentoO:#7E4F5B; --acentoT:#F3EBDC; --mal:#B3341A; --bien:#4E7A3C;
+  --figura:#2B2626; --figuraO:#5A4E4E; --hueco:#E9DCC3;
+  --sombra:rgba(43,38,38,.2); --cuenta:#7E4F5B;
+}
+[data-texto="grande"]{--texto:17.5px}
+*{box-sizing:border-box}
+[hidden]{display:none !important}
+html{background:var(--fondo)}
+html,body{overflow-x:clip}
+body{margin:0;color:var(--tinta);background:var(--fondo);
+  font-family:'Atkinson Hyperlegible',system-ui,sans-serif;font-size:var(--texto);line-height:1.5;
+  max-width:820px;margin:0 auto;padding:0 14px 40px}
+[data-fuente="playfair"] body{font-family:'Playfair Display','Atkinson Hyperlegible',serif;font-size:calc(var(--texto) + 1px)}
+[data-movimiento="menos"] *{animation-duration:.001ms !important;transition-duration:.001ms !important}
+
+.dientes{height:22px;margin:0 -14px;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='22'><path d='M0 21 V7 L36 2 V21' fill='none' stroke='%239AA0AA' stroke-width='1.4' stroke-linejoin='round'/><path d='M36 4 V19 M40 21 V6' stroke='%239AA0AA' stroke-width='1' opacity='.7'/><path d='M0 21 H48' stroke='%239AA0AA' stroke-width='1.4'/><rect x='8' y='10' width='6' height='5' fill='%23DDB35C' opacity='.6'/></svg>") repeat-x left top / 48px 22px}
+[data-tema="gaceta"] .dientes{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='22'><path d='M0 21 V7 L36 2 V21' fill='none' stroke='%236B6F78' stroke-width='1.4' stroke-linejoin='round'/><path d='M36 4 V19 M40 21 V6' stroke='%236B6F78' stroke-width='1' opacity='.7'/><path d='M0 21 H48' stroke='%236B6F78' stroke-width='1.4'/><rect x='8' y='10' width='6' height='5' fill='%23C39A4A' opacity='.6'/></svg>")}
+
+header .cabeza{display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap;margin-top:14px}
+h1{font-family:'Playfair Display',serif;font-weight:900;font-size:33px;letter-spacing:.2px;margin:0;color:var(--acento);line-height:1.05}
+header .sub{font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:var(--tenue);margin:4px 0 0}
+.atendidas{margin-left:auto;display:flex;align-items:center;gap:8px;font-family:'Space Mono',monospace;font-size:12px;letter-spacing:1px;color:var(--tenue);
+  border:1px solid var(--linea);border-radius:20px;padding:4px 12px;transition:border-color .3s, box-shadow .3s}
+.atendidas b{color:var(--acento);font-weight:400;font-variant-numeric:tabular-nums}
+.atendidas svg{width:22px;height:18px}
+.atendidas.brilla{border-color:var(--laton);box-shadow:0 0 18px var(--laton)}
+.barra{display:flex;gap:2px 14px;flex-wrap:wrap;margin:10px 0 0;font-family:'Playfair Display',serif;font-size:18px;letter-spacing:.3px}
+.barra a,.barra button{font:inherit;color:var(--tenue);background:none;border:0;padding:4px 0;cursor:pointer;text-decoration:none}
+.barra a:hover,.barra button:hover,.barra button[aria-pressed="true"]{color:var(--acento)}
+.barra a:focus-visible,.barra button:focus-visible{outline:2px solid var(--laton);outline-offset:2px}
+.franja{margin:12px 0 0;padding:8px 12px;border:1px solid var(--linea);border-radius:10px;background:var(--panel);display:grid;grid-template-columns:40px 1fr;gap:6px 10px;align-items:center}
+.franja .escarapela{grid-row:1/3;width:38px;height:44px}
+.franja .escarapela svg{width:100%;height:100%;display:block}
+.franja .linea1{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+.franja .rango{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:var(--acento);letter-spacing:.2px}
+.franja .rango small{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:var(--tenue);margin-left:8px;font-weight:400}
+.franja .cuenta{font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:1.2px;text-transform:uppercase;color:var(--tenue)}
+.franja .barraR{height:6px;border-radius:3px;background:var(--fondo);overflow:hidden}
+.franja .barraR i{display:block;height:100%;width:0;border-radius:3px;background:linear-gradient(90deg,var(--acentoO),var(--acento));transition:width .5s ease}
+
+.panel{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--linea);border-radius:12px;
+  padding:14px 14px 12px;margin:10px 0;box-shadow:0 6px 18px var(--sombra);position:relative}
+.salaRot{margin:-2px 0 10px}
+.salaRot b{font-family:'Playfair Display',serif;font-weight:700;font-size:22px;letter-spacing:.2px;color:var(--acento)}
+.salaRot b::before{content:'';display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--acento);margin-right:8px;vertical-align:-1px}
+.salaRot span{font-family:'Playfair Display',serif;font-style:italic;font-size:16px;color:var(--tenue);margin-left:8px}
+.fila{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-top:8px}
+.etq{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:var(--tenue);min-width:82px}
+button.n{font-family:'Space Mono',monospace;font-weight:700;font-size:14px;min-width:34px;min-height:34px;padding:5px 9px;border-radius:8px;
+  border:1px solid var(--linea);background:var(--panel);color:var(--tinta);cursor:pointer}
+button.n[aria-pressed="true"]{background:var(--acento);border-color:var(--acento);color:var(--acentoT)}
+button.n.v{font-family:'Playfair Display',serif;font-weight:700;font-size:15px;letter-spacing:.2px}
+button.n.t[aria-pressed="true"]{background:var(--lacre);border-color:var(--lacre);color:#fff}
+.cifra{display:inline-block;padding:5px 12px;font-family:'Space Mono',monospace;font-weight:700;font-size:14px;color:var(--laton);min-width:44px;text-align:center}
+button.b{font-family:'Playfair Display',serif;font-weight:700;font-size:16px;letter-spacing:.3px;min-height:36px;padding:5px 14px;border-radius:9px;
+  border:1px solid var(--linea);background:var(--panel);color:var(--tinta);cursor:pointer}
+button.b:hover{border-color:var(--acento)}
+button.b.ok{background:var(--acento);border-color:var(--acento);color:var(--acentoT)}
+button.b:disabled{opacity:.45;cursor:default}
+button.b[aria-pressed="true"]{border-color:var(--acento);color:var(--acento)}
+button.b.armado{border-color:var(--mal);color:var(--mal)}
+button:focus-visible{outline:2px solid var(--laton);outline-offset:2px}
+.escena{background:var(--fondo);border:1px solid var(--linea);border-radius:10px;padding:10px;margin-top:10px;overflow-x:auto;position:relative}
+.escena svg{display:block;width:100%;height:auto}
+.lectura{margin:10px 0 0;font-size:var(--texto);line-height:1.55}
+.lectura b{color:var(--acento)}
+.lectura .cuenta{font-family:'Space Mono',monospace;font-size:13.5px;color:var(--cuenta);display:block;margin:6px 0 0;overflow-x:auto;white-space:nowrap;padding-bottom:2px}
+.lectura .def{display:block;margin:0 0 6px;padding:6px 10px;border-left:3px solid var(--botella);font-family:'Playfair Display',serif;font-size:calc(var(--texto) + 2px);color:var(--tinta);line-height:1.4}
+.lectura .murmullo{display:block;margin-top:6px;font-family:'Playfair Display',serif;font-style:italic;font-size:15px;color:var(--tenue)}
+.lectura .trampa{color:var(--lacre);font-weight:700}
+textarea.propia{font-family:'Space Mono',monospace;font-size:13px;width:100%;min-height:54px;padding:8px 10px;border-radius:9px;border:1px solid var(--linea);background:var(--fondo);color:var(--tinta);resize:vertical}
+input.resp{font-family:'Space Mono',monospace;font-size:16px;padding:8px 10px;border-radius:9px;border:1px solid var(--linea);background:var(--fondo);color:var(--tinta);width:150px}
+
+.encargo{padding-left:70px;min-height:82px}
+.cara{position:absolute;left:12px;top:11px;width:46px;height:48px}
+.cara svg{width:100%;height:100%;display:block}
+.cara.toca{cursor:pointer}
+.cara.bribon{left:auto;right:10px;top:8px;width:40px;height:42px;transition:transform .35s ease}
+.informe .encTxt{padding-right:44px}
+.quien{font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:1.6px;text-transform:uppercase;color:var(--botella);margin-bottom:4px}
+.informe .quien{color:var(--laton)}
+.informe{border-left:3px solid var(--laton)}
+.informe.mal{border-left-color:var(--mal)}
+.encTxt{margin:0;font-size:var(--texto);line-height:1.55}
+.encTxt b{color:var(--acento)}
+.encTxt .telegrama{display:block;margin-top:8px;padding:8px 10px;background:var(--gaceta);color:#2B2626;font-family:'Space Mono',monospace;font-size:12px;letter-spacing:1px;text-transform:uppercase;border-radius:4px;border-top:3px dashed var(--ladrilloO)}
+.ops{display:grid;gap:6px;margin:10px 0 4px}
+.op{font-family:inherit;font-size:calc(var(--texto) - 1px);text-align:left;padding:10px 12px;border-radius:9px;border:1px solid var(--linea);
+  background:var(--panel);color:var(--tinta);cursor:pointer;line-height:1.4}
+.op[aria-pressed="true"]{border-color:var(--acento);background:var(--panel2)}
+.op.fallada{border-color:var(--mal);opacity:.65}
+.paso{font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:1.4px;text-transform:uppercase;color:var(--tenue);margin-left:auto}
+
+.asomo{position:absolute;pointer-events:none;z-index:4;opacity:0;overflow:hidden;
+  transition:transform .44s cubic-bezier(.34,1.56,.64,1), opacity .2s ease}
+.asomo svg{width:100%;height:auto;display:block;filter:drop-shadow(0 3px 8px rgba(0,0,0,.5))}
+.asomo.arriba{right:14px;top:0;width:62px;transform:translateY(20px)}
+.asomo.arriba.mira{opacity:1;transform:translateY(calc(-64% + 2px))}
+.asomo.arriba.mira.falla{transform:translateY(calc(-42% + 2px));transition:transform .5s ease-out, opacity .2s ease}
+.asomo.lado{right:0;top:18px;width:70px;transform:translateX(80px)}
+.asomo.lado.mira{opacity:1;transform:translateX(26px)}
+.asomo.entero{right:14px;top:-10px;width:76px;transform:translateY(-20px) scale(.6)}
+.asomo.entero.mira{opacity:1;transform:translateY(-70%) scale(1)}
+.globo{position:absolute;right:96px;top:22px;max-width:200px;background:var(--gaceta);color:#2B2626;border-radius:12px;padding:8px 11px;
+  font-size:13px;line-height:1.35;z-index:5;opacity:0;transform:translateY(6px);transition:opacity .3s ease,transform .3s ease;pointer-events:none}
+.globo::after{content:'';position:absolute;right:-8px;top:14px;border:6px solid transparent;border-left-color:var(--gaceta)}
+.globo.mira{opacity:1;transform:none}
+.cara.brilla svg{filter:drop-shadow(0 0 6px var(--laton)) drop-shadow(0 0 14px var(--laton));transition:filter .3s}
+.papelito{position:absolute;width:8px;height:11px;background:#F3EBDC;border:1px solid #8E5A67;pointer-events:none;z-index:6;animation:cae linear forwards;opacity:.95}
+@keyframes cae{from{transform:translateY(-30px) rotate(0)}to{transform:translateY(420px) rotate(400deg);opacity:0}}
+.lacreSello{position:absolute;width:14px;height:14px;border-radius:50%;border:3px solid var(--lacre);pointer-events:none;z-index:6;animation:estampa .7s ease-out forwards}
+@keyframes estampa{from{transform:scale(2.4);opacity:0}40%{transform:scale(1);opacity:1}to{transform:scale(1);opacity:0}}
+.cara.ajusta svg{animation:ajusta .5s ease-in-out 2}
+@keyframes ajusta{0%,100%{transform:none}50%{transform:translateY(-3px) scaleY(1.04)}}
+
+.listaEnc{margin-top:8px;max-height:260px;overflow-y:auto;border:1px solid var(--linea);border-radius:9px;background:var(--fondo)}
+.listaEnc button{display:block;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid var(--linea);color:var(--tenue);cursor:pointer;
+  font-family:inherit;font-size:13px;padding:7px 10px;line-height:1.35}
+.listaEnc button:last-child{border-bottom:0}
+.listaEnc button:hover{background:var(--panel2);color:var(--tinta)}
+.listaEnc button b{color:var(--acento);font-family:'Space Mono',monospace;font-size:11px;margin-right:6px}
+.listaEnc button.hecho b{color:var(--bien)}
+.listaEnc button.actual{color:var(--tinta);background:var(--panel2)}
+#diag{font-family:'Space Mono',monospace;font-size:11.5px;line-height:1.5;margin-top:10px}
+#diag .ok{color:var(--bien)} #diag .ko{color:var(--mal)}
+.glosa{border-top:1px solid var(--linea);padding:9px 0;display:grid;grid-template-columns:130px 1fr;gap:4px 12px}
+.glosa:last-child{border-bottom:1px solid var(--linea)}
+.glosa b{font-family:'Playfair Display',serif;color:var(--acento);font-size:18px;font-weight:700}
+.glosa i{font-family:'Space Mono',monospace;font-style:normal;font-size:10px;color:var(--tenue);display:block;letter-spacing:1px}
+.glosa p{margin:0;font-size:14px;color:var(--tinta)}
+@media (max-width:460px){ .glosa{grid-template-columns:1fr} }
+.deuda{border:1px solid var(--linea);border-radius:10px;padding:10px 12px;margin-top:8px;background:var(--fondo)}
+.deuda summary{cursor:pointer;font-weight:700;color:var(--tinta);font-size:15px;list-style:none;display:flex;gap:10px;align-items:baseline}
+.deuda summary::before{content:'▸';color:var(--acento);font-size:13px}
+.deuda[open] summary::before{content:'▾'}
+.deuda p{font-size:14px;color:var(--tinta);margin:8px 0 0}
+.aviso{font-size:13px;color:var(--tenue);margin:8px 0 0}
+.oculta .latin{font-family:'Playfair Display',serif;font-style:italic;font-size:21px;color:var(--laton);margin:6px 0 2px;line-height:1.3}
+.oculta .trad{font-style:italic;color:var(--tenue);margin:0 0 10px;font-size:14px}
+.oculta .cara{position:static;float:right;margin:0 0 6px 10px;width:56px;height:58px}
+
+.tipos{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.tipos button.b{font-size:15px;padding:5px 10px;min-height:34px}
+.ejer{font-size:17px;margin:14px 0 8px;line-height:1.5}
+.ejer b{color:var(--acento)}
+.veredicto{margin-top:9px;padding:9px 11px;border:1px solid var(--linea);border-radius:9px;font-size:14px;color:var(--tinta);background:var(--fondo)}
+.veredicto.bien{border-color:var(--laton)}
+.veredicto b{color:var(--acento)}
+.marcador{display:flex;gap:16px;margin-top:8px;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:var(--tenue)}
+.marcador b{color:var(--acento);font-size:13px;margin-left:4px}
+.hoja{display:none}
+body.imprimiendo .hoja{display:block;background:#fff;color:#222;padding:20px;font-family:Georgia,serif}
+body.imprimiendo > *:not(.hoja){display:none !important}
+.hoja h2{font-family:'Playfair Display',serif;font-size:22px;margin:0 0 4px}
+.hoja .cab{font-size:12px;color:#666;margin-bottom:14px}
+.hoja ol{padding-left:22px;font-size:15px;line-height:2.1}
+.hoja .clave{break-before:page;page-break-before:always;margin-top:30px;border-top:1px solid #999;padding-top:10px}
+.hoja .clave ol{line-height:1.7;font-size:13px}
+@media print{ .hoja{display:block} }
+
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center;z-index:50;padding:14px}
+.modal .caja{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--linea);border-radius:14px;padding:18px 18px 14px;
+  width:min(520px,100%);max-height:92vh;overflow:auto;box-shadow:0 20px 50px rgba(0,0,0,.6)}
+.modal h2{font-family:'Playfair Display',serif;font-weight:700;font-size:24px;color:var(--acento);margin:0 0 2px;letter-spacing:.2px}
+.modal .sub{font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:1.6px;text-transform:uppercase;color:var(--tenue);margin:0 0 14px}
+.aj{display:grid;grid-template-columns:auto 1fr;gap:10px 14px;align-items:center}
+.aj .etq{min-width:0}
+.aj .ops2{display:flex;flex-wrap:wrap;gap:6px}
+.aj .ops2 button{font-family:'Space Mono',monospace;font-size:11.5px;padding:6px 10px;border-radius:8px;border:1px solid var(--linea);background:var(--fondo);color:var(--tinta);cursor:pointer}
+.aj .ops2 button[aria-pressed="true"]{background:var(--acento);border-color:var(--acento);color:var(--acentoT)}
+.aj .ops2 button:disabled{opacity:.4;cursor:default}
+.nombre{font-family:inherit;font-size:15px;padding:8px 10px;border-radius:9px;border:1px solid var(--linea);background:var(--fondo);color:var(--tinta);width:100%;margin-bottom:10px}
+.albaran{font-family:'Space Mono',monospace;font-size:12px;line-height:1.55;white-space:pre-wrap;background:var(--fondo);border:1px solid var(--linea);
+  border-radius:9px;padding:10px 12px;color:var(--tinta);word-break:break-all}
+.albaran .sello{color:var(--lacre)}
+.tourCapa{position:fixed;inset:0;z-index:80;cursor:pointer}
+.tourFoco{position:fixed;border-radius:12px;border:2px solid var(--laton);pointer-events:none;
+  box-shadow:0 0 0 9999px rgba(0,0,0,.66), 0 0 24px var(--laton);transition:all .35s ease}
+.tourGlobo{position:fixed;max-width:320px;background:var(--panel);color:var(--tinta);border:1px solid var(--linea);border-radius:12px;padding:12px 14px;
+  box-shadow:0 12px 30px rgba(0,0,0,.6);cursor:default;transition:top .35s ease,left .35s ease}
+.tourGlobo b{font-family:'Playfair Display',serif;font-size:19px;color:var(--acento);display:block;margin-bottom:4px;font-weight:700}
+.tourGlobo p{margin:0 0 10px;font-size:14px;line-height:1.45}
+.tourGlobo .pie{display:flex;gap:8px;align-items:center;justify-content:space-between}
+.tourGlobo .num{font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:1.4px;color:var(--tenue)}
+.tourGlobo button{font-family:'Playfair Display',serif;font-size:16px;padding:5px 12px;border-radius:8px;
+  border:1px solid var(--linea);background:var(--panel);color:var(--tinta);cursor:pointer}
+.tourGlobo button.pri{background:var(--acento);border-color:var(--acento);color:var(--acentoT)}
+
+.boot{position:fixed;inset:0;z-index:9999;background:#1E1B1B;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;
+  transition:opacity .5s ease;cursor:pointer}
+.boot.fuera{opacity:0;pointer-events:none}
+.boot .tit{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(26px,6.6vw,40px);color:#C98A98;letter-spacing:.2px;text-align:center;padding:0 16px}
+.bootEscena{position:relative;width:300px;height:210px}
+.bootEscena svg{width:100%;height:100%;display:block}
+.bootEscena .llega{opacity:0;animation:llega .6s cubic-bezier(.34,1.56,.64,1) forwards}
+.bootEscena .humo{opacity:0;animation:humea 2.4s ease-out infinite}
+.bootEscena .papel{opacity:0;animation:caePapel .5s ease-in forwards}
+.bootEscena .barraB{transform-origin:center bottom;transform:scaleY(0);animation:crece .7s ease-out forwards}
+.bootEscena .rotulo{opacity:0;animation:aclara .4s ease-out forwards}
+@keyframes llega{from{opacity:0;transform:translateY(14px) scale(.7)}to{opacity:1;transform:none}}
+@keyframes humea{0%{opacity:0;transform:translate(0,0) scale(.6)}30%{opacity:.7}100%{opacity:0;transform:translate(14px,-40px) scale(1.6)}}
+@keyframes caePapel{from{opacity:0;transform:translateY(-40px) rotate(-20deg)}to{opacity:1;transform:none}}
+@keyframes crece{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes aclara{from{opacity:0}to{opacity:1}}
+.boot .lista{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:1.6px;text-transform:uppercase;color:#B8AAA0;display:flex;gap:14px;flex-wrap:wrap;justify-content:center;padding:0 16px}
+.boot .lista span{opacity:0;animation:pasaLista .3s forwards}
+.boot .saltar{position:absolute;bottom:26px;font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:1.6px;text-transform:uppercase;color:#B8AAA0;opacity:.8}
+@keyframes pasaLista{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@keyframes aparece{from{opacity:0}to{opacity:1}}
+.nueva{animation:aparece .28s ease-out}
+@keyframes tiembla{0%,100%{transform:none}25%{transform:rotate(-6deg)}75%{transform:rotate(6deg)}}
+.tiembla{animation:tiembla .35s ease-in-out 3;transform-origin:center}
+
+footer.pie{margin-top:26px;padding-top:12px;border-top:1px solid var(--linea);display:flex;justify-content:center;flex-direction:column;align-items:center;gap:6px}
+footer.pie a{display:inline-flex;align-items:center;gap:10px;color:var(--tenue);text-decoration:none;font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:1.4px;text-transform:uppercase}
+footer.pie a:hover{color:var(--tinta)}
+footer.pie svg{width:100px;height:22px}
+footer.pie svg circle{fill:none;stroke:currentColor;stroke-width:1.6}
+footer.pie svg text{fill:currentColor;font-family:'Space Mono',monospace;font-size:9px;font-weight:700}
+footer.pie .lox{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:1.2px;text-transform:uppercase;color:var(--tenue);text-align:center}
+@media (prefers-reduced-motion: reduce){
+  *{animation-duration:.001ms !important;transition-duration:.001ms !important}
+  .asomo.arriba.mira,.asomo.arriba.mira.falla{transform:translateY(calc(-64% + 2px))}
+}
+@media (max-width:520px){ h1{font-size:27px} .encargo{padding-left:64px} .etq{min-width:70px} }
+
+@media (min-width:900px){
+  body[data-aula="si"]{zoom:1.32;max-width:1430px}
+}
+@media (min-width:1100px){
+  body[data-aula="si"] .aulaRejilla{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.06fr);
+    gap:0 14px;align-items:start}
+  body[data-aula="si"] .colIzq,
+  body[data-aula="si"] .colDer{display:block;min-width:0}
+  body[data-aula="si"] .colIzq > .panel:first-child,
+  body[data-aula="si"] .colDer > .panel:first-child{margin-top:0}
+  body[data-aula="si"] .colIzq > footer.pie{margin-top:18px}
+}
+.aulaRejilla,.colIzq,.colDer{display:contents}
+.barra button.aula[aria-pressed="true"]{color:var(--acento)}
+</style>
+</head><body>
+
+<div class="boot" id="boot" role="status" aria-live="polite">
+  <div class="tit">El comité de reclamaciones</div>
+  <div class="bootEscena" id="bootEscena">
+    <svg viewBox="0 0 300 210" aria-hidden="true" id="bootFabrica"></svg>
+  </div>
+  <div class="lista" id="bootLista"></div>
+  <div class="saltar">toca para saltar</div>
+</div>
+
+<header>
+  <div class="dientes" aria-hidden="true"></div>
+  <div class="cabeza">
+    <div>
+      <h1>El comité de reclamaciones</h1>
+      <p class="sub">Estadística y gráficos · la fábrica</p>
+    </div>
+    <div class="atendidas" id="atendidas" aria-label="Reclamaciones atendidas"><svg viewBox="0 0 44 36" aria-hidden="true"><path d="M8 4 H30 L36 10 V32 H8 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13 14 H28 M13 20 H24" stroke="currentColor" stroke-width="1.6"/><circle cx="30" cy="26" r="5" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>atendidas</span><b id="atendidasT">0</b></div>
+  </div>
+  <nav class="barra" id="barra">
+    <a href="https://diazepamina-creator.github.io/linea.html">← Materiales</a>
+    <button id="bGuia">Guía</button>
+    <button id="bTaller" aria-pressed="false">Taller</button>
+    <button id="bIndice" aria-pressed="false">Salas</button>
+    <button id="bGlosario" aria-pressed="false">Glosario</button>
+    <button id="bDeudas" aria-pressed="false">Deudas</button>
+    <span style="flex:1"></span>
+    <button id="bAula" class="aula" aria-pressed="false">Aula</button>
+    <button id="bSello">El acta</button>
+    <button id="bAjustes">Ajustes</button>
+  </nav>
+  <div class="franja" id="franja">
+    <div class="escarapela" id="rangoEscarapela" aria-hidden="true"></div>
+    <div class="linea1">
+      <span class="rango"><span id="rangoNom">Peticionario</span><small id="rangoSig"></small></span>
+      <span class="cuenta" id="rangoCuenta"></span>
+    </div>
+    <div class="barraR"><i id="rangoBarra"></i></div>
+  </div>
+</header>
+
+<div class="panel encargo" id="pEncargo">
+  <div class="asomo lado" id="asomoLado" aria-hidden="true"></div>
+  <div class="globo" id="globoLado" aria-hidden="true"></div>
+  <div class="asomo entero" id="asomoEntero" aria-hidden="true"></div>
+  <div class="cara toca" id="caraLorza" title="Lord Lorza"></div>
+  <div class="quien">Lord Lorza, que preside</div>
+  <p class="encTxt" id="encTxt"></p>
+  <div class="ops" id="ops" hidden></div>
+  <div class="fila">
+    <button class="b" id="atras" aria-label="Encargo anterior">◀</button>
+    <button class="b ok" id="comprobar">Comprobar</button>
+    <span class="paso" id="cual"></span>
+  </div>
+</div>
+<div class="panel informe encargo" id="informe" hidden>
+  <div class="asomo arriba" id="asomoArriba" aria-hidden="true"></div>
+  <div class="cara" id="caraCream" title="Lady Cream"></div>
+  <div class="cara bribon toca" id="caraBrybon" title="Lord Brybon"></div>
+  <div class="quien">Lady Cream, que lleva las cuentas</div>
+  <p class="encTxt" id="infTxt"></p>
+</div>
+
+<div class="panel taller" id="pTaller" hidden>
+  <div class="salaRot"><b>El taller</b><span>práctica libre, y a la sala si hace falta</span></div>
+  <div class="tipos" id="tipos"></div>
+  <div class="ejer" id="ejer"></div>
+  <div class="fila" style="margin-top:6px" id="filaSiNo" hidden>
+    <button class="b" id="bSi">Sí</button><button class="b" id="bNo">No</button>
+  </div>
+  <div class="fila" style="margin-top:6px" id="filaResp">
+    <input class="resp" id="resp" type="text" inputmode="text" autocomplete="off" placeholder="tu respuesta">
+    <button class="b ok" id="corrige">Corregir</button>
+  </div>
+  <div class="fila" style="margin-top:6px">
+    <button class="b" id="otro">Otro</button>
+    <button class="b" id="verlo" hidden>Verlo en la sala</button>
+  </div>
+  <div class="veredicto" id="verTaller" hidden></div>
+  <div class="marcador"><span>aciertos <b id="tAc">0</b></span><span>racha <b id="tRacha">0</b></span><span>mejor <b id="tMejor">0</b></span></div>
+  <div class="fila">
+    <button class="b" id="hojaDiez">Imprimir una hoja de diez</button>
+    <span class="etq" style="min-width:0">con la clave en hoja aparte</span>
+  </div>
+</div>
+<div class="hoja" id="hoja"></div>
+
+<div class="panel" id="pGlosario" hidden>
+  <div class="salaRot"><b>El glosario</b><span>las palabras del comité y de las cuentas</span></div>
+  <div id="glosas"></div>
+</div>
+
+<div class="panel" id="pDeudas" hidden>
+  <div class="salaRot"><b>Las deudas</b><span>lo que se demuestra aquí, lo que se dice y lo que se demuestra en otro sitio</span></div>
+  <p class="aviso" style="margin:0 0 10px">Cuatro cosas de este comité no se demuestran en las salas. Dos se demuestran aquí en pocas líneas; las otras dos
+  son verdad, se ven, y se dice de dónde salen.</p>
+  <details class="deuda">
+    <summary>Por qué la media es un reparto</summary>
+    <p>Los jornales de la semana, en columnas de monedas: 12, 12, 13, 14 y 19. Si se quita una moneda de la columna más alta y se
+    pone en la más baja, el <b>total no cambia</b>: siguen siendo 70 chelines. Se repite hasta que todas las columnas son iguales, y
+    entonces cada una tiene 70 entre 5, que es 14. Eso es la media: <b>lo que tocaría a cada uno si el total se repartiera a
+    partes iguales</b>. La fórmula (sumar todo y dividir entre cuántos) es el gesto de nivelar, escrito.</p>
+  </details>
+  <details class="deuda">
+    <summary>Por qué el doble de lado es el cuádruple de área</summary>
+    <p>Un saco dibujado de dos cuadraditos de lado ocupa cuatro cuadraditos. Uno de cuatro de lado ocupa dieciséis: el doble de lado,
+    el cuádruple de superficie, porque el lado cuenta <b>dos veces</b>, a lo ancho y a lo alto. Por eso un pictograma que crece
+    a lo ancho y a lo alto a la vez miente: el ojo mira la superficie, y la superficie ha crecido con el cuadrado.</p>
+  </details>
+  <details class="deuda">
+    <summary>Por qué el ángulo de un sector es 360 por la parte</summary>
+    <p>La vuelta entera son 360 grados y es <b>el total</b>. Si el frío es un cuarto de las reclamaciones, se lleva un cuarto de
+    la vuelta: 90 grados. Se dice así y se ve en el tablero. Que «un cuarto de 360 es 90» y «diez de cuarenta es lo mismo que
+    noventa de trescientos sesenta» sea la misma cuenta es una <b>proporción</b>, y las proporciones se estudian en la ciudad de
+    Liz. Aquí se usan sin nombre.</p>
+  </details>
+  <details class="deuda">
+    <summary>Por qué la mediana aguanta los valores raros y la media no</summary>
+    <p>La mediana solo mira <b>el orden</b>: el sueldo de Lord Lorza, doscientos chelines, está en el mismo sitio de la fila (el
+    último) que si fueran veinte. La del medio no se entera. La media, en cambio, reparte también lo de Lorza entre todos, y sube.
+    Se ve con el interruptor de la sala del reparto; se demuestra en general más adelante, cuando se estudian las medidas de
+    dispersión. Aquí se ve, y se dice.</p>
+  </details>
+</div>
+
+<div class="panel oculta" id="pRosa" hidden>
+  <div class="salaRot"><b>La rosa de Nightingale</b><span>lo que no está en el índice</span></div>
+  <div class="cara" id="caraFlorencia"></div>
+  <p class="latin">«Para que el que manda entienda lo que no quiere entender.»</p>
+  <p class="trad">Florence Nightingale, 1858. La gráfica que cambió los hospitales del ejército.</p>
+  <p><b>Florence Nightingale</b> volvió de la guerra de Crimea en 1856 con las cuentas de los muertos de cada mes. En 1858 las
+  dibujó como una rosa de doce pétalos: cada mes un sector de treinta grados, y el <b>área</b> de cada uno proporcional a los
+  muertos. En azul, los de enfermedad; en rojo, los de heridas; en gris, los demás. El azul se comía al rojo, y eso un ministro
+  lo entendía sin leer una tabla. Ésta es la marca de la parada, y la dibuja Florencia mes a mes, con los números de verdad.</p>
+  <div class="fila" style="margin-top:0"><span class="etq">hasta el mes</span><span id="oMes"></span></div>
+  <div class="fila"><span class="etq">se dibuja</span><span id="oComo"></span></div>
+  <div class="escena"><svg id="svgRosa" viewBox="0 0 540 400" role="img" aria-label="La rosa de Nightingale: doce sectores, uno por mes, con el área proporcional a los muertos"></svg></div>
+  <p class="lectura" id="lecRosa"></p>
+  <p class="aviso">Esta sala se ha abierto porque alguien ha escrito «rosa», o ha tocado tres veces la escarapela. No sale en el índice.</p>
+</div>
+
+<div class="panel" id="pIndice" hidden>
+  <div class="salaRot"><b>Índice</b><span>las salas, sueltas</span></div>
+  <div class="fila"><span class="etq">salas</span><span id="ixSalas"></span></div>
+  <div class="fila">
+    <button class="b" id="ixCerrar">Volver al encargo</button>
+    <button class="b" id="ixTodo">Marcar todo hecho</button>
+    <button class="b" id="ixCero">Empezar de cero</button>
+  </div>
+  <div class="etq" style="margin-top:12px">los encargos</div>
+  <div class="listaEnc" id="ixLista"></div>
+  <div class="fila">
+    <button class="b" id="ixDiag">Autodiagnóstico</button>
+    <span class="etq" style="min-width:0">prueba cada cuenta contra sí misma</span>
+  </div>
+  <div id="diag" hidden></div>
+</div>
+
+<div class="panel" id="pCarpeta">
+  <div class="fila" style="margin-top:0"><span class="etq">los datos</span><span id="cDatos"></span></div>
+  <div class="fila"><span class="etq">papeles</span><span id="cMuestra"></span><button class="b" id="cContar">Contar otra vez</button></div>
+  <div class="fila" id="cPropiaFila" hidden><span class="etq">la carpeta propia</span></div>
+  <div id="cPropia" hidden>
+    <textarea class="propia" id="propiaTxt" placeholder="escribe los datos de la clase separados por comas: rojo, azul, azul, verde… o números: 7, 8, 8, 6…" aria-label="Datos propios"></textarea>
+    <div class="fila" style="margin-top:6px"><button class="b ok" id="propiaUsar">Usar estos datos</button><span class="etq" id="propiaAviso" style="min-width:0"></span></div>
+  </div>
+  <div class="escena"><svg id="svgCarpeta" viewBox="0 0 540 340" role="img" aria-label="La carpeta con los papeles, los montones con sus palotes y la tabla de frecuencias"></svg></div>
+  <p class="lectura" id="lecCarpeta"></p>
+</div>
+
+<div class="panel" id="pTablero" hidden>
+  <div class="fila" style="margin-top:0"><span class="etq">los datos</span><span id="tDatos"></span></div>
+  <div class="fila"><span class="etq">la gráfica</span><span id="tGraf"></span></div>
+  <div class="escena"><svg id="svgTablero" viewBox="0 0 540 330" role="img" aria-label="La tabla a la izquierda y la gráfica a la derecha"></svg></div>
+  <p class="lectura" id="lecTablero"></p>
+</div>
+
+<div class="panel" id="pLectura" hidden>
+  <div class="fila" style="margin-top:0"><span class="etq">la gráfica</span><span id="lGraf"></span></div>
+  <div class="fila"><span class="etq">los números</span><span id="lNums"></span></div>
+  <div class="fila"><span class="etq">la pregunta</span><span id="lPreg"></span></div>
+  <div class="fila"><span class="etq">respuesta</span><input class="resp" id="lResp" type="text" inputmode="decimal" autocomplete="off" placeholder="lo que se lee"><button class="b" id="lResponder">Responder</button><span class="etq" id="lVeredicto" style="min-width:0"></span></div>
+  <div class="escena"><svg id="svgLectura" viewBox="0 0 540 340" role="img" aria-label="La gráfica grande, con una regla que se arrastra para leer contra el eje"></svg></div>
+  <p class="lectura" id="lecLectura"></p>
+</div>
+
+<div class="panel" id="pReparto" hidden>
+  <div class="fila" style="margin-top:0"><span class="etq">los datos</span><span id="rDatos"></span></div>
+  <div class="fila"><span class="etq">el gesto</span><span id="rVista"></span></div>
+  <div class="fila"><span class="etq">el valor raro</span><button class="b" id="rRaro" aria-pressed="false">Meter a Lord Lorza</button></div>
+  <div class="escena"><svg id="svgReparto" viewBox="0 0 540 320" role="img" aria-label="Los datos como columnas de monedas: se nivelan para la media, se ordenan para la mediana, se apilan para la moda"></svg></div>
+  <p class="lectura" id="lecReparto"></p>
+</div>
+
+<div class="panel" id="pBrybon" hidden>
+  <div class="fila" style="margin-top:0"><span class="etq">los datos</span><span id="bDatos"></span></div>
+  <div class="fila"><span class="etq">las trampas</span><span id="bTrampas"></span></div>
+  <div class="fila"><span class="etq">¿cuál es?</span><span id="bSenala"></span></div>
+  <div class="escena"><svg id="svgBrybon" viewBox="0 0 540 330" role="img" aria-label="Los mismos datos dibujados dos veces: la gráfica de Lady Cream y la de Lord Brybon, con sus trampas"></svg></div>
+  <p class="lectura" id="lecBrybon"></p>
+</div>
+
+<div class="modal" id="mAjustes" hidden>
+  <div class="caja" role="dialog" aria-modal="true" aria-labelledby="ajTit">
+    <h2 id="ajTit">Ajustes</h2>
+    <p class="sub">Para el aula y para cada aparato</p>
+    <div class="aj" id="aj"></div>
+    <div class="fila" style="margin-top:14px">
+      <button class="b" id="ajCerrar">Cerrar</button>
+      <span class="etq" style="min-width:0">se guardan en este aparato</span>
+    </div>
+  </div>
+</div>
+<div class="modal" id="mSello" hidden>
+  <div class="caja" role="dialog" aria-modal="true" aria-labelledby="selloTit">
+    <h2 id="selloTit">El acta</h2>
+    <p class="sub">Lo hecho en esta sesión, para pasar por debajo de la puerta</p>
+    <input class="nombre" id="selloNombre" placeholder="Nombre del peticionario" autocomplete="off" aria-label="Nombre">
+    <div class="albaran" id="selloTexto"></div>
+    <div class="fila" style="margin-top:12px">
+      <button class="b ok" id="selloCopiar">Copiar</button>
+      <button class="b" id="selloCerrar">Cerrar</button>
+      <span class="etq" id="selloAviso" style="min-width:0"></span>
+    </div>
+  </div>
+</div>
+<div class="tourCapa" id="tourCapa" hidden>
+  <div class="tourFoco" id="tourFoco"></div>
+  <div class="tourGlobo" id="tourGlobo" role="dialog" aria-modal="true">
+    <b id="tourTit"></b><p id="tourTxt"></p>
+    <div class="pie"><span class="num" id="tourNum"></span>
+      <span><button id="tourSalir">Salir</button> <button class="pri" id="tourSig">Siguiente</button></span></div>
+  </div>
+</div>
+
+<footer class="pie">
+  <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es" rel="license" aria-label="Licencia Creative Commons Reconocimiento-NoComercial-SinObraDerivada 4.0">
+    <svg viewBox="0 0 100 22" aria-hidden="true">
+      <circle cx="11" cy="11" r="10"/><text x="11" y="14.5" text-anchor="middle">CC</text>
+      <circle cx="37" cy="11" r="10"/><text x="37" y="14.5" text-anchor="middle">BY</text>
+      <circle cx="63" cy="11" r="10"/><text x="63" y="14.5" text-anchor="middle">NC</text>
+      <circle cx="89" cy="11" r="10"/><text x="89" y="14.5" text-anchor="middle">ND</text>
+    </svg>
+    <span>© 2026 Andrés Asensio · CC BY-NC-ND 4.0</span>
+  </a>
+  <span class="lox">Lord Lorza, Lady Cream y Lord Brybon son personajes de LOX AJENJO, usados con su permiso</span>
+</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+const NS = 'http://www.w3.org/2000/svg';
+const redondo = (x, n = 2) => Math.round(x * 10**n) / 10**n;
+function cifra(x, n = 2){
+  const v = redondo(x, n); const neg = v < 0; const [ent, dec] = String(Math.abs(v)).split('.');
+  return (neg ? '−' : '') + ent.replace(/\B(?=(\d{3})+$)/g, '.') + (dec ? ',' + dec : '');
+}
+const al = (a, b) => a + Math.floor(Math.random() * (b - a + 1));
+const elige = arr => arr[al(0, arr.length - 1)];
+const el = (g, t, at, txt) => { const e = document.createElementNS(NS, t); for(const q in at) e.setAttribute(q, at[q]); if(txt !== undefined) e.textContent = txt; g.appendChild(e); return e; };
+const txt = (g, x, y, t, at = {}) => el(g, 'text', Object.assign({x, y, fill:'var(--tenue)', 'font-family':"'Space Mono',monospace", 'font-size':12.5}, at), t);
+const playfair = (g, x, y, t, at = {}) => txt(g, x, y, t, Object.assign({'font-family':"'Playfair Display',serif", 'font-size':17, 'font-weight':700, fill:'var(--acento)'}, at));
+function parrafo(g, x, y, texto, ancho, at = {}, alto = 15){
+  const fs = at['font-size'] || 12, porLetra = fs * (at['font-family'] && /Playfair/.test(at['font-family']) ? .55 : .6);
+  const lineas = [], palabras = texto.split(' '); let l = '';
+  palabras.forEach(p => { if((l + ' ' + p).trim().length * porLetra > ancho && l){ lineas.push(l); l = p; } else l = (l + ' ' + p).trim(); });
+  if(l) lineas.push(l);
+  lineas.forEach((t, i) => txt(g, x, y + i * alto, t, Object.assign({'font-size':fs}, at)));
+  return y + lineas.length * alto;
+}
+function baraja(arr, semilla){
+  let s = semilla >>> 0; const r = () => { s = (s * 1664525 + 1013904223) >>> 0; return s / 4294967296; };
+  const a = arr.slice(); for(let i = a.length - 1; i > 0; i--){ const j = Math.floor(r() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a;
+}
+const repiteN = (v, n) => Array.from({length:n}, () => v);
+
+const CARA_LORZA = `<svg viewBox="0 0 46 48" aria-hidden="true">
+  <path d="M6 46 Q7 33 17 30 L29 30 Q39 33 40 46 Z" fill="#3A3350" stroke="#2A2038" stroke-width="1.3"/>
+  <path d="M17 30 Q23 37 29 30 L31.6 31.2 Q23 40 14.4 31.2 Z" fill="#EFE7D6" stroke="#2A2038" stroke-width="1.2" stroke-linejoin="round"/>
+  <path d="M18.6 32.6 Q23 35.6 27.4 32.6 L27.4 40 Q23 42.4 18.6 40 Z" fill="#7E3A4A" stroke="#2A2038" stroke-width="1.2" stroke-linejoin="round"/>
+  <path d="M18.6 30.4 L23 34 L27.4 30.4 L24.6 29.4 L23 31.2 L21.4 29.4 Z" fill="#7E3A4A" stroke="#2A2038" stroke-width="1.1" stroke-linejoin="round"/>
+  <path d="M27.6 34 Q32.4 36.6 31.4 41.6" fill="none" stroke="#E0B24A" stroke-width="1.2"/>
+  <circle cx="31.4" cy="42.4" r="1.6" fill="#E0B24A" stroke="#2A2038" stroke-width="1"/>
+  <g fill="#E8A9B4" stroke="#2A2038" stroke-width="1.2" stroke-linejoin="round">
+    <path d="M12.6 13.6 Q8.6 13 8.2 18 Q9.4 21.6 13 20.4 Z"/>
+    <path d="M33.4 13.6 Q37.4 13 37.8 18 Q36.6 21.6 33 20.4 Z"/>
+  </g>
+  <ellipse cx="23" cy="19.4" rx="11.6" ry="10.2" fill="#F0B8C2" stroke="#2A2038" stroke-width="1.3"/>
+  <path d="M12.6 23.6 Q13.6 30.4 23 30.8 Q32.4 30.4 33.4 23.6 Q23 28 12.6 23.6 Z" fill="#E8A9B4" stroke="#2A2038" stroke-width="1.1"/>
+  <path d="M12.4 18 Q13.4 27 19 30 Q14.6 25 14 17 Z" fill="#E8A9B4" opacity=".8"/>
+  <ellipse cx="23" cy="23.4" rx="6" ry="4.4" fill="#E8A9B4" stroke="#2A2038" stroke-width="1.2"/>
+  <ellipse cx="20.8" cy="23.4" rx="1.2" ry="1.7" fill="#2A2038"/>
+  <ellipse cx="25.2" cy="23.4" rx="1.2" ry="1.7" fill="#2A2038"/>
+  <circle cx="17.6" cy="17" r="1.5" fill="#2A2038"/>
+  <circle cx="28.4" cy="16.6" r="4.6" fill="#DDEAF2" opacity=".55" stroke="#E0B24A" stroke-width="1.5"/>
+  <circle cx="28.4" cy="16.8" r="1.5" fill="#2A2038"/>
+  <path d="M32.6 18.2 Q35.4 24 32 29.4" fill="none" stroke="#2A2038" stroke-width="1.1"/>
+  <path d="M26.6 13.4 Q28.4 12 30.4 13.2" stroke="#2A2038" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  <path d="M9.6 11.4 Q23 8 36.4 11.4 L36.4 13.4 Q23 17 9.6 13.4 Z" fill="#241C36" stroke="#2A2038" stroke-width="1.3" stroke-linejoin="round"/>
+  <path d="M13.4 11.6 L14.8 1.4 Q23 -0.4 31.2 1.4 L32.6 11.6 Q23 14.2 13.4 11.6 Z" fill="#241C36" stroke="#2A2038" stroke-width="1.3" stroke-linejoin="round"/>
+  <path d="M13.9 8 Q23 10.4 32.1 8 L32.3 10 Q23 12.4 13.7 10 Z" fill="#7E3A4A"/>
+</svg>`;
+const CARA_CREAM = `<svg viewBox="0 0 46 48" aria-hidden="true">
+  <path d="M6 46 Q7 32 17 29 L29 29 Q39 32 40 46 Z" fill="#DCC9D8" stroke="#2A2038" stroke-width="1.3"/>
+  <path d="M17 29 Q23 34 29 29 L31 30 Q23 36.6 15 30 Z" fill="#EFE7D6" stroke="#2A2038" stroke-width="1.2" stroke-linejoin="round"/>
+  <g fill="#F4EFE2" stroke="#2A2038" stroke-width=".9"><circle cx="14" cy="38" r="2.4"/><circle cx="31.6" cy="40" r="2"/></g>
+  <g fill="#FBF7EE" stroke="#2A2038" stroke-width=".8">
+    <circle cx="17.6" cy="31.6" r="1.5"/><circle cx="20.6" cy="33.4" r="1.5"/>
+    <circle cx="23.6" cy="34" r="1.5"/><circle cx="26.6" cy="33" r="1.5"/><circle cx="29.2" cy="31" r="1.5"/>
+  </g>
+  <g stroke="#2A2038" stroke-width="1.2" stroke-linejoin="round">
+    <path d="M11.6 15 Q5 13.4 4.6 18.8 Q6.4 22.4 12 20.6 Z" fill="#E4DBC6"/>
+    <path d="M34.4 15 Q41 13.4 41.4 18.8 Q39.6 22.4 34 20.6 Z" fill="#E4DBC6"/>
+    <path d="M10.4 16.6 Q7.2 16.2 7 18.8 Q8.2 20.4 10.8 19.4 Z" fill="#E8B9C4"/>
+    <path d="M35.6 16.6 Q38.8 16.2 39 18.8 Q37.8 20.4 35.2 19.4 Z" fill="#E8B9C4"/>
+  </g>
+  <path d="M23 8.6 Q34 8.6 34 18 Q34 24 29.4 26.6 Q23 29.4 16.6 26.6 Q12 24 12 18 Q12 8.6 23 8.6 Z"
+        fill="#F4EFE2" stroke="#2A2038" stroke-width="1.3" stroke-linejoin="round"/>
+  <path d="M13.6 12.6 Q17.4 11 18.4 15.4 Q16 18.6 12.6 17 Z" fill="#3A3350"/>
+  <path d="M30 21.6 Q33.6 21 33.6 24.4 Q31 26.4 29 24.4 Z" fill="#3A3350"/>
+  <ellipse cx="23" cy="23.8" rx="6.6" ry="4.6" fill="#E8B9C4" stroke="#2A2038" stroke-width="1.2"/>
+  <ellipse cx="20.6" cy="23.4" rx="1.1" ry="1.5" fill="#2A2038"/>
+  <ellipse cx="25.4" cy="23.4" rx="1.1" ry="1.5" fill="#2A2038"/>
+  <path d="M20.4 26.4 Q23 27.8 25.6 26.4" stroke="#2A2038" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+  <ellipse cx="18.4" cy="17.4" rx="2.9" ry="3.2" fill="#FBF7EE" stroke="#2A2038" stroke-width="1"/>
+  <ellipse cx="27.6" cy="17.4" rx="2.9" ry="3.2" fill="#FBF7EE" stroke="#2A2038" stroke-width="1"/>
+  <circle cx="18.7" cy="17.9" r="1.6" fill="#2A2038"/><circle cx="27.9" cy="17.9" r="1.6" fill="#2A2038"/>
+  <circle cx="18" cy="16.8" r=".7" fill="#fff"/><circle cx="27.2" cy="16.8" r=".7" fill="#fff"/>
+  <g stroke="#2A2038" stroke-width="1" stroke-linecap="round" fill="none">
+    <path d="M15.8 15.4 Q14.4 14.2 13.8 13"/><path d="M15.4 17.4 Q13.8 16.8 12.9 16"/>
+    <path d="M30.2 15.4 Q31.6 14.2 32.2 13"/><path d="M30.6 17.4 Q32.2 16.8 33.1 16"/>
+  </g>
+  <path d="M6.6 10.8 Q23 4.4 39.4 10.8 Q23 15.6 6.6 10.8 Z" fill="#EFE7D6" stroke="#2A2038" stroke-width="1.3" stroke-linejoin="round"/>
+  <path d="M14.6 9.6 Q23 4.6 31.4 9.6 Q23 12 14.6 9.6 Z" fill="#E4DBC6" stroke="#2A2038" stroke-width="1.1"/>
+  <g stroke="#2A2038" stroke-width=".8">
+    <circle cx="18" cy="7.6" r="2.1" fill="#E8A9B4"/><circle cx="24" cy="6.2" r="2.3" fill="#D98C9A"/>
+    <circle cx="29.4" cy="7.8" r="1.9" fill="#E8A9B4"/>
+  </g>
+  <g fill="#E0B24A"><circle cx="18" cy="7.6" r=".7"/><circle cx="24" cy="6.2" r=".8"/><circle cx="29.4" cy="7.8" r=".65"/></g>
+  <g fill="#F4EFE2" stroke="#2A2038" stroke-width="1.1" stroke-linejoin="round">
+    <path d="M10.6 11.4 Q6.2 9.4 6 5.6 Q9.6 7.4 12 10.6 Z"/>
+    <path d="M35.4 11.4 Q39.8 9.4 40 5.6 Q36.4 7.4 34 10.6 Z"/>
+  </g>
+</svg>`;
+const CARA_BRYBON = `<svg viewBox="0 0 46 48" aria-hidden="true">
+  <path d="M6 46 Q7 33 17 30 L29 30 Q39 33 40 46 Z" fill="#4A4030" stroke="#2A2038" stroke-width="1.3"/>
+  <path d="M17 30 Q23 36 29 30 L31 31 Q23 38.6 15 31 Z" fill="#8A7A5E" stroke="#2A2038" stroke-width="1.2" stroke-linejoin="round"/>
+  <path d="M13.6 36 L18.6 36 L18.6 41 L13.6 41 Z" fill="#5E5340" stroke="#2A2038" stroke-width="1" stroke-dasharray="2 2"/>
+  <path d="M28.4 34 L28.4 44" stroke="#2A2038" stroke-width="1" stroke-dasharray="2 2.4"/>
+  <path d="M9.6 30 L11.4 25 L13.4 29.4 L15.4 24.6 L17 29" fill="none" stroke="#3A3020" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+  <g fill="#6E6048" stroke="#2A2038" stroke-width="1.2" stroke-linejoin="round">
+    <path d="M12.6 14 Q8.6 10.6 8 15.4 Q9 19.6 13.2 19.4 Z"/>
+    <path d="M33.4 14 Q37.4 10.6 38 15.4 Q37 19.6 32.8 19.4 Z"/>
+  </g>
+  <ellipse cx="23" cy="19.4" rx="11.4" ry="10" fill="#8A7A5E" stroke="#2A2038" stroke-width="1.3"/>
+  <path d="M12.4 17.6 Q13.4 27 19 30 Q14.6 25 14 16.6 Z" fill="#6E6048" opacity=".8"/>
+  <ellipse cx="23" cy="24" rx="5.8" ry="4.2" fill="#6E6048" stroke="#2A2038" stroke-width="1.2"/>
+  <ellipse cx="20.9" cy="24" rx="1.1" ry="1.6" fill="#2A2038"/>
+  <ellipse cx="25.1" cy="24" rx="1.1" ry="1.6" fill="#2A2038"/>
+  <path d="M18 26.6 Q14 25.6 13.2 18.8 Q16.4 21.4 19.4 26 Z"
+        fill="#EFE7D6" stroke="#2A2038" stroke-width="1.2" stroke-linejoin="round"/>
+  <path d="M28 26.6 Q32 25.6 32.8 18.8 Q29.6 21.4 26.6 26 Z"
+        fill="#EFE7D6" stroke="#2A2038" stroke-width="1.2" stroke-linejoin="round"/>
+  <circle cx="18.4" cy="17.6" r="2.4" fill="#FBF7EE" stroke="#2A2038" stroke-width="1"/>
+  <circle cx="27.6" cy="17.6" r="2.4" fill="#FBF7EE" stroke="#2A2038" stroke-width="1"/>
+  <circle cx="18.8" cy="17.9" r="1.3" fill="#2A2038"/><circle cx="28" cy="17.9" r="1.3" fill="#2A2038"/>
+  <path d="M15.4 13.6 Q18.4 12 21.2 13.8" stroke="#2A2038" stroke-width="1.7" fill="none" stroke-linecap="round"/>
+  <path d="M25 14.6 Q27.8 13.8 30.6 15.4" stroke="#2A2038" stroke-width="1.7" fill="none" stroke-linecap="round"/>
+  <path d="M10.6 12 Q23 8.4 35.4 12 L35.4 14 Q23 17.4 10.6 14 Z" fill="#3A3020" stroke="#2A2038" stroke-width="1.3" stroke-linejoin="round"/>
+  <path d="M14.4 12.2 L15.4 3.4 Q19 1.6 23.4 2.6 Q28 3.6 30.6 2.2 L31.6 12.2 Q23 14.8 14.4 12.2 Z"
+        fill="#3A3020" stroke="#2A2038" stroke-width="1.3" stroke-linejoin="round"/>
+  <path d="M14.8 8.6 Q23 11 31.2 8.6 L31.4 10.6 Q23 13 14.6 10.6 Z" fill="#6E6048"/>
+</svg>`;
+const CARA_FLORENCIA = `<svg viewBox="0 0 46 48" aria-hidden="true">
+  <circle cx="38" cy="40.4" r="7" fill="#E0B24A" opacity=".22"/>
+  <path d="M6 46 Q7 33 17 30 L29 30 Q39 33 40 46 Z" fill="#3E4A5E" stroke="#2A2038" stroke-width="1.3"/>
+  <path d="M17 30 Q23 36 29 30 L31 31 Q23 38.6 15 31 Z" fill="#F4EFE2" stroke="#2A2038" stroke-width="1.2" stroke-linejoin="round"/>
+  <path d="M18.2 34.2 Q23 37.2 27.8 34.2 L28.8 46 L17.2 46 Z" fill="#F4EFE2" stroke="#2A2038" stroke-width="1.1" stroke-linejoin="round"/>
+  <path d="M39.2 33.6 L38.4 35.2" stroke="#2A2038" stroke-width="1.2" stroke-linecap="round"/>
+  <rect x="35.6" y="35" width="4.8" height="1.8" rx=".5" fill="#C39A4A" stroke="#2A2038" stroke-width=".9"/>
+  <path d="M35.6 36.8 L40.4 36.8 L41.2 44.4 Q38 46.4 34.8 44.4 Z" fill="#E0B24A" stroke="#2A2038" stroke-width="1.1" stroke-linejoin="round"/>
+  <path d="M38 37.2 L38 44.8 M35.8 39.6 L40.2 39.6 M35.4 42.2 L40.6 42.2" stroke="#2A2038" stroke-width=".7" opacity=".55"/>
+  <ellipse cx="38" cy="41.2" rx="1.1" ry="1.9" fill="#FBF7EE"/>
+  <path d="M29.4 37.4 Q29.6 31.2 34.2 29 Q37.8 27.4 41 29.4 L39.6 31.4 L41.6 32.8 L39.4 33.8 L40.6 35.6 Q36.8 37 33.4 37.6 Q30.8 38.2 29.4 37.4 Z" fill="#8A7455" stroke="#2A2038" stroke-width="1.2" stroke-linejoin="round"/>
+  <path d="M31.4 36.4 Q32.2 32 36 30.2 M33.6 37 Q34.6 33.4 38 31.8" fill="none" stroke="#2A2038" stroke-width=".7" opacity=".5"/>
+  <g fill="#6E5A40" stroke="#2A2038" stroke-width="1.2" stroke-linejoin="round">
+    <path d="M12.6 12.6 L9.4 5.2 L17 9.8 Z"/>
+    <path d="M33.4 12.6 L36.6 5.2 L29 9.8 Z"/>
+  </g>
+  <path d="M23 8.4 Q35 8.4 35 19.6 Q35 28.4 23 29.6 Q11 28.4 11 19.6 Q11 8.4 23 8.4 Z" fill="#8A7455" stroke="#2A2038" stroke-width="1.3" stroke-linejoin="round"/>
+  <circle cx="17.4" cy="18.6" r="6.1" fill="#E4DBC6" stroke="#2A2038" stroke-width="1"/>
+  <circle cx="28.6" cy="18.6" r="6.1" fill="#E4DBC6" stroke="#2A2038" stroke-width="1"/>
+  <circle cx="17.4" cy="18.8" r="3.5" fill="#E0B24A" stroke="#2A2038" stroke-width="1"/>
+  <circle cx="28.6" cy="18.8" r="3.5" fill="#E0B24A" stroke="#2A2038" stroke-width="1"/>
+  <circle cx="17.6" cy="19" r="1.9" fill="#2A2038"/><circle cx="28.8" cy="19" r="1.9" fill="#2A2038"/>
+  <circle cx="16.8" cy="18" r=".7" fill="#fff"/><circle cx="28" cy="18" r=".7" fill="#fff"/>
+  <path d="M21.2 22.6 L23 27 L24.8 22.6 Z" fill="#E0B24A" stroke="#2A2038" stroke-width="1" stroke-linejoin="round"/>
+</svg>`;
+$('caraLorza').innerHTML = CARA_LORZA;
+$('caraCream').innerHTML = CARA_CREAM;
+$('caraBrybon').innerHTML = CARA_BRYBON;
+$('caraFlorencia').innerHTML = CARA_FLORENCIA;
+
+const Ruido = (() => {
+  let ctx = null;
+  const ac = () => { try{ if(!ctx) ctx = new (window.AudioContext || window.webkitAudioContext)(); return ctx; }catch(e){ return null; } };
+  const on = () => AJ.sonido === 'si';
+  const tono = (f, dur, vol = .08, tipo = 'sine', t0 = 0, f2) => {
+    const c = ac(); if(!c || !on()) return;
+    const o = c.createOscillator(), g = c.createGain();
+    o.type = tipo; o.frequency.setValueAtTime(f, c.currentTime + t0);
+    if(f2) o.frequency.exponentialRampToValueAtTime(f2, c.currentTime + t0 + dur);
+    g.gain.setValueAtTime(0, c.currentTime + t0);
+    g.gain.linearRampToValueAtTime(vol, c.currentTime + t0 + .01);
+    g.gain.exponentialRampToValueAtTime(.0001, c.currentTime + t0 + dur);
+    o.connect(g); g.connect(c.destination); o.start(c.currentTime + t0); o.stop(c.currentTime + t0 + dur + .02);
+  };
+  return {
+    despierta(){ const c = ac(); if(c && c.state === 'suspended') c.resume(); },
+    sirena(){ tono(300, 1.4, .05, 'sawtooth', 0, 520); tono(302, 1.4, .03, 'sawtooth', .02, 524); },
+    lacre(){ tono(120, .16, .12, 'square'); tono(90, .22, .08, 'sine', .03); },
+    mazo(){ tono(180, .08, .14, 'square'); tono(140, .12, .1, 'square', .09); tono(110, .3, .06, 'sine', .18); },
+    abanico(){ for(let i = 0; i < 4; i++) tono(2200 + i * 300, .05, .02, 'triangle', i * .09); },
+    papel(k = 1){ for(let i = 0; i < Math.min(k, 6); i++) tono(900 + Math.random() * 400, .03, .04, 'triangle', i * .05); },
+    bien(){ this.lacre(); tono(784, .18, .05, 'triangle', .1); },
+    mal(){ tono(150, .22, .1, 'square'); },
+    asciende(){ this.mazo(); tono(660, .5, .05, 'sine', .3); tono(880, .6, .04, 'sine', .45); }
+  };
+})();
+
+const AJ = {vista:'normal', tema:'hollin', texto:'normal', fuente:'legible', movimiento:'normal', sonido:'si', lang:'es'};
+const AJ_OPS = {
+  vista:     {etq:'vista',       ops:[['normal','normal'], ['aula','aula · pizarra']]},
+  tema:      {etq:'tema',        ops:[['hollin','de hollín'], ['gaceta','de gaceta · proyector']]},
+  texto:     {etq:'texto',       ops:[['normal','normal'], ['grande','grande']]},
+  fuente:    {etq:'tipografía',  ops:[['legible','legible'], ['playfair','de periódico']]},
+  movimiento:{etq:'movimiento',  ops:[['normal','normal'], ['menos','menos']]},
+  sonido:    {etq:'sonido',      ops:[['si','sí'], ['no','no']]},
+  lang:      {etq:'idioma',      ops:[['es','castellano'], ['va','valencià · pronto']]}
+};
+function aplicaAjustes(){
+  const r = document.documentElement;
+  document.body.dataset.aula = AJ.vista === 'aula' ? 'si' : 'no';
+  if(window.pintaAula) pintaAula();
+  r.dataset.tema = AJ.tema; r.dataset.texto = AJ.texto; r.dataset.fuente = AJ.fuente; r.dataset.movimiento = AJ.movimiento;
+  document.querySelectorAll('#aj button').forEach(b => b.setAttribute('aria-pressed', String(AJ[b.dataset.k] === b.dataset.v)));
+}
+function pintaAjustes(){
+  const c = $('aj'); c.innerHTML = '';
+  Object.entries(AJ_OPS).forEach(([k, o]) => {
+    const e = document.createElement('span'); e.className = 'etq'; e.textContent = o.etq; c.appendChild(e);
+    const w = document.createElement('div'); w.className = 'ops2';
+    o.ops.forEach(([v, t]) => {
+      const b = document.createElement('button'); b.textContent = t; b.dataset.k = k; b.dataset.v = v;
+      if(k === 'lang' && v === 'va') b.disabled = true;
+      b.addEventListener('click', () => { AJ[k] = v; aplicaAjustes(); Ruido.despierta(); guardaTurno(); });
+      w.appendChild(b);
+    });
+    c.appendChild(w);
+  });
+  aplicaAjustes();
+}
+function tira(donde, valores, lee, pon, rotula = v => typeof v === 'number' ? cifra(v, 2) : v, clase = 'n'){
+  const c = $(donde); c.innerHTML = '';
+  valores.forEach(v => {
+    const b = document.createElement('button'); b.className = clase; b.textContent = rotula(v);
+    b.setAttribute('aria-pressed', String(lee() === v));
+    b.addEventListener('click', () => pon(v));
+    c.appendChild(b);
+  });
+}
+function tiraMulti(donde, valores, tiene, conmuta, rotula, clase = 'n t'){
+  const c = $(donde); c.innerHTML = '';
+  valores.forEach(v => {
+    const b = document.createElement('button'); b.className = clase; b.textContent = rotula(v);
+    b.setAttribute('aria-pressed', String(tiene(v)));
+    b.addEventListener('click', () => conmuta(v));
+    c.appendChild(b);
+  });
+}
+function masMenos(donde, lee, pon, min, max, paso = 1, rotula = v => String(v)){
+  const c = $(donde); c.innerHTML = '';
+  const b1 = document.createElement('button'); b1.className = 'n'; b1.textContent = '−'; b1.setAttribute('aria-label', 'menos');
+  const s = document.createElement('span'); s.className = 'cifra'; s.textContent = rotula(lee());
+  const b2 = document.createElement('button'); b2.className = 'n'; b2.textContent = '+'; b2.setAttribute('aria-label', 'más');
+  b1.disabled = lee() <= min; b2.disabled = lee() >= max;
+  b1.addEventListener('click', () => { if(lee() > min) pon(Math.max(min, lee() - paso)); });
+  b2.addEventListener('click', () => { if(lee() < max) pon(Math.min(max, lee() + paso)); });
+  repite(b1, () => b1.click()); repite(b2, () => b2.click());
+  c.appendChild(b1); c.appendChild(s); c.appendChild(b2);
+}
+function repite(boton, f){
+  let r = null, t = null;
+  const para = () => { clearTimeout(t); clearInterval(r); };
+  boton.addEventListener('pointerdown', () => { para(); t = setTimeout(() => { r = setInterval(() => { if(boton.disabled) para(); else f(); }, 110); }, 420); });
+  ['pointerup', 'pointerleave', 'pointercancel'].forEach(ev => boton.addEventListener(ev, para));
+}
+
+function escarapela(g, x, y, w, figura, extra = {}){
+  const s = w / 40;
+  const gg = el(g, 'g', Object.assign({transform:'translate(' + x + ' ' + y + ') scale(' + s + ')'}, extra));
+  const tinta = extra.tinta || 'var(--figura)', fondo = extra.fondo || 'var(--hueco)', lazo = extra.oro ? 'var(--laton)' : 'var(--acento)';
+  el(gg, 'path', {d:'M14 30 L11 45 L16 42 L19 31 Z', fill:lazo, stroke:tinta, 'stroke-width':1});
+  el(gg, 'path', {d:'M26 30 L29 45 L24 42 L21 31 Z', fill:lazo, stroke:tinta, 'stroke-width':1});
+  let d = ''; for(let i = 0; i < 16; i++){ const a1 = i * Math.PI / 8, a2 = a1 + Math.PI / 16, a3 = a1 + Math.PI / 8;
+    const p = (a, r) => (20 + r * Math.cos(a)).toFixed(2) + ' ' + (18 + r * Math.sin(a)).toFixed(2);
+    d += (i ? 'L' : 'M') + p(a1, 15) + ' L' + p(a2, 18) + ' L' + p(a3, 15) + ' '; }
+  el(gg, 'path', {d:d + 'Z', fill:lazo, stroke:tinta, 'stroke-width':1.2, 'stroke-linejoin':'round'});
+  el(gg, 'circle', {cx:20, cy:18, r:11, fill:fondo, stroke:tinta, 'stroke-width':1.4});
+  const f = el(gg, 'g', {fill:tinta, stroke:'none'});
+  if(figura === 'sobre'){ el(gg, 'rect', {x:12.5, y:13, width:15, height:10, rx:1, fill:'none', stroke:tinta, 'stroke-width':1.5}); el(gg, 'path', {d:'M12.5 13 L20 19 L27.5 13', fill:'none', stroke:tinta, 'stroke-width':1.4}); }
+  else if(figura === 'mano'){ el(f, 'path', {d:'M15.5 20 V13.5 a1.3 1.3 0 0 1 2.6 0 V18 V11.5 a1.3 1.3 0 0 1 2.6 0 V18 V12 a1.3 1.3 0 0 1 2.6 0 V18.5 V13.5 a1.3 1.3 0 0 1 2.6 0 V21 Q26 26 20.5 26 Q16 26 14 22 L13 19.5 a1.2 1.2 0 0 1 2.1 -1 Z'}); }
+  else if(figura === 'pluma'){ el(f, 'path', {d:'M13 25 Q15 16 27 10 Q25 20 17 24 Z'}); el(gg, 'path', {d:'M13 25 Q18 19 24 13', stroke:fondo, 'stroke-width':.9, fill:'none'}); }
+  else if(figura === 'llave'){ el(gg, 'circle', {cx:15, cy:15, r:3.6, fill:'none', stroke:tinta, 'stroke-width':1.8}); el(gg, 'path', {d:'M17.8 17.6 L26 25.8 M23 22.8 L25 20.8 M24.8 24.6 L26.8 22.6', stroke:tinta, 'stroke-width':1.9, 'stroke-linecap':'round'}); }
+  else if(figura === 'banda'){ el(f, 'path', {d:'M9.5 12 L14 9 L27 24 L23.5 27 Z'}); el(gg, 'path', {d:'M11.8 11.6 L25.2 25.6', stroke:fondo, 'stroke-width':.8}); }
+  else if(figura === 'mazo'){ el(f, 'rect', {x:11, y:11, width:10, height:7, rx:1.5, transform:'rotate(-35 16 14.5)'}); el(gg, 'path', {d:'M18 18.5 L27 26.5', stroke:tinta, 'stroke-width':2.4, 'stroke-linecap':'round'}); }
+  if(extra.borde) el(gg, 'circle', {cx:20, cy:18, r:11, fill:'none', stroke:extra.borde, 'stroke-width':2.4});
+  return gg;
+}
+
+const SERIE = ['var(--ladrillo)', 'var(--laton)', 'var(--botella)', 'var(--pizarra)', 'var(--hierro)', 'var(--lacre)'];
+const DATOS = {
+  asuntos: {n:'las reclamaciones', var:'el asunto de la queja', tipo:'cual', ind:'reclamación', inds:'reclamaciones', pob:'todas las reclamaciones de la fábrica',
+            orden:['jornada', 'salario', 'frío', 'comida'],
+            valores:baraja([].concat(repiteN('jornada', 14), repiteN('salario', 12), repiteN('frío', 10), repiteN('comida', 4)), 7)
+                    .concat(baraja([].concat(repiteN('jornada', 7), repiteN('salario', 6), repiteN('frío', 5), repiteN('comida', 2)), 11)), defecto:40},
+  hijos:   {n:'los hijos', var:'hijos por familia', tipo:'disc', ind:'familia', inds:'familias', pob:'todas las familias de los obreros',
+            valores:baraja([].concat(repiteN(0, 4), repiteN(1, 8), repiteN(2, 9), repiteN(3, 6), repiteN(4, 2), repiteN(5, 1)), 3), defecto:30},
+  horas:   {n:'las horas del turno', var:'horas del turno', tipo:'cont', ind:'obrero', inds:'obreros', pob:'todos los obreros de la nave', tramos:[8, 10, 12, 14, 16], unidad:'h',
+            valores:baraja([8.5, 9, 9.5, 9, 10, 10, 10.5, 11, 11, 11.5, 10.5, 11.5, 12, 12, 12, 12.5, 13, 13, 13.5, 12.5, 14, 14, 14.5, 15], 5), defecto:24},
+  comedor: {n:'el comedor', var:'lo que se pide en el comedor', tipo:'cual', ind:'obrero', inds:'obreros', pob:'todos los que comen en la nave',
+            orden:['té', 'café', 'cerveza', 'agua'],
+            valores:baraja([].concat(repiteN('té', 15), repiteN('café', 24), repiteN('cerveza', 12), repiteN('agua', 9)), 13), defecto:60},
+  caldera: {n:'la caldera', var:'accidentes en la caldera, por mes', tipo:'tiempo', unidad:'accidentes',
+            serie:[['ene', 14], ['feb', 15], ['mar', 13], ['abr', 16], ['may', 15], ['jun', 17]]},
+  sacos:   {n:'los sacos de carbón', var:'sacos de carbón, por semana', tipo:'tiempo', unidad:'sacos',
+            serie:[['sem. 1', 20], ['sem. 2', 40], ['sem. 3', 30], ['sem. 4', 25]]},
+  jornales:{n:'los jornales', var:'chelines a la semana', tipo:'num', ind:'obrero', inds:'obreros', unidad:'chelines', valores:[12, 12, 13, 14, 19], raro:{v:200, n:'el sueldo de Lord Lorza', b:'Meter a Lord Lorza'}},
+  sueno:   {n:'el sueño de los aprendices', var:'horas de sueño', tipo:'num', ind:'aprendiz', inds:'aprendices', unidad:'horas', valores:[6, 7, 7, 8, 8, 8, 9], raro:{v:20, n:'el aprendiz que durmió veinte horas', b:'Meter al dormilón'}},
+  quejas:  {n:'las quejas marcadas', var:'quejas marcadas por cada obrero (podía marcar varias)', tipo:'multi', N:40, ind:'obrero', inds:'obreros',
+            filas:[['jornada', 20], ['salario', 16], ['frío', 10], ['comida', 6]]},
+  propia:  {n:'la carpeta propia', var:'lo que diga la clase', tipo:'cual', ind:'dato', inds:'datos', pob:'la clase', valores:[], defecto:0, propia:true}
+};
+const esNumero = v => typeof v === 'number' && isFinite(v);
+function ponPropia(texto){
+  const partes = String(texto || '').split(/[,;\n\t]+|\s{2,}/).map(s => s.trim()).filter(Boolean);
+  const nums = partes.map(p => { const s = p.replace(',', '.'); return /^-?\d+(\.\d+)?$/.test(s) ? parseFloat(s) : null; });
+  const D = DATOS.propia;
+  if(partes.length && nums.every(n => n !== null)){
+    D.valores = nums; const distintos = new Set(nums).size, enteros = nums.every(Number.isInteger);
+    if(enteros && distintos <= 10){ D.tipo = 'disc'; delete D.tramos; }
+    else { D.tipo = 'cont'; const lo = Math.floor(Math.min(...nums)), hi = Math.ceil(Math.max(...nums)) + 1e-9, paso = Math.max(1, Math.ceil((hi - lo) / 5)); D.tramos = []; for(let v = lo; v < hi + paso; v += paso) D.tramos.push(v); }
+    D.raro = {v:Math.max(...nums) * 10, n:'un valor diez veces el mayor', b:'Meter un valor raro'};
+    D.var = 'los números de la clase'; D.unidad = '';
+  }else{
+    D.valores = partes.map(p => p.toLowerCase()); D.tipo = 'cual'; D.orden = [...new Set(D.valores)]; D.var = 'lo que ha dicho cada uno'; delete D.raro;
+  }
+  D.defecto = D.valores.length; D.texto = String(texto || '');
+  return D.valores.length;
+}
+function tabla(k, N){
+  const D = DATOS[k]; let filas = [], total = 0;
+  if(D.tipo === 'tiempo'){ filas = D.serie.map(([v, f]) => ({v, f})); total = filas.reduce((s, r) => s + r.f, 0); }
+  else if(D.tipo === 'multi'){ filas = D.filas.map(([v, f]) => ({v, f})); total = D.N; }
+  else{
+    const vals = D.valores.slice(0, N === undefined ? (D.defecto || D.valores.length) : N); total = vals.length;
+    if(D.tipo === 'cual'){ const orden = D.orden || [...new Set(vals)]; filas = orden.map(v => ({v, f:vals.filter(x => x === v).length})); }
+    else if(D.tipo === 'cont'){ const tr = D.tramos; for(let i = 0; i < tr.length - 1; i++) filas.push({v:'de ' + cifra(tr[i], 1) + ' a ' + cifra(tr[i + 1], 1), lo:tr[i], hi:tr[i + 1], f:vals.filter(x => x >= tr[i] && (x < tr[i + 1] || (i === tr.length - 2 && x === tr[i + 1]))).length}); }
+    else { const distintos = [...new Set(vals)].sort((a, b) => a - b); filas = distintos.map(v => ({v, f:vals.filter(x => x === v).length})); }
+  }
+  filas.forEach(r => { r.fr = total ? r.f / total : 0; r.pct = 100 * r.fr; r.ang = 360 * r.fr; r.vt = typeof r.v === 'number' ? cifra(r.v, 1) : String(r.v); });
+  return {filas, N:total, sumaF:filas.reduce((s, r) => s + r.f, 0), D};
+}
+const tipoDice = D => D.tipo === 'cual' ? 'cualitativa' : D.tipo === 'disc' || D.tipo === 'num' ? 'cuantitativa discreta' : D.tipo === 'cont' ? 'cuantitativa continua' : D.tipo === 'tiempo' ? 'cuantitativa, contada mes a mes' : 'de respuesta múltiple';
+const palotes = (g, x, y, n, color) => {
+  let cx = x; for(let i = 0; i < n; i++){ const k = i % 5; if(k < 4){ el(g, 'path', {d:'M' + (cx + k * 5) + ' ' + (y - 9) + ' V' + (y + 1), stroke:color, 'stroke-width':1.6, 'stroke-linecap':'round'}); }
+    else { el(g, 'path', {d:'M' + (cx - 2) + ' ' + (y - 1) + ' L' + (cx + 17) + ' ' + (y - 8), stroke:color, 'stroke-width':1.6, 'stroke-linecap':'round'}); cx += 24; } }
+  return Math.ceil(n / 5) * 24;
+};
+
+function ejeY(g, box, desde, hasta, opts){
+  const {x, y, w, h} = box, n = 4, esc = v => y + h - (v - desde) / (hasta - desde) * h;
+  el(g, 'path', {d:'M' + x + ' ' + y + ' V' + (y + h) + ' H' + (x + w), fill:'none', stroke:'var(--figura)', 'stroke-width':1.2});
+  for(let i = 0; i <= n; i++){ const v = desde + (hasta - desde) * i / n;
+    el(g, 'path', {d:'M' + (x - 3) + ' ' + esc(v) + ' H' + (x + w), stroke:'var(--linea)', 'stroke-width':.7});
+    if(!opts.sinEje) txt(g, x - 6, esc(v) + 3.5, cifra(v, Number.isInteger(v) ? 0 : 1), {'text-anchor':'end', 'font-size':9.5}); }
+  if(desde > 0){ el(g, 'path', {d:'M' + (x - 4) + ' ' + (y + h + 4) + ' l4 -5 l-4 -5', fill:'none', stroke:'var(--lacre)', 'stroke-width':1.8}); }
+  return esc;
+}
+function techo(filas, opts){ const m = Math.max(...filas.map(r => r.f), 1); if(opts.estirar) return m + 1; const paso = m <= 10 ? 2 : m <= 20 ? 5 : m <= 50 ? 10 : 20; return Math.ceil((m * 1.08) / paso) * paso; }
+function barras(g, T, box, opts = {}){
+  let filas = opts.meses ? T.filas.filter((_, i) => opts.meses.includes(i)) : T.filas;
+  const desde = opts.desde || 0, hasta = opts.hasta || techo(filas, opts), esc = ejeY(g, box, desde, hasta, opts);
+  const {x, y, w, h} = box, paso = w / filas.length, bw = Math.min(46, paso * .62);
+  filas.forEach((r, i) => {
+    const bx = x + paso * (i + .5) - bw / 2, top = esc(Math.max(r.f, desde)), col = opts.color || SERIE[T.filas.indexOf(r) % SERIE.length];
+    const rect = el(g, 'rect', {x:bx, y:top, width:bw, height:Math.max(0, y + h - top), fill:col, 'fill-opacity':.9, stroke:'var(--figura)', 'stroke-width':1, class:'nueva'});
+    if(opts.marca && opts.marca === r.v) rect.setAttribute('stroke', 'var(--laton)'), rect.setAttribute('stroke-width', '3');
+    if(!opts.sinNumeros) txt(g, bx + bw / 2, top - 4, cifra(r.f, 0), {'text-anchor':'middle', 'font-size':10.5, fill:'var(--tinta)'});
+    txt(g, bx + bw / 2, y + h + 13, r.vt, {'text-anchor':'middle', 'font-size':9.5, fill:'var(--tinta)'});
+  });
+  return esc;
+}
+function lineas(g, T, box, opts = {}){
+  let filas = opts.meses ? T.filas.filter((_, i) => opts.meses.includes(i)) : T.filas;
+  const desde = opts.desde || 0, hasta = opts.hasta || techo(filas, opts), esc = ejeY(g, box, desde, hasta, opts);
+  const {x, y, w, h} = box, paso = w / filas.length, pts = filas.map((r, i) => [x + paso * (i + .5), esc(Math.max(r.f, desde))]);
+  el(g, 'path', {d:pts.map((p, i) => (i ? 'L' : 'M') + p[0] + ' ' + p[1]).join(' '), fill:'none', stroke:opts.color || 'var(--botella)', 'stroke-width':2.2, 'stroke-linejoin':'round', class:'nueva'});
+  filas.forEach((r, i) => { const [px, py] = pts[i];
+    el(g, 'circle', {cx:px, cy:py, r:4, fill:opts.color || 'var(--botella)', stroke:'var(--hueco)', 'stroke-width':1.2});
+    if(!opts.sinNumeros) txt(g, px, py - 8, cifra(r.f, 0), {'text-anchor':'middle', 'font-size':10.5, fill:'var(--tinta)'});
+    txt(g, px, y + h + 13, r.vt, {'text-anchor':'middle', 'font-size':9.5, fill:'var(--tinta)'}); });
+  return esc;
+}
+function sectores(g, T, cx, cy, r, opts = {}){
+  const total = opts.total || T.N, ry = opts.perspectiva ? r * .55 : r; let a = -Math.PI / 2;
+  const punto = (ang, k = 1) => [cx + r * k * Math.cos(ang), cy + ry * k * Math.sin(ang)];
+  if(opts.perspectiva){
+    el(g, 'path', {d:'M' + (cx - r) + ' ' + cy + ' A' + r + ' ' + ry + ' 0 0 0 ' + (cx + r) + ' ' + cy + ' v14 A' + r + ' ' + ry + ' 0 0 1 ' + (cx - r) + ' ' + (cy + 14) + ' Z', fill:'var(--figuraO)', 'fill-opacity':.5, stroke:'var(--figura)', 'stroke-width':1}); }
+  T.filas.forEach((f, i) => {
+    const ang = 2 * Math.PI * f.f / total, a2 = a + ang, grande = ang > Math.PI ? 1 : 0;
+    const [x1, y1] = punto(a), [x2, y2] = punto(a2);
+    const d = ang >= 2 * Math.PI - 1e-9 ? 'M' + (cx - r) + ' ' + cy + ' A' + r + ' ' + ry + ' 0 1 1 ' + (cx + r) + ' ' + cy + ' A' + r + ' ' + ry + ' 0 1 1 ' + (cx - r) + ' ' + cy + ' Z'
+      : 'M' + cx + ' ' + cy + ' L' + x1 + ' ' + y1 + ' A' + r + ' ' + ry + ' 0 ' + grande + ' 1 ' + x2 + ' ' + y2 + ' Z';
+    const sec = el(g, 'path', {d, fill:SERIE[i % SERIE.length], 'fill-opacity':opts.suma && a2 > 3 * Math.PI / 2 ? .6 : .9, stroke:'var(--figura)', 'stroke-width':1, class:'nueva sector', 'data-i':i});
+    if(opts.marca === f.v) sec.setAttribute('stroke', 'var(--laton)'), sec.setAttribute('stroke-width', '3');
+    const am = a + ang / 2, [lx, ly] = punto(am, 1.28);
+    if(ang > .12 && !opts.suma){ const et = f.vt + (opts.sinNumeros ? '' : ' · ' + cifra(100 * f.f / total, 0) + ' %'), an = lx < cx - 2 ? 'end' : lx > cx + 2 ? 'start' : 'middle', ancho = et.length * 6;
+      let x = lx; if(an === 'end' && opts.minX !== undefined) x = Math.max(x, opts.minX + ancho); if(an === 'start' && opts.maxX !== undefined) x = Math.min(x, opts.maxX - ancho); if(an === 'middle' && opts.minX !== undefined) x = Math.max(x, opts.minX + ancho / 2);
+      txt(g, x, ly + 3.5, et, {'text-anchor':an, 'font-size':10, fill:'var(--tinta)'}); }
+    a = a2;
+  });
+  if(opts.suma){ const tot = T.filas.reduce((s, f) => s + f.f, 0);
+    T.filas.forEach((f, i) => { const y = cy + ry + 22 + i * 14; el(g, 'rect', {x:cx - 70, y:y - 8, width:9, height:9, fill:SERIE[i % SERIE.length]}); txt(g, cx - 57, y, f.vt + ' · ' + cifra(100 * f.f / total, 0) + ' %', {'font-size':10, fill:'var(--tinta)'}); });
+    txt(g, cx - 70, cy + ry + 22 + T.filas.length * 14 + 4, 'suman ' + cifra(100 * tot / total, 0) + ' %: no eran partes de un todo', {'font-size':10.5, fill:'var(--lacre)', 'font-weight':700}); }
+  return punto;
+}
+function icono(g, x, y, s, clase){
+  const gg = el(g, 'g', {transform:'translate(' + x + ' ' + y + ') scale(' + s + ')', class:clase || ''});
+  el(gg, 'path', {d:'M4 6 Q10 -2 16 6 L18 20 Q10 24 2 20 Z', fill:'var(--hierro)', stroke:'var(--figura)', 'stroke-width':1});
+  el(gg, 'path', {d:'M6 6 Q10 8 14 6', fill:'none', stroke:'var(--figura)', 'stroke-width':1});
+  return gg;
+}
+function pictograma(g, T, box, opts = {}){
+  const {x, y, w, h} = box, filas = T.filas, paso = h / filas.length, por = opts.por || 5;
+  filas.forEach((r, i) => {
+    const fy = y + paso * i;
+    txt(g, x, fy + paso / 2 + 4, r.vt, {'font-size':10, fill:'var(--tinta)'});
+    if(opts.ancho){
+      const k = r.f / Math.max(...filas.map(q => q.f)), s = .45 + 1.3 * k; icono(g, x + 60, fy + paso / 2 - 12 * s, s, 'nueva');
+    }else{ const n = Math.round(r.f / por); for(let j = 0; j < n; j++) icono(g, x + 60 + j * 20, fy + paso / 2 - 12, 1, 'nueva'); }
+    if(!opts.sinNumeros) txt(g, x + w, fy + paso / 2 + 4, cifra(r.f, 0), {'text-anchor':'end', 'font-size':10.5, fill:'var(--tinta)'});
+  });
+  if(!opts.ancho) { icono(g, x, y + h + 4, .8); txt(g, x + 22, y + h + 18, '= ' + por + ' ' + (T.D.unidad || ''), {'font-size':9.5}); }
+}
+function pintaTabla(g, T, x, y, opts = {}){
+  const cols = opts.cols || ['v', 'f', 'pct'], nombres = {v:'valor', f:'f', fr:'fr', pct:'%', ang:'grados', palotes:'palotes'}, anchos = {v:opts.anchoV || 78, f:34, fr:44, pct:44, ang:52, palotes:80};
+  let cx = x; const xs = {}; cols.forEach(c => { xs[c] = cx; txt(g, cx, y, nombres[c], {'font-size':9.5}); cx += anchos[c]; });
+  el(g, 'path', {d:'M' + x + ' ' + (y + 5) + ' H' + cx, stroke:'var(--linea)', 'stroke-width':.8});
+  T.filas.forEach((r, i) => { const ry = y + 20 + i * (opts.alto || 20);
+    if(opts.marca === r.v) el(g, 'rect', {x:x - 4, y:ry - 13, width:cx - x + 6, height:18, rx:3, fill:'var(--panel2)'});
+    cols.forEach(c => { const v = c === 'v' ? r.vt : c === 'f' ? cifra(r.f, 0) : c === 'fr' ? cifra(r.fr, 2) : c === 'pct' ? cifra(r.pct, r.pct % 1 ? 1 : 0) : c === 'ang' ? cifra(r.ang, r.ang % 1 ? 1 : 0) + '°' : '';
+      if(c === 'palotes') palotes(g, xs[c], ry, r.f, SERIE[i % SERIE.length]); else txt(g, xs[c], ry, v, {'font-size':11, fill:c === 'v' ? SERIE[i % SERIE.length] : 'var(--tinta)', 'font-weight':c === 'v' ? 700 : 400}); }); });
+  const ty = y + 20 + T.filas.length * (opts.alto || 20);
+  el(g, 'path', {d:'M' + x + ' ' + (ty - 12) + ' H' + cx, stroke:'var(--linea)', 'stroke-width':.8});
+  cols.forEach(c => { const v = c === 'v' ? 'total' : c === 'f' ? cifra(T.N, 0) : c === 'fr' ? (T.N ? '1' : '0') : c === 'pct' ? (T.N ? '100' : '0') : c === 'ang' ? (T.N ? '360°' : '0°') : ''; if(v) txt(g, xs[c], ty + 2, v, {'font-size':11, fill:'var(--laton)', 'font-weight':700}); });
+  return ty + 8;
+}
+
+const carpeta = {datos:'asuntos', N:40, contados:40};
+const CARPETA_DATOS = ['asuntos', 'hijos', 'horas', 'comedor', 'propia'];
+let contando = null;
+function pintaCarpeta(){
+  const g = $('svgCarpeta'); g.innerHTML = '';
+  const D = DATOS[carpeta.datos], T = tabla(carpeta.datos, carpeta.contados), Tf = tabla(carpeta.datos, carpeta.N);
+  if(!D.valores.length){ playfair(g, 12, 24, 'la carpeta propia está vacía'); parrafo(g, 12, 60, 'Escribe arriba los datos de la clase, separados por comas, y pulsa «Usar estos datos». Valen palabras (rojo, azul, azul…) y números (7, 8, 8, 6…).', 500, {'font-size':12, fill:'var(--tinta)'}); return; }
+  playfair(g, 12, 24, D.n + ' · ' + carpeta.N + ' ' + D.inds + (carpeta.contados < carpeta.N ? ' · contados ' + carpeta.contados : ' · contados todos'));
+  const quedan = carpeta.N - carpeta.contados;
+  el(g, 'path', {d:'M14 70 h34 l8 -10 h44 v96 h-86 Z', fill:'var(--ladrilloO)', 'fill-opacity':.45, stroke:'var(--figura)', 'stroke-width':1.3, 'stroke-linejoin':'round'});
+  for(let i = 0; i < Math.min(quedan, 14); i++) el(g, 'rect', {x:22 + (i % 3) * 3, y:150 - i * 5, width:64, height:7, rx:1, fill:'var(--gaceta)', stroke:'var(--figuraO)', 'stroke-width':.6});
+  txt(g, 57, 176, quedan ? quedan + ' por contar' : 'vacía', {'text-anchor':'middle', 'font-size':9.5});
+  const filas = Tf.filas, alto = Math.min(44, 250 / Math.max(filas.length, 1)), x0 = 128;
+  filas.forEach((r, i) => {
+    const y = 68 + i * alto, f = T.filas[i] ? T.filas[i].f : 0, col = SERIE[i % SERIE.length];
+    txt(g, x0, y + 4, r.vt, {'font-size':11, fill:col, 'font-weight':700});
+    for(let j = 0; j < Math.min(f, 12); j++) el(g, 'rect', {x:x0 + 62 + j * 1.5, y:y + 6 - j * 1.6, width:20, height:9, rx:1, fill:'var(--gaceta)', stroke:'var(--figuraO)', 'stroke-width':.6});
+    palotes(g, x0 + 104, y + 4, f, col);
+  });
+  const cols = ['v', 'f', 'fr', 'pct'];
+  pintaTabla(g, T, 316, 62, {cols, anchoV:D.tipo === 'cont' ? 88 : 70, alto:alto > 26 ? 22 : alto});
+  txt(g, 528, 332, 'las absolutas suman N; las relativas, 1; los porcentajes, 100', {'text-anchor':'end', 'font-size':9.5});
+}
+function leeCarpeta(){
+  const D = DATOS[carpeta.datos], T = tabla(carpeta.datos, carpeta.N), mayor = T.filas.reduce((m, r) => r.f > m.f ? r : m, T.filas[0] || {f:0, vt:'—'});
+  if(!D.valores.length){ $('lecCarpeta').innerHTML = '<span class="def">La carpeta propia se llena con los datos de la clase: cuántos hermanos tiene cada uno, qué deporte hace, cuántas horas duerme. Se cuentan igual que las reclamaciones.</span>'; return; }
+  $('lecCarpeta').innerHTML =
+    '<span class="def">Cada papel es un <b>individuo</b>; lo que dice, la <b>variable</b>; cuántos dicen lo mismo, la <b>frecuencia</b>. La tabla de frecuencias es el recuento ordenado. Los papeles que hay son la <b>muestra</b>; la <b>población</b> es todo lo que se podría haber contado.</span>'
+    + 'Aquí la población es ' + D.pob + ' y la muestra son estos <b>' + T.N + '</b> ' + D.inds + '. La variable es <b>' + D.var + '</b>, y es <b>' + tipoDice(D) + '</b>: '
+    + (D.tipo === 'cual' ? 'no es un número, es una palabra, y solo se puede contar cuántos hay de cada.' : D.tipo === 'disc' ? 'es un número que se cuenta de uno en uno, y entre dos valores seguidos no hay nada.' : 'es un número que se mide y puede caer en cualquier sitio; por eso va en <b>tramos</b>: de ocho a diez, de diez a doce.') + ' '
+    + 'La frecuencia <b>absoluta</b> es cuántos: la mayor es ' + mayor.vt + ', con ' + mayor.f + '. La <b>relativa</b> es qué parte del total: ' + mayor.f + ' de ' + T.N + ', que es ' + cifra(mayor.fr, 2) + '. El <b>porcentaje</b> es la relativa por cien: ' + cifra(mayor.pct, mayor.pct % 1 ? 1 : 0) + ' %. '
+    + 'Las absolutas suman siempre ' + T.N + '; las relativas, 1; los porcentajes, 100. Si no suman eso, algo está mal contado.'
+    + (carpeta.datos === 'propia' && D.valores.length === 787 ? '<span class="murmullo">Lady Cream deja la pluma: «Setecientos ochenta y siete. Como las papeletas de la feria de Plymouth, en 1906: la gente apostaba el peso de un buey, y la mediana de todas las apuestas, mil doscientas siete libras, se quedó a nueve del peso de verdad. Ninguno acertó; la mitad, sí».</span>' : '')
+    + '<span class="cuenta">' + T.filas.map(r => r.vt + ': ' + r.f + ' · ' + cifra(r.fr, 2) + ' · ' + cifra(r.pct, 1) + ' %').join('   |   ') + '   |   N = ' + T.N + '</span>';
+}
+function acotaCarpeta(){ const D = DATOS[carpeta.datos]; if(carpeta.N > D.valores.length) carpeta.N = D.valores.length; if(carpeta.contados > carpeta.N) carpeta.contados = carpeta.N; }
+function mandosCarpeta(){
+  const D = DATOS[carpeta.datos]; acotaCarpeta();
+  tira('cDatos', CARPETA_DATOS, () => carpeta.datos, v => { carpeta.datos = v; carpeta.N = DATOS[v].defecto; carpeta.contados = carpeta.N; Ruido.papel(); pintaCarpeta2(); }, v => DATOS[v].n, 'n v');
+  masMenos('cMuestra', () => carpeta.N, v => { carpeta.N = v; carpeta.contados = v; Ruido.papel(); pintaCarpeta2(); }, Math.min(5, D.valores.length), D.valores.length);
+  $('cContar').disabled = !D.valores.length;
+  $('cPropiaFila').hidden = $('cPropia').hidden = carpeta.datos !== 'propia';
+}
+function pintaCarpeta2(){ mandosCarpeta(); pintaCarpeta(); leeCarpeta(); revisa(); if(carpeta.datos === 'propia' && DATOS.propia.valores.length === 787) huevo('buey'); }
+$('cContar').addEventListener('click', () => {
+  clearInterval(contando); carpeta.contados = 0; pintaCarpeta(); Ruido.despierta();
+  contando = setInterval(() => { if(carpeta.contados >= carpeta.N){ clearInterval(contando); leeCarpeta(); return; } carpeta.contados++; Ruido.papel(1); pintaCarpeta(); }, Math.max(40, 1600 / carpeta.N));
+});
+$('propiaUsar').addEventListener('click', () => {
+  const n = ponPropia($('propiaTxt').value);
+  $('propiaAviso').textContent = n ? n + ' datos, ' + tipoDice(DATOS.propia) : 'no he entendido nada: separa los datos con comas';
+  carpeta.N = n; carpeta.contados = n; Ruido.papel(3); pintaCarpeta2(); guardaTurno();
+});
+
+const tablero = {datos:'asuntos', graf:'barras'};
+const TABLERO_DATOS = ['asuntos', 'hijos', 'comedor', 'caldera', 'sacos', 'propia'];
+const GRAFICAS = {barras:'barras', sectores:'sectores', lineas:'líneas', pictograma:'pictograma'};
+const conviene = (D, graf) => graf === 'barras' ? true : graf === 'sectores' ? D.tipo !== 'tiempo' : graf === 'lineas' ? D.tipo === 'tiempo' || D.tipo === 'disc' || D.tipo === 'cont' : D.tipo === 'tiempo' || D.tipo === 'cual';
+function pintaTablero(){
+  const g = $('svgTablero'); g.innerHTML = '';
+  const D = DATOS[tablero.datos], T = tabla(tablero.datos), graf = tablero.graf;
+  if(!T.filas.length){ playfair(g, 12, 24, 'la carpeta propia está vacía: se llena en la sala de la carpeta'); return; }
+  playfair(g, 12, 24, D.n + ' · ' + GRAFICAS[graf] + (conviene(D, graf) ? '' : ' · no es la gráfica que conviene'));
+  const cols = graf === 'sectores' ? ['v', 'f', 'pct', 'ang'] : ['v', 'f', 'pct'];
+  pintaTabla(g, T, 14, 60, {cols, anchoV:70, alto:Math.min(20, 220 / Math.max(T.filas.length, 1))});
+  const box = {x:290, y:56, w:230, h:220};
+  if(graf === 'barras') barras(g, T, box);
+  else if(graf === 'lineas') lineas(g, T, box);
+  else if(graf === 'sectores'){ sectores(g, T, 400, 170, 92); if(D.tipo === 'tiempo') txt(g, 400, 300, 'los meses no son partes de un todo', {'text-anchor':'middle', 'font-size':10, fill:'var(--lacre)'}); }
+  else pictograma(g, T, {x:270, y:56, w:250, h:Math.min(220, 44 * T.filas.length)}, {por:T.N > 100 ? 10 : T.N > 30 ? 5 : T.N > 12 ? 2 : 1});
+  txt(g, 528, 322, graf === 'barras' ? 'la altura es la frecuencia' : graf === 'sectores' ? 'el ángulo es la parte: 360 por la relativa' : graf === 'lineas' ? 'el tiempo va debajo; la línea une' : 'cada dibujo vale lo que dice la leyenda', {'text-anchor':'end', 'font-size':10});
+}
+function leeTablero(){
+  const D = DATOS[tablero.datos], T = tabla(tablero.datos), graf = tablero.graf, r0 = T.filas[0];
+  if(!T.filas.length){ $('lecTablero').innerHTML = '<span class="def">La carpeta propia se llena en la primera sala.</span>'; return; }
+  const mayor = T.filas.reduce((m, r) => r.f > m.f ? r : m, r0);
+  $('lecTablero').innerHTML =
+    '<span class="def">Una gráfica es la tabla dibujada: cada número, un tamaño. En las <b>barras</b>, la altura es la frecuencia. En los <b>sectores</b>, el ángulo: 360 grados repartidos como el total. En las <b>líneas</b>, el tiempo va debajo y la línea une lo que pasó. En el <b>pictograma</b>, cada dibujo vale unos cuantos.</span>'
+    + (graf === 'barras' ? 'Cada valor tiene su barra, y la barra de ' + mayor.vt + ' es la más alta porque tiene la frecuencia mayor, ' + mayor.f + '. Las barras sirven para <b>comparar</b>: se ve de un vistazo cuál gana y por cuánto. Van con cualquier variable, y el eje empieza en cero.'
+     : graf === 'sectores' ? (D.tipo === 'tiempo' ? '<span class="trampa">Aquí los sectores no dicen la verdad:</span> los meses no son partes de un todo, son momentos. Sumar los accidentes de seis meses y repartir la tarta no cuenta nada. Para el tiempo, líneas.'
+        : 'La vuelta entera son 360 grados y es el total, ' + T.N + '. ' + mayor.vt + ' es ' + mayor.f + ' de ' + T.N + ', o sea ' + cifra(mayor.fr, 2) + ' del total, y se lleva ' + cifra(mayor.fr, 2) + ' × 360 = <b>' + cifra(mayor.ang, mayor.ang % 1 ? 1 : 0) + ' grados</b>. Los sectores sirven para ver <b>partes de un todo</b>, y solo si las partes suman el todo.')
+     : graf === 'lineas' ? (D.tipo === 'tiempo' ? 'Abajo van los meses, en orden, y cada punto es la frecuencia de ese mes; la línea los une para que se vea si sube o baja. Las líneas sirven para lo que <b>cambia con el tiempo</b>. Y ojo: entre dos puntos no ha pasado nada que se sepa, la línea solo une.'
+        : D.tipo === 'cual' ? '<span class="trampa">Las líneas aquí no dicen nada:</span> ' + D.var + ' no tiene orden ni tiempo, y unir jornada con salario con una línea no significa nada. Para esto, barras o sectores.' : 'Cuando la variable es un número con orden, unir los puntos se llama <b>polígono de frecuencias</b>. Vale, pero la línea solo une: entre ' + r0.vt + ' y el siguiente no hay nada.')
+     : (D.tipo === 'disc' ? 'El pictograma se lleva mal con esta variable: hay que redondear cada frecuencia a dibujos enteros y se pierde el detalle. Para contar familias, barras.' : 'Cada saco vale lo que dice la leyenda, y se cuentan los sacos de cada fila. El pictograma sirve para <b>contar de un vistazo</b>, y su regla es una: todos los dibujos <b>iguales</b>, y más cantidad son más dibujos, no dibujos más grandes.'))
+    + ' En todas, el tamaño tiene que ser <b>proporcional</b> al número: el doble de frecuencia, el doble de altura, el doble de ángulo, el doble de dibujos.'
+    + '<span class="cuenta">' + T.filas.map(r => r.vt + ': ' + r.f + (graf === 'sectores' ? ' → ' + cifra(r.ang, 1) + '°' : ' · ' + cifra(r.pct, 1) + ' %')).join('   |   ') + '</span>';
+}
+function mandosTablero(){
+  tira('tDatos', TABLERO_DATOS, () => tablero.datos, v => { tablero.datos = v; Ruido.papel(); pintaTablero2(); }, v => DATOS[v].n, 'n v');
+  tira('tGraf', Object.keys(GRAFICAS), () => tablero.graf, v => { tablero.graf = v; Ruido.papel(2); pintaTablero2(); }, v => GRAFICAS[v], 'n v');
+}
+function pintaTablero2(){ mandosTablero(); pintaTablero(); leeTablero(); revisa(); }
+
+const lectura = {graf:'caldera', nums:'sin', preg:0, resp:'', ok:null, regla:null, sector:null};
+const numeroLibre = v => { const s = String(v).trim(); const n = parseFloat(s.includes(',') ? s.replace(/\./g, '').replace(',', '.') : s); return isNaN(n) ? null : n; };
+const casi = (v, sol, tol = 1e-9) => { const n = numeroLibre(v); return n !== null && Math.abs(n - sol) <= tol; };
+const LECTURAS = {
+  caldera:{tipo:'lineas', pregs:[
+    {t:'¿Qué mes hubo más accidentes?', sol:'junio', ok:v => /jun/i.test(v), exp:'El punto más alto es el de junio: 17, contra el eje.'},
+    {t:'¿Cuántos más en el mes de más que en el de menos?', sol:4, exp:'Junio, 17; marzo, 13. Se leen los dos contra el eje y se restan: 4.'},
+    {t:'¿Cuántos accidentes hubo en total, de enero a junio?', sol:90, exp:'14 + 15 + 13 + 16 + 15 + 17 = 90. Se leen los seis y se suman.'},
+    {t:'¿Cuántos hubo en abril?', sol:16, exp:'La regla en el punto de abril marca 16.'}]},
+  comedor:{tipo:'sectores', pregs:[
+    {t:'El té es un cuarto. Si contestaron sesenta, ¿cuántos pidieron té?', sol:15, exp:'Un cuarto de 60 es 15. Del porcentaje al número hace falta el total.'},
+    {t:'¿Qué parte del total es el café, en tanto por ciento?', sol:40, exp:'El sector del café son 144 grados; 144 de 360 es el 40 %.'},
+    {t:'Sin los números, ¿cuántos obreros contestaron en total?', sol:'no se puede saber', ok:v => /no/i.test(v), exp:'Los sectores dicen partes, no cuántos. Sin el total escrito, no se sabe.'}]},
+  asuntos:{tipo:'barras', pregs:[
+    {t:'¿Cuál es el asunto con más reclamaciones?', sol:'la jornada', ok:v => /jorn/i.test(v), exp:'La barra más alta es la de la jornada: 14.'},
+    {t:'¿Cuántas reclamaciones son de frío?', sol:10, exp:'La barra del frío llega a 10 contra el eje.'},
+    {t:'¿Cuántas más de jornada que de comida?', sol:10, exp:'Jornada 14, comida 4: diez más.'}]},
+  sacos:{tipo:'barras', pregs:[
+    {t:'¿Qué semana entraron más sacos?', sol:'la segunda', ok:v => /2|dos|segunda/i.test(v), exp:'La barra más alta es la de la segunda semana: 40.'},
+    {t:'¿Cuántas veces más sacos entraron la segunda semana que la primera?', sol:2, exp:'40 es el doble de 20: dos veces. Se leen los dos y se divide.'},
+    {t:'¿Cuántos sacos entraron en el mes?', sol:115, exp:'20 + 40 + 30 + 25 = 115.'}]},
+  hijos:{tipo:'barras', pregs:[
+    {t:'¿Cuántos hijos tiene la familia más corriente?', sol:2, exp:'La barra más alta es la de dos hijos: nueve familias.'},
+    {t:'¿Cuántas familias tienen tres hijos o más?', sol:9, exp:'Tres hijos, 6; cuatro, 2; cinco, 1. Suman 9.'},
+    {t:'¿Cuántas familias hay en total?', sol:30, exp:'4 + 8 + 9 + 6 + 2 + 1 = 30: se suman todas las barras.'}]}
+};
+const LECTURA_ORDEN = ['caldera', 'comedor', 'asuntos', 'sacos', 'hijos'];
+let lecturaEsc = null;
+function compruebaLectura(){
+  const q = LECTURAS[lectura.graf].pregs[lectura.preg], v = lectura.resp;
+  if(!String(v).trim()) return null;
+  return q.ok ? q.ok(v) : casi(v, q.sol);
+}
+function pintaLectura(){
+  const g = $('svgLectura'); g.innerHTML = '';
+  const k = lectura.graf, L = LECTURAS[k], D = DATOS[k], T = tabla(k), sin = lectura.nums === 'sin', q = L.pregs[lectura.preg];
+  playfair(g, 12, 24, D.n + ' · ' + GRAFICAS[L.tipo] + (sin ? ' · sin los números' : ' · con los números'));
+  parrafo(g, 12, 46, 'Lord Lorza pregunta: ' + q.t, 516, {'font-size':12, fill:'var(--tinta)', 'font-family':"'Playfair Display',serif", 'font-style':'italic'}, 15);
+  const box = {x:52, y:76, w:380, h:210};
+  const marca = lectura.sector !== null && T.filas[lectura.sector] ? T.filas[lectura.sector].v : undefined;
+  if(L.tipo === 'sectores'){
+    sectores(g, T, 200, 196, 96, {sinNumeros:sin, marca, minX:10, maxX:340});
+    lecturaEsc = null;
+    txt(g, 356, 100, 'toca un sector', {'font-size':10.5});
+    if(lectura.sector !== null && T.filas[lectura.sector]){ const r = T.filas[lectura.sector];
+      txt(g, 356, 122, r.vt, {'font-size':13, fill:SERIE[lectura.sector % SERIE.length], 'font-weight':700});
+      txt(g, 356, 142, 'el transportador: ' + cifra(r.ang, 0) + '°', {'font-size':11, fill:'var(--tinta)'});
+      txt(g, 356, 158, cifra(r.ang, 0) + ' de 360 es el ' + cifra(r.pct, 0) + ' %', {'font-size':10.5, fill:'var(--tinta)'});
+      txt(g, 356, 178, sin ? 'cuántos: no está escrito' : 'cuántos: ' + r.f + ' de ' + T.N, {'font-size':10.5, fill:sin ? 'var(--lacre)' : 'var(--tinta)'}); }
+    txt(g, 356, 300, sin ? 'el total no está escrito' : 'el total: ' + T.N + ' ' + D.inds, {'font-size':10.5, fill:sin ? 'var(--lacre)' : 'var(--tenue)'});
+  }else{
+    const hasta = techo(T.filas, {}), esc = (L.tipo === 'lineas' ? lineas : barras)(g, T, box, {sinNumeros:sin, marca});
+    lecturaEsc = {desde:0, hasta, box};
+    if(lectura.regla !== null){ const v = lectura.regla, y = esc(v);
+      el(g, 'path', {d:'M' + (box.x - 30) + ' ' + y + ' H' + (box.x + box.w + 8), stroke:'var(--laton)', 'stroke-width':1.6, 'stroke-dasharray':'6 4'});
+      el(g, 'rect', {x:box.x + box.w + 12, y:y - 10, width:70, height:20, rx:4, fill:'var(--panel2)', stroke:'var(--laton)', 'stroke-width':1});
+      txt(g, box.x + box.w + 47, y + 4, 'regla: ' + cifra(v, 1), {'text-anchor':'middle', 'font-size':10.5, fill:'var(--laton)', 'font-weight':700}); }
+    txt(g, box.x + box.w + 12, box.y + 6, 'arrastra la regla', {'font-size':9.5});
+    txt(g, box.x + box.w + 12, box.y + 20, 'por la gráfica', {'font-size':9.5});
+  }
+  txt(g, 528, 332, 'leer es deshacer el dibujo: del tamaño al número', {'text-anchor':'end', 'font-size':9.5});
+}
+function leeLectura(){
+  const k = lectura.graf, L = LECTURAS[k], D = DATOS[k], T = tabla(k), q = L.pregs[lectura.preg], sin = lectura.nums === 'sin';
+  $('lecLectura').innerHTML =
+    '<span class="def">Leer una gráfica es el camino al revés: del tamaño al número, y del número a lo que pasó. Se lee <b>contra el eje</b>, no a ojo; y lo que la gráfica no trae escrito no se puede saber.</span>'
+    + (L.tipo === 'sectores' ? 'Los sectores dicen <b>qué parte</b> del total es cada uno: el ángulo, o el tanto por ciento. Lo que no dicen es <b>cuántos</b>: un cuarto de sesenta son quince, pero un cuarto de no se sabe cuánto no es nada. ' + (sin ? 'Aquí el total no está escrito, así que las preguntas de «cuántos» no se pueden contestar con la gráfica sola.' : 'Aquí el total está escrito, ' + T.N + ', y con él cada parte se convierte en un número.')
+     : L.tipo === 'lineas' ? 'Cada punto se lee contra el eje: se pone la regla a su altura y se mira el número. La línea solo une los puntos: entre ' + T.filas[0].vt + ' y ' + T.filas[1].vt + ' no ha pasado nada que se sepa. ' + (sin ? 'Sin los números escritos hay que leerlos con la regla, y se lee con el error del ojo: 16 o 17, y no pasa nada.' : 'Con los números escritos la regla sobra, pero conviene comprobar que el dibujo y el número dicen lo mismo.')
+     : 'Cada barra se lee contra el eje: la regla a la altura de la barra, y el número que marca. Para comparar dos, se leen las dos y se restan; para el total, se suman todas. ' + (sin ? 'Sin los números, la regla es lo único que hay.' : 'Con los números escritos, se comprueba que la barra y el número van juntos.'))
+    + (lectura.ok === true ? '<span class="murmullo">Lady Cream: «Bien leído. ' + q.exp + '»</span>' : lectura.ok === false ? '<span class="murmullo">Lady Cream: «No es eso. ' + q.exp + '»</span>' : '')
+    + '<span class="cuenta">' + (sin ? 'los números, escondidos' : T.filas.map(r => r.vt + ': ' + r.f).join('   |   ') + '   |   N = ' + T.N) + '</span>';
+}
+function mandosLectura(){
+  const L = LECTURAS[lectura.graf];
+  tira('lGraf', LECTURA_ORDEN, () => lectura.graf, v => { lectura.graf = v; lectura.preg = 0; lectura.resp = ''; lectura.ok = null; lectura.regla = null; lectura.sector = null; $('lResp').value = ''; Ruido.papel(); pintaLectura2(); }, v => DATOS[v].n + ' · ' + GRAFICAS[LECTURAS[v].tipo], 'n v');
+  tira('lNums', ['sin', 'con'], () => lectura.nums, v => { lectura.nums = v; Ruido.papel(); pintaLectura2(); }, v => v === 'sin' ? 'escondidos' : 'escritos', 'n v');
+  tira('lPreg', L.pregs.map((_, i) => i), () => lectura.preg, v => { lectura.preg = v; lectura.resp = ''; lectura.ok = null; $('lResp').value = ''; Ruido.papel(); pintaLectura2(); }, i => L.pregs[i].t, 'n v');
+  $('lVeredicto').textContent = lectura.ok === null ? '' : lectura.ok ? 'bien leído' : 'no es eso';
+}
+function pintaLectura2(){ mandosLectura(); pintaLectura(); leeLectura(); revisa(); }
+$('lResponder').addEventListener('click', () => { lectura.resp = $('lResp').value; lectura.ok = compruebaLectura(); Ruido.despierta(); if(lectura.ok) Ruido.bien(); else if(lectura.ok === false) Ruido.mal(); pintaLectura2(); });
+$('lResp').addEventListener('keydown', e => { if(e.key === 'Enter') $('lResponder').click(); });
+{
+  const g = $('svgLectura');
+  const punto = e => { const pt = g.createSVGPoint(); pt.x = e.clientX; pt.y = e.clientY; return pt.matrixTransform(g.getScreenCTM().inverse()); };
+  let arrastra = false;
+  const pon = e => { if(!lecturaEsc) return; const p = punto(e), {desde, hasta, box} = lecturaEsc; const v = desde + (box.y + box.h - p.y) / box.h * (hasta - desde);
+    lectura.regla = Math.max(desde, Math.min(hasta, Math.round(v * 2) / 2)); pintaLectura(); };
+  g.addEventListener('pointerdown', e => { const s = e.target.closest && e.target.closest('.sector'); if(s){ lectura.sector = +s.getAttribute('data-i'); Ruido.papel(); pintaLectura(); leeLectura(); return; } arrastra = true; pon(e); });
+  g.addEventListener('pointermove', e => { if(arrastra) pon(e); });
+  ['pointerup', 'pointerleave', 'pointercancel'].forEach(ev => g.addEventListener(ev, () => { arrastra = false; }));
+}
+
+const reparto = {datos:'jornales', vista:'monedas', raro:false};
+const REPARTO_DATOS = ['jornales', 'sueno', 'hijos', 'propia'];
+const VISTAS = {monedas:'las monedas', repartir:'repartir', fila:'poner en fila', repetidos:'contar repetidos'};
+function valoresReparto(conRaro = reparto.raro){
+  const D = DATOS[reparto.datos]; let v = D.valores.filter(esNumero).slice(0, 40);
+  if(conRaro && D.raro && v.length) v = v.concat([D.raro.v]);
+  return v;
+}
+function medidas(v){
+  const n = v.length; if(!n) return null;
+  const suma = v.reduce((s, x) => s + x, 0), orden = v.slice().sort((a, b) => a - b);
+  const mediana = n % 2 ? orden[(n - 1) / 2] : (orden[n / 2 - 1] + orden[n / 2]) / 2;
+  const cuenta = {}; v.forEach(x => { cuenta[x] = (cuenta[x] || 0) + 1; });
+  const maxC = Math.max(...Object.values(cuenta)), moda = maxC > 1 ? Object.keys(cuenta).filter(k => cuenta[k] === maxC).map(Number).sort((a, b) => a - b) : [];
+  return {n, suma, media:suma / n, mediana, moda, maxC, min:orden[0], max:orden[n - 1], rango:orden[n - 1] - orden[0], orden, cuenta};
+}
+function pintaReparto(){
+  const g = $('svgReparto'); g.innerHTML = '';
+  const D = DATOS[reparto.datos], v = valoresReparto(), M = medidas(v), vista = reparto.vista;
+  if(!M){ playfair(g, 12, 24, 'no hay números que repartir'); parrafo(g, 12, 60, 'La carpeta propia tiene palabras, o está vacía. Escribe números en la sala de la carpeta y vuelve.', 500, {'font-size':12, fill:'var(--tinta)'}); return; }
+  playfair(g, 12, 24, D.n + ' · media ' + cifra(M.media, 2) + ' · mediana ' + cifra(M.mediana, 2) + ' · moda ' + (M.moda.length ? M.moda.map(x => cifra(x, 1)).join(' y ') : 'ninguna'));
+  const x0 = 30, w = 360, y0 = 270, alto = 200, tope = Math.max(M.max, M.media) * 1.06, esc = x => alto * x / tope;
+  const lista = vista === 'fila' ? M.orden : vista === 'repetidos' ? Object.keys(M.cuenta).map(Number).sort((a, b) => a - b) : v;
+  const n = lista.length, paso = w / n, bw = Math.min(30, paso * .7);
+  const columna = (x, val, color, opts = {}) => {
+    const h = esc(val), y = y0 - h;
+    el(g, 'rect', {x:x - bw / 2, y, width:bw, height:h, rx:2, fill:color, 'fill-opacity':opts.fantasma ? .18 : .85, stroke:opts.fantasma ? 'none' : 'var(--figura)', 'stroke-width':1, class:opts.clase || ''});
+    if(!opts.fantasma && val <= 30 && tope <= 40) for(let k = 1; k < val; k++) el(g, 'path', {d:'M' + (x - bw / 2) + ' ' + (y0 - esc(k)) + ' h' + bw, stroke:'var(--hueco)', 'stroke-width':.7, 'stroke-opacity':.7});
+    if(!opts.fantasma) txt(g, x, y - 5, cifra(val, 1), {'text-anchor':'middle', 'font-size':10, fill:opts.color2 || 'var(--tinta)', 'font-weight':opts.negrita ? 700 : 400});
+  };
+  el(g, 'path', {d:'M' + (x0 - 10) + ' ' + y0 + ' H' + (x0 + w + 10), stroke:'var(--figura)', 'stroke-width':1.2});
+  if(vista === 'repartir'){
+    lista.forEach((val, i) => { const x = x0 + paso * (i + .5); columna(x, val, 'var(--laton)', {fantasma:true}); columna(x, M.media, 'var(--laton)', {clase:'nueva'}); });
+    const ym = y0 - esc(M.media);
+    el(g, 'path', {d:'M' + (x0 - 10) + ' ' + ym + ' H' + (x0 + w + 10), stroke:'var(--botella)', 'stroke-width':1.8, 'stroke-dasharray':'6 4'});
+    txt(g, x0 - 8, ym + 14, 'media ' + cifra(M.media, 2), {'font-size':11, fill:'var(--botella)', 'font-weight':700});
+    txt(g, x0, 300, 'el total no cambia: ' + cifra(M.suma, 1) + ' entre ' + M.n + ' = ' + cifra(M.media, 2) + ' a cada uno', {'font-size':10.5, fill:'var(--tinta)'});
+  }else if(vista === 'fila'){
+    const medio = M.n % 2 ? [(M.n - 1) / 2] : [M.n / 2 - 1, M.n / 2];
+    lista.forEach((val, i) => { const x = x0 + paso * (i + .5), es = medio.includes(i); columna(x, val, es ? 'var(--laton)' : 'var(--ladrillo)', {negrita:es, color2:es ? 'var(--laton)' : undefined, clase:'nueva'});
+      if(es) txt(g, x, y0 + 14, medio.length === 1 ? 'el del medio' : (i === medio[0] ? 'los dos' : 'del medio'), {'text-anchor':'middle', 'font-size':9, fill:'var(--laton)'}); });
+    txt(g, x0, 300, 'en fila de menor a mayor: la mediana es ' + cifra(M.mediana, 2) + (M.n % 2 ? '' : ', la mitad entre los dos del medio'), {'font-size':10.5, fill:'var(--tinta)'});
+  }else if(vista === 'repetidos'){
+    lista.forEach((val, i) => { const x = x0 + paso * (i + .5), c = M.cuenta[val], es = M.moda.includes(val) && M.maxC > 1;
+      for(let k = 0; k < c; k++){ const dx = (k - (c - 1) / 2) * Math.min(8, paso / Math.max(c, 1)); const h = esc(val); el(g, 'rect', {x:x + dx - bw / 2 + 4, y:y0 - h - k * 2, width:bw - 8, height:h, rx:2, fill:es ? 'var(--laton)' : 'var(--ladrillo)', 'fill-opacity':.85, stroke:'var(--figura)', 'stroke-width':.8, class:'nueva'}); }
+      txt(g, x, y0 - esc(val) - 8, cifra(val, 1) + ' × ' + c, {'text-anchor':'middle', 'font-size':10, fill:es ? 'var(--laton)' : 'var(--tinta)', 'font-weight':es ? 700 : 400}); });
+    txt(g, x0, 300, M.maxC > 1 ? 'el más repetido: ' + M.moda.map(x => cifra(x, 1)).join(' y ') + ', ' + M.maxC + ' veces' : 'ninguno se repite: no hay moda', {'font-size':10.5, fill:'var(--tinta)'});
+  }else{
+    lista.forEach((val, i) => { const x = x0 + paso * (i + .5), raro = reparto.raro && i === lista.length - 1; columna(x, val, raro ? 'var(--lacre)' : 'var(--ladrillo)', {clase:'nueva'}); });
+    txt(g, x0, 300, M.n + ' ' + (D.inds || 'datos') + ' · suman ' + cifra(M.suma, 1) + (D.unidad ? ' ' + D.unidad : '') + ' · del menor, ' + cifra(M.min, 1) + ', al mayor, ' + cifra(M.max, 1) + ': rango ' + cifra(M.rango, 1), {'font-size':10.5, fill:'var(--tinta)'});
+  }
+  const lx = 412; txt(g, lx, 66, 'las tres', {'font-size':9.5});
+  [['media', M.media, 'var(--botella)'], ['mediana', M.mediana, 'var(--laton)'], ['moda', M.moda.length ? M.moda.map(x => cifra(x, 1)).join(' y ') : '—', 'var(--ladrillo)']].forEach(([n, val, col], i) => {
+    txt(g, lx, 90 + i * 40, n, {'font-size':10, fill:col}); txt(g, lx, 108 + i * 40, typeof val === 'number' ? cifra(val, 2) : val, {'font-size':18, fill:col, 'font-weight':700, 'font-family':"'Playfair Display',serif"}); });
+  txt(g, lx, 214, 'rango ' + cifra(M.rango, 1), {'font-size':10.5, fill:'var(--tinta)'});
+  if(reparto.raro){ const M0 = medidas(valoresReparto(false)); txt(g, lx, 238, 'sin el raro:', {'font-size':9.5, fill:'var(--lacre)'}); txt(g, lx, 252, 'media ' + cifra(M0.media, 2), {'font-size':10, fill:'var(--tinta)'}); txt(g, lx, 266, 'mediana ' + cifra(M0.mediana, 2), {'font-size':10, fill:'var(--tinta)'}); }
+  txt(g, 528, 314, 'la media reparte, la mediana ordena, la moda cuenta', {'text-anchor':'end', 'font-size':9.5});
+}
+function leeReparto(){
+  const D = DATOS[reparto.datos], v = valoresReparto(), M = medidas(v), vista = reparto.vista;
+  if(!M){ $('lecReparto').innerHTML = '<span class="def">La media es el reparto a partes iguales: lo que tocaría a cada uno. La mediana es el del medio, puestos en fila. La moda es el más repetido.</span>Aquí no hay números: la carpeta propia se llena en la primera sala.'; return; }
+  const M0 = reparto.raro ? medidas(valoresReparto(false)) : null;
+  $('lecReparto').innerHTML =
+    '<span class="def">La <b>media</b> es el reparto a partes iguales: lo que tocaría a cada uno si el total se repartiera. La <b>mediana</b> es el del medio, puestos en fila de menor a mayor. La <b>moda</b> es el más repetido. El <b>rango</b>, del menor al mayor.</span>'
+    + (vista === 'repartir' ? 'Las columnas se nivelan quitando de las altas y poniendo en las bajas, y el total no cambia: ' + cifra(M.suma, 1) + '. Cuando todas son iguales, cada una tiene ' + cifra(M.suma, 1) + ' entre ' + M.n + ', que es <b>' + cifra(M.media, 2) + '</b>. Eso es la media, y la fórmula (sumar todo y dividir entre cuántos) es el gesto de nivelar, escrito. '
+     : vista === 'fila' ? 'En fila de menor a mayor, ' + M.orden.map(x => cifra(x, 1)).join(', ') + '. ' + (M.n % 2 ? 'Son ' + M.n + ', impar, y el del medio es <b>' + cifra(M.mediana, 2) + '</b>: hay tantos por debajo como por encima.' : 'Son ' + M.n + ', par, y hay dos en el medio: la mediana es la mitad entre los dos, <b>' + cifra(M.mediana, 2) + '</b>.') + ' La mediana no mira cuánto vale cada uno, solo el orden. '
+     : vista === 'repetidos' ? (M.maxC > 1 ? 'Apilados los iguales, el más repetido es <b>' + M.moda.map(x => cifra(x, 1)).join(' y ') + '</b>, ' + M.maxC + ' veces: la moda. ' + (M.moda.length > 1 ? 'Hay empate: dos modas, y no pasa nada. ' : '') : 'Ninguno se repite: <b>no hay moda</b>, y no pasa nada. ') + 'La moda es la única de las tres que vale también para palabras: el asunto más frecuente de las reclamaciones es una moda. '
+     : 'Los ' + M.n + ' datos, tal como vienen. Suman ' + cifra(M.suma, 1) + '; el menor es ' + cifra(M.min, 1) + ' y el mayor ' + cifra(M.max, 1) + ', así que el rango es <b>' + cifra(M.rango, 1) + '</b>. Con los tres gestos de arriba se sacan las tres medidas. ')
+    + (reparto.raro ? '<span class="trampa">Con ' + D.raro.n + ':</span> la media pasa de ' + cifra(M0.media, 2) + ' a <b>' + cifra(M.media, 2) + '</b>, y la mediana de ' + cifra(M0.mediana, 2) + ' a <b>' + cifra(M.mediana, 2) + '</b>. La media reparte también lo de Lorza entre todos y se dispara; la mediana solo mira el orden, y doscientos está en el mismo sitio de la fila que veinte. Para decir «lo típico» cuando hay un valor raro, la mediana. '
+       : 'La media puede no ser ninguno de los datos, y no pasa nada: es un reparto, no un dato. ')
+    + (reparto.datos === 'jornales' && reparto.raro ? '<span class="murmullo">Lord Lorza, desde la presidencia: «Doscientos chelines es una cifra modesta. Lo que pasa es que los demás cobran poco».</span>' : '')
+    + '<span class="cuenta">media = ' + cifra(M.suma, 1) + ' ÷ ' + M.n + ' = ' + cifra(M.media, 2) + '   |   mediana = ' + cifra(M.mediana, 2) + '   |   moda = ' + (M.moda.length ? M.moda.map(x => cifra(x, 1)).join(', ') : 'ninguna') + '   |   rango = ' + cifra(M.rango, 1) + '</span>';
+}
+function mandosReparto(){
+  const D = DATOS[reparto.datos];
+  tira('rDatos', REPARTO_DATOS, () => reparto.datos, v => { reparto.datos = v; reparto.raro = false; Ruido.papel(); pintaReparto2(); }, v => DATOS[v].n, 'n v');
+  tira('rVista', Object.keys(VISTAS), () => reparto.vista, v => { reparto.vista = v; Ruido.papel(2); pintaReparto2(); }, v => VISTAS[v], 'n v');
+  const b = $('rRaro'); b.textContent = D.raro ? D.raro.b : 'Meter un valor raro'; b.disabled = !D.raro || !valoresReparto(false).length; b.setAttribute('aria-pressed', String(reparto.raro));
+}
+function pintaReparto2(){ mandosReparto(); pintaReparto(); leeReparto(); revisa(); if(reparto.raro && reparto.datos === 'jornales') huevo('sueldo'); if(valoresReparto(false).length === 1198 || (reparto.datos === 'propia' && DATOS.propia.valores.length === 787)) huevo('buey'); }
+$('rRaro').addEventListener('click', () => { reparto.raro = !reparto.raro; Ruido.despierta(); Ruido.papel(3); pintaReparto2(); });
+
+const brybon = {datos:'caldera', trampas:new Set(['corte']), senala:null};
+const BRYBON_DATOS = ['caldera', 'sacos', 'comedor', 'quejas'];
+const TRAMPAS = {
+  corte:      {n:'el eje cortado', para:['caldera', 'sacos'], anti:'mirar dónde empieza el eje: si no es en cero, las barras y las subidas están exageradas', dice:'Se han disparado.'},
+  estirar:    {n:'la escala estirada', para:['caldera', 'sacos'], anti:'comparar los números, no las alturas: la misma subida se dibuja suave o en picado según lo alto y estrecho que sea el papel', dice:'En picado.'},
+  meses:      {n:'los meses elegidos', para:['caldera'], anti:'preguntar qué meses faltan: de marzo a junio sube, pero de enero a marzo bajaba', dice:'Sube sin parar.'},
+  ancho:      {n:'el dibujo a lo ancho y a lo alto', para:['sacos'], anti:'el doble de lado es el cuádruple de superficie: se cuentan los dibujos, no se miden', dice:'El carbón se ha multiplicado.'},
+  perspectiva:{n:'los sectores en perspectiva', para:['comedor'], anti:'el sector de delante parece mayor porque se le ve el canto: se pide la tarta plana', dice:'El café arrasa.'},
+  suma:       {n:'los sectores que suman más de cien', para:['quejas'], anti:'sumar los porcentajes: si pasan de cien, no eran partes de un todo y no van en sectores', dice:'Todo el mundo se queja de todo.'}
+};
+const pilladas = new Set();
+const trampasDe = k => Object.keys(TRAMPAS).filter(t => TRAMPAS[t].para.includes(k));
+const activas = () => [...brybon.trampas].filter(t => TRAMPAS[t].para.includes(brybon.datos));
+function pintaBrybon(){
+  const g = $('svgBrybon'); g.innerHTML = '';
+  const k = brybon.datos, D = DATOS[k], T = tabla(k), act = activas(), tr = t => act.includes(t);
+  playfair(g, 12, 24, D.n + ' · ' + (act.length ? act.length + (act.length === 1 ? ' trampa encendida' : ' trampas encendidas') : 'sin trampas: las dos dicen lo mismo'));
+  txt(g, 130, 48, 'LADY CREAM · HONRADA', {'text-anchor':'middle', 'font-size':9.5, 'letter-spacing':1.4, fill:'var(--botella)'});
+  txt(g, 400, 48, 'LORD BRYBON', {'text-anchor':'middle', 'font-size':9.5, 'letter-spacing':1.4, fill:'var(--lacre)'});
+  el(g, 'path', {d:'M268 40 V300', stroke:'var(--linea)', 'stroke-width':1, 'stroke-dasharray':'3 4'});
+  const dice = act.map(t => TRAMPAS[t].dice).join(' ') || 'Lo mismo que ella.';
+  parrafo(g, 300, 66, '«' + dice + '»', 220, {'font-size':12, fill:'var(--lacre)', 'font-family':"'Playfair Display',serif", 'font-style':'italic'}, 14);
+  const izq = {x:44, y:80, w:210, h:180}, der = {x:314, y:80, w:210, h:180};
+  if(k === 'caldera' || (k === 'sacos' && !tr('ancho'))){
+    const pinta = k === 'caldera' ? lineas : barras;
+    pinta(g, T, izq, {color:'var(--botella)'});
+    const opts = {color:'var(--ladrillo)'};
+    if(tr('corte')){ const m = Math.min(...T.filas.map(r => r.f)); opts.desde = k === 'caldera' ? 12 : 15; opts.hasta = Math.max(...T.filas.map(r => r.f)) + 1; }
+    if(tr('meses')) opts.meses = [2, 3, 4, 5];
+    const caja = tr('estirar') ? {x:der.x + 60, y:der.y - 6, w:90, h:196} : der;
+    pinta(g, T, caja, opts);
+  }else if(k === 'sacos'){
+    pictograma(g, T, {x:izq.x - 24, y:izq.y, w:250, h:160}, {por:5});
+    pictograma(g, T, {x:der.x - 20, y:der.y, w:230, h:180}, {ancho:true});
+    parrafo(g, der.x + 20, der.y + 200, 'el doble de sacos: el saco, el doble de alto y de ancho', 200, {'font-size':9.5, fill:'var(--lacre)'}, 12);
+  }else if(k === 'comedor'){
+    sectores(g, T, 140, 180, 72, {minX:10, maxX:262}); sectores(g, T, 404, 180, 78, {perspectiva:tr('perspectiva'), minX:276, maxX:534});
+  }else{
+    barras(g, T, izq, {hasta:40, color:'var(--botella)'}); txt(g, izq.x + izq.w / 2, izq.y + izq.h + 26, 'de 40 obreros, cuántos marcaron cada queja', {'text-anchor':'middle', 'font-size':9, fill:'var(--tenue)'});
+    sectores(g, T, 404, 150, 62, {suma:true, total:40});
+  }
+  if(brybon.senala){ const bien = act.includes(brybon.senala);
+    txt(g, 400, 318, bien ? 'pillada: ' + TRAMPAS[brybon.senala].n : 'esa trampa no está encendida', {'text-anchor':'middle', 'font-size':10.5, fill:bien ? 'var(--laton)' : 'var(--lacre)', 'font-weight':700}); }
+  txt(g, 130, 318, 'si el tamaño no va con el número, miente', {'text-anchor':'middle', 'font-size':9.5});
+}
+function leeBrybon(){
+  const k = brybon.datos, D = DATOS[k], act = activas(), s = brybon.senala;
+  $('lecBrybon').innerHTML =
+    '<span class="def">Una gráfica miente cuando el tamaño no va con el número: un eje que no empieza en cero, un dibujo que crece a lo ancho y a lo alto, unos sectores que no son partes de un todo. Los números pueden ser verdad y el dibujo mentir.</span>'
+    + 'Los dos dibujan ' + D.n + ' con los mismos números. ' + (act.length ? 'Lord Brybon lleva encendid' + (act.length === 1 ? 'a ' : 'as ') + act.map(t => '<b>' + TRAMPAS[t].n + '</b>').join(', ') + '. ' : 'Sin trampas, las dos gráficas dicen lo mismo, y Brybon está incómodo. ')
+    + (s ? (act.includes(s) ? '<span class="trampa">Pillada:</span> ' + TRAMPAS[s].n + '. El antídoto es ' + TRAMPAS[s].anti + '. ' : 'Has señalado ' + TRAMPAS[s].n + ', pero esa no está encendida ahora. Mira otra vez. ') : 'Enciende las trampas una a una y compara con la de Lady Cream; luego señala cuál es. ')
+    + (act.includes('corte') && s !== 'corte' ? 'Mira dónde empieza el eje de la derecha. ' : '')
+    + (pilladas.size >= 6 ? '<span class="murmullo">Lord Brybon, con las dos cejas iguales por primera vez: «Está bien. Tú ya no te lo tragas. Las palabras las sigo poniendo yo».</span>' : '')
+    + '<span class="cuenta">' + Object.keys(TRAMPAS).map(t => (pilladas.has(t) ? '✓ ' : '· ') + TRAMPAS[t].n).join('   |   ') + '</span>';
+}
+function mandosBrybon(){
+  tira('bDatos', BRYBON_DATOS, () => brybon.datos, v => { brybon.datos = v; brybon.senala = null; Ruido.papel(); pintaBrybon2(); }, v => DATOS[v].n, 'n v');
+  tiraMulti('bTrampas', trampasDe(brybon.datos), t => brybon.trampas.has(t), t => { if(brybon.trampas.has(t)) brybon.trampas.delete(t); else brybon.trampas.add(t); brybon.senala = null; Ruido.papel(2); pintaBrybon2(); }, t => TRAMPAS[t].n);
+  tira('bSenala', Object.keys(TRAMPAS), () => brybon.senala, t => { brybon.senala = t; Ruido.despierta(); const bien = activas().includes(t);
+    if(bien){ pilladas.add(t); Ruido.bien(); cejaAsoma(); if(pilladas.size >= 6) huevo('ceja'); } else Ruido.mal(); pintaBrybon2(); guardaTurno(); }, t => TRAMPAS[t].n, 'n v');
+}
+function pintaBrybon2(){ mandosBrybon(); pintaBrybon(); leeBrybon(); revisa(); }
+
+const rosa = {mes:12, como:'area'};
+const CRIMEA = [['abr 1854', 1, 0, 5], ['may', 12, 0, 9], ['jun', 11, 0, 6], ['jul', 359, 0, 23], ['ago', 828, 1, 30], ['sep', 788, 81, 70], ['oct', 503, 132, 128], ['nov', 844, 287, 106], ['dic', 1725, 114, 131], ['ene 1855', 2761, 83, 324], ['feb', 2120, 42, 361], ['mar', 1205, 32, 172]];
+const CAUSAS = [['enfermedad', 'var(--pizarra)'], ['heridas', 'var(--lacre)'], ['otras', 'var(--hierro)']];
+function pintaRosa(){
+  const g = $('svgRosa'); g.innerHTML = '';
+  const cx = 200, cy = 200, R = 150, maxV = Math.max(...CRIMEA.map(m => Math.max(m[1], m[2], m[3]))), area = rosa.como === 'area';
+  const radio = v => R * (area ? Math.sqrt(v / maxV) : v / maxV);
+  playfair(g, 12, 24, 'Crimea, ' + CRIMEA[rosa.mes - 1][0] + ' · ' + (area ? 'el área dice los muertos' : 'el radio dice los muertos: exagera'));
+  for(let i = 0; i < 12; i++){
+    const a1 = -Math.PI / 2 + i * Math.PI / 6, a2 = a1 + Math.PI / 6, m = CRIMEA[i];
+    el(g, 'path', {d:'M' + cx + ' ' + cy + ' L' + (cx + R * Math.cos(a1)) + ' ' + (cy + R * Math.sin(a1)), stroke:'var(--linea)', 'stroke-width':.6});
+    const am = a1 + Math.PI / 12; txt(g, cx + (R + 16) * Math.cos(am), cy + (R + 16) * Math.sin(am) + 3, m[0].split(' ')[0], {'text-anchor':'middle', 'font-size':9, fill:i < rosa.mes ? 'var(--tinta)' : 'var(--tenue)'});
+    if(i >= rosa.mes) continue;
+    [[1, 0], [3, 2], [2, 1]].sort((p, q) => m[q[0]] - m[p[0]]).forEach(([j, c]) => { const r = radio(m[j]); if(r <= 0) return;
+      el(g, 'path', {d:'M' + cx + ' ' + cy + ' L' + (cx + r * Math.cos(a1)) + ' ' + (cy + r * Math.sin(a1)) + ' A' + r + ' ' + r + ' 0 0 1 ' + (cx + r * Math.cos(a2)) + ' ' + (cy + r * Math.sin(a2)) + ' Z', fill:CAUSAS[c][1], 'fill-opacity':.78, stroke:'var(--figura)', 'stroke-width':.8, class:i === rosa.mes - 1 ? 'nueva' : ''}); });
+  }
+  el(g, 'circle', {cx, cy, r:R, fill:'none', stroke:'var(--linea)', 'stroke-width':.8});
+  const lx = 386; txt(g, lx, 66, 'cada causa', {'font-size':9.5});
+  CAUSAS.forEach(([n, col], i) => { el(g, 'rect', {x:lx, y:78 + i * 20, width:12, height:12, fill:col}); txt(g, lx + 18, 88 + i * 20, n, {'font-size':10.5, fill:'var(--tinta)'}); });
+  const m = CRIMEA[rosa.mes - 1]; txt(g, lx, 160, m[0], {'font-size':13, fill:'var(--tinta)', 'font-weight':700, 'font-family':"'Playfair Display',serif"});
+  CAUSAS.forEach(([n, col], i) => txt(g, lx, 180 + i * 16, n + ': ' + cifra(m[i + 1], 0), {'font-size':10.5, fill:col}));
+  const tot = CRIMEA.slice(0, rosa.mes).reduce((s, q) => [s[0] + q[1], s[1] + q[2], s[2] + q[3]], [0, 0, 0]);
+  txt(g, lx, 240, 'hasta aquí', {'font-size':9.5}); CAUSAS.forEach(([n, col], i) => txt(g, lx, 256 + i * 16, n + ': ' + cifra(tot[i], 0), {'font-size':10.5, fill:col}));
+  txt(g, lx, 316, area ? 'radio ∝ √muertos' : 'radio ∝ muertos', {'font-size':10, fill:'var(--laton)'});
+  txt(g, 528, 392, 'la rosa de Nightingale, 1858', {'text-anchor':'end', 'font-size':9.5});
+}
+function leeRosa(){
+  const m = CRIMEA[rosa.mes - 1], area = rosa.como === 'area', tot = CRIMEA.reduce((s, q) => [s[0] + q[1], s[1] + q[2], s[2] + q[3]], [0, 0, 0]);
+  $('lecRosa').innerHTML =
+    '<span class="def">Cada mes es un sector de treinta grados, y lo que cambia no es el ángulo sino lo lejos que llega: el área del sector es proporcional a los muertos de ese mes. Como el área de un sector crece con el cuadrado del radio, el radio tiene que crecer con la raíz cuadrada.</span>'
+    + 'En ' + m[0] + ' murieron ' + cifra(m[1], 0) + ' de enfermedad, ' + cifra(m[2], 0) + ' de heridas y ' + cifra(m[3], 0) + ' de otras causas. En todo el año, ' + cifra(tot[0], 0) + ' de enfermedad contra ' + cifra(tot[1], 0) + ' de heridas: <b>siete de cada ocho no murieron en el campo de batalla, sino en el hospital</b>, de cólera, tifus y disentería. Eso era lo que un ministro tenía que entender de un vistazo, y lo entendió. '
+    + (area ? 'Dibujada por el área es honrada: el doble de muertos, el doble de superficie. ' : '<span class="trampa">Dibujada por el radio miente:</span> el doble de muertos se ve como el cuádruple de superficie, que es la misma trampa del pictograma de Brybon. Nightingale lo sabía, y por eso usó la raíz. ')
+    + 'Lo que se le discute a la rosa es otra cosa: el ojo compara mal áreas de sectores, y unas barras habrían dicho lo mismo con menos belleza y más precisión. Ella eligió la belleza porque tenía que convencer, no que medir.'
+    + '<span class="murmullo">Florencia, con el farol en alto: «Una gráfica honrada se hace para que el que manda entienda lo que no quiere entender. Lo demás es adorno».</span>'
+    + '<span class="cuenta">' + m[0] + ': ' + cifra(m[1], 0) + ' · ' + cifra(m[2], 0) + ' · ' + cifra(m[3], 0) + '   |   radio = R · ' + (area ? '√(muertos ÷ máximo)' : 'muertos ÷ máximo') + '</span>';
+}
+function mandosRosa(){
+  masMenos('oMes', () => rosa.mes, v => { rosa.mes = v; Ruido.papel(); pintaRosa2(); }, 1, 12, 1, v => CRIMEA[v - 1][0]);
+  tira('oComo', ['area', 'radio'], () => rosa.como, v => { rosa.como = v; Ruido.papel(2); pintaRosa2(); }, v => v === 'area' ? 'por el área · honrada' : 'por el radio · exagera', 'n v');
+}
+function pintaRosa2(){ mandosRosa(); pintaRosa(); leeRosa(); }
+
+const SALAS = {carpeta:'pCarpeta', tablero:'pTablero', lectura:'pLectura', reparto:'pReparto', brybon:'pBrybon'};
+const LEMAS = {
+  carpeta:['La carpeta', 'una tabla de frecuencias es un recuento ordenado'],
+  tablero:['El tablero de dibujo', 'cada número, un tamaño proporcional'],
+  lectura:['El interrogatorio', 'leer es deshacer el dibujo'],
+  reparto:['El reparto', 'la media reparte, la mediana ordena, la moda cuenta'],
+  brybon: ['La gráfica de Lord Brybon', 'si el tamaño no va con el número, miente']
+};
+const PINTA = {carpeta:pintaCarpeta2, tablero:pintaTablero2, lectura:pintaLectura2, reparto:pintaReparto2, brybon:pintaBrybon2};
+function muestraSala(cual){ for(const k in SALAS) $(SALAS[k]).hidden = (k !== cual); PINTA[cual](); }
+
+const ENCARGOS = [
+  {sala:'carpeta', pre(){ Object.assign(carpeta, {datos:'asuntos', N:40, contados:0}); },
+   t:'Lady Cream, en la carpeta hay <b>cuarenta reclamaciones</b> y el director abre la puerta en diez minutos. <b>Cuéntalas por asunto</b>: jornada, salario, frío y comida. Quiero la tabla.',
+   ok: () => carpeta.datos === 'asuntos' && carpeta.N === 40 && carpeta.contados >= 40,
+   bien:'Contadas, milord: <b>jornada 14, salario 12, frío 10, comida 4</b>. Suman cuarenta, que es lo primero que se comprueba. Cada papel es un individuo; lo que dice, la variable; cuántos dicen lo mismo, la frecuencia. Y eso, ordenado, es la <b>tabla de frecuencias</b>.',
+   mal(){ if(carpeta.datos !== 'asuntos') return 'La carpeta de las reclamaciones, milord, no ésa.'; if(carpeta.N !== 40) return 'Eran cuarenta papeles, milord: poned la muestra en cuarenta.'; return 'Faltan papeles por contar, milord. Pulsad «Contar otra vez» y dejad que caigan todos.'; }},
+  {sala:'carpeta', pre(){ Object.assign(carpeta, {datos:'asuntos', N:40, contados:40}); },
+   t:'Una duda de vocabulario, que Brybon me corrige. Cada papel de la carpeta, ¿es <b>la población</b>, <b>la muestra</b> o <b>un individuo</b>?',
+   ops:[
+     {t:'La población: son todos los papeles que hay.', ok:false, r:'La población sería todo lo que se podría haber contado, milord: todas las reclamaciones de la fábrica, las de hoy y las que están por venir. Un papel es <b>un individuo</b>; los cuarenta de la carpeta, la muestra.'},
+     {t:'Un individuo: cada papel es uno de los que se cuentan.', ok:true, r:'Eso es, milord. Cada papel es <b>un individuo</b>: uno de los que se cuentan. Los cuarenta juntos son la <b>muestra</b>, lo que tenemos en la carpeta. Y la <b>población</b> es todo lo que se podría haber contado: todas las reclamaciones de la fábrica, incluidas las que nadie escribió.'},
+     {t:'La muestra: cada papel es una muestra de lo que pasa.', ok:false, r:'En el lenguaje de la calle sí, milord, pero aquí la muestra es el conjunto: los cuarenta papeles. Cada papel, solo, es <b>un individuo</b>.'}
+   ]},
+  {sala:'carpeta', pre(){ Object.assign(carpeta, {datos:'asuntos', N:40, contados:40}); },
+   t:'El director no entiende de cuarenta, entiende de tantos por ciento. <b>Pásalas a porcentaje.</b> ¿Cuánto tienen que sumar los cuatro?',
+   ops:[
+     {t:'Cuarenta, como los papeles.', ok:false, r:'Cuarenta suman las absolutas, milord, los papeles. Los porcentajes dicen qué parte del total es cada asunto, y todas las partes juntas son el total entero: <b>cien</b>. Jornada 35, salario 30, frío 25, comida 10.'},
+     {t:'Cien: son partes del total, y el total entero es el cien por cien.', ok:true, r:'<b>Cien</b>, milord. El porcentaje es la frecuencia relativa por cien: jornada 14 de 40 es 0,35, o sea 35 %; salario 30 %; frío 25 %; comida 10 %. Las absolutas suman cuarenta, las relativas uno y los porcentajes cien. Si no suman eso, algo está mal contado.'},
+     {t:'Depende de cuántos asuntos haya.', ok:false, r:'No depende, milord: sean cuatro asuntos o cuarenta, las partes juntas son el todo, y el todo es el <b>cien por cien</b>. Aquí: 35 + 30 + 25 + 10.'}
+   ]},
+  {sala:'tablero', pre(){ Object.assign(tablero, {datos:'hijos', graf:'sectores'}); },
+   t:'Al tablero. <b>Dibuja los asuntos de las reclamaciones en barras.</b> ¿Qué altura tiene la del frío?',
+   ok: () => tablero.datos === 'asuntos' && tablero.graf === 'barras',
+   bien:'<b>Diez</b>, milord: la altura de cada barra es su frecuencia, y el frío tiene diez. La de la jornada llega a catorce, la más alta; la de la comida se queda en cuatro. Las barras son para <b>comparar</b>: de un vistazo se ve cuál gana y por cuánto. Y el eje empieza en cero, que luego importará.',
+   mal(){ if(tablero.datos !== 'asuntos') return 'Las reclamaciones, milord: los asuntos de la carpeta.'; return 'Eso son ' + GRAFICAS[tablero.graf] + ', milord. Pedía barras.'; }},
+  {sala:'tablero', pre(){ Object.assign(tablero, {datos:'asuntos', graf:'barras'}); },
+   t:'Ahora <b>en sectores</b>, que al director le gustan las tartas. ¿Cuántos grados le tocan al frío?',
+   ok: () => tablero.datos === 'asuntos' && tablero.graf === 'sectores',
+   bien:'<b>Noventa grados</b>, milord. La vuelta entera son 360 y es el total, cuarenta. El frío es 10 de 40, un cuarto; un cuarto de 360 son 90. Jornada, 0,35 × 360 = 126; salario, 108; comida, 36. Suman 360, que es la comprobación. Los sectores son para <b>partes de un todo</b>, y solo si las partes suman el todo.',
+   mal(){ if(tablero.datos !== 'asuntos') return 'Las reclamaciones, milord.'; return 'Eso son ' + GRAFICAS[tablero.graf] + ', milord. Pedía sectores.'; }},
+  {sala:'tablero', pre(){ Object.assign(tablero, {datos:'caldera', graf:'sectores'}); },
+   t:'Brybon quiere enseñar <b>los accidentes de la caldera mes a mes</b> y no sabe cómo. ¿Barras, sectores o líneas?',
+   ops:[
+     {t:'Sectores: se ve qué mes se lleva más tarta.', ok:false, r:'Los meses no son partes de un todo, milord: son momentos. Sumar los accidentes de seis meses y repartir la tarta no cuenta nada, y además esconde si sube o baja. Para el tiempo, <b>líneas</b>.'},
+     {t:'Líneas: es tiempo, y se ve si sube o baja.', ok:true, r:'<b>Líneas</b>, milord. Los meses van abajo en orden, cada punto es un mes, y la línea los une para que se vea el camino: enero 14, febrero 15, marzo 13, abril 16, mayo 15, junio 17. Con barras también valdría; con sectores, nunca, porque los meses no son partes de nada.'},
+     {t:'Da igual: los números son los mismos.', ok:false, r:'Los números son los mismos y el dibujo no, milord, y eso es todo lo que hay que aprender en esta fábrica. Para lo que cambia con el tiempo, <b>líneas</b>: se ve si sube o baja. Los sectores lo esconderían.'}
+   ]},
+  {sala:'lectura', pre(){ Object.assign(lectura, {graf:'caldera', nums:'sin', preg:1, resp:'', ok:null, regla:null, sector:null}); $('lResp').value = ''; },
+   t:'Aquí tienes la gráfica de la caldera, sin los números, como la verá el director. <b>¿Cuántos accidentes más hubo en el mes de más que en el de menos?</b> Léelo con la regla y responde en la sala.',
+   ok: () => lectura.graf === 'caldera' && lectura.preg === 1 && lectura.ok === true,
+   bien:'<b>Cuatro</b>, milord. El punto más alto es junio y la regla marca 17; el más bajo es marzo, 13. Diecisiete menos trece, cuatro. Se lee <b>contra el eje</b>, con la regla, no a ojo: a ojo se dice «unos pocos», y el director no paga por «unos pocos».',
+   mal(){ if(lectura.graf !== 'caldera') return 'La gráfica de la caldera, milord.'; if(lectura.preg !== 1) return 'La pregunta era la de cuántos más, milord: elegidla en la sala.'; if(lectura.ok === null) return 'Escribid la respuesta en la sala y pulsad «Responder», milord.'; return 'Eso no es lo que marca la regla, milord. Poned la regla en el punto más alto y en el más bajo, y restad.'; }},
+  {sala:'lectura', pre(){ Object.assign(lectura, {graf:'comedor', nums:'sin', preg:0, resp:'', ok:null, regla:null, sector:null}); $('lResp').value = ''; },
+   t:'Los sectores del comedor. El té es un cuarto de la tarta, y sé que contestaron <b>sesenta</b> obreros. <b>¿Cuántos pidieron té?</b> Responde en la sala.',
+   ok: () => lectura.graf === 'comedor' && lectura.preg === 0 && lectura.ok === true,
+   bien:'<b>Quince</b>, milord. El sector del té son 90 grados, un cuarto de la vuelta; un cuarto de sesenta, quince. Fijaos en lo que ha hecho falta: el sector dice <b>la parte</b>, y para pasar de la parte al número hace falta <b>el total</b>, que os lo he tenido que decir yo. Sin él, la tarta no dice cuántos.',
+   mal(){ if(lectura.graf !== 'comedor') return 'La gráfica del comedor, milord.'; if(lectura.preg !== 0) return 'La pregunta era la del té, milord.'; if(lectura.ok === null) return 'Escribid la respuesta en la sala y pulsad «Responder», milord.'; return 'Un cuarto de sesenta, milord. Tocad el sector del té: el transportador marca noventa grados, un cuarto de la vuelta.'; }},
+  {sala:'lectura', pre(){ Object.assign(lectura, {graf:'comedor', nums:'sin', preg:2, resp:'', ok:null, regla:null, sector:null}); $('lResp').value = ''; },
+   t:'Brybon dice que con la tarta del comedor, sin ningún número, se sabe todo. ¿Qué es lo que <b>no</b> se puede saber?',
+   ops:[
+     {t:'Qué bebida es la más pedida.', ok:false, r:'Eso sí se ve, milord: el sector mayor es el del café. Lo que la tarta no dice es <b>cuántos son en total</b>: un sector de 144 grados es el 40 % de no se sabe cuánto. Sin el total escrito, no hay número.'},
+     {t:'Cuántos obreros son en total.', ok:true, r:'Eso es, milord. Los sectores dicen <b>partes</b>: el café es el 40 %, el té el 25 %. Pero el 40 % de cuántos, no lo dicen. Con el total escrito, cada parte se convierte en un número; sin él, la tarta es bonita y muda. Por eso una tarta honrada lleva el total al pie.'},
+     {t:'Qué parte del total es el té.', ok:false, r:'Eso es justo lo que la tarta sí dice, milord: el té es un cuarto, 90 grados, 25 %. Lo que no dice es <b>cuántos</b>: sin el total, un cuarto de nada.'}
+   ]},
+  {sala:'reparto', pre(){ Object.assign(reparto, {datos:'jornales', vista:'monedas', raro:false}); },
+   t:'Los jornales de la semana: 12, 12, 13, 14 y 19 chelines. Haz los tres gestos en la sala y dime <b>media, mediana y moda</b>.',
+   ops:[
+     {t:'Media 14, mediana 13, moda 12.', ok:true, r:'Eso es, milord. <b>Media 14</b>: suman 70, entre cinco, lo que tocaría a cada uno si se repartiera. <b>Mediana 13</b>: en fila, 12, 12, 13, 14, 19, el del medio. <b>Moda 12</b>: el que más se repite, dos veces. Tres resúmenes, tres números, y ninguno miente: cada uno cuenta una cosa distinta.'},
+     {t:'Media 13, mediana 14, moda 12.', ok:false, r:'Al revés las dos primeras, milord. La media reparte: 70 entre 5, <b>14</b>. La mediana ordena: 12, 12, 13, 14, 19, y el del medio es <b>13</b>. La moda, 12, esa sí.'},
+     {t:'Media 14, mediana 14, moda 19.', ok:false, r:'La media sí es 14, milord. Pero la mediana es el del medio en fila, 12, 12, <b>13</b>, 14, 19; y la moda es el más repetido, <b>12</b>, no el mayor. Diecinueve solo sale una vez.'}
+   ]},
+  {sala:'reparto', pre(){ Object.assign(reparto, {datos:'jornales', vista:'repartir', raro:false}); },
+   t:'Brybon dice que si metemos <b>mi sueldo</b> en la lista, doscientos chelines, el jornal medio de la fábrica queda muy bien. <b>Mételo</b> y dime qué cambia.',
+   ok: () => reparto.datos === 'jornales' && reparto.raro,
+   bien:'Cambia la media, milord, y mucho: de 14 a <b>45</b> chelines. La mediana, de 13 a <b>13,5</b>: casi nada. La media reparte también vuestros doscientos entre los seis, y por eso sube; la mediana solo mira el orden, y doscientos está en el mismo sitio de la fila que veinte. Brybon tiene razón en que queda muy bien. Por eso es trampa.',
+   mal(){ if(reparto.datos !== 'jornales') return 'Los jornales, milord.'; return 'Falta meter vuestro sueldo, milord: el botón de «Meter a Lord Lorza».'; }},
+  {sala:'reparto', pre(){ Object.assign(reparto, {datos:'jornales', vista:'fila', raro:true}); },
+   t:'Para decir en el acta «el jornal típico de la fábrica», con mi sueldo en la lista, ¿cuál de las tres pongo?',
+   ops:[
+     {t:'La media, que es la más conocida.', ok:false, r:'La media con vuestro sueldo dentro dice 45 chelines, milord, y nadie en la nave cobra eso ni de lejos. Cuando hay un valor raro, la media se lo lleva por delante. Para lo típico, <b>la mediana</b>: 13,5, que es lo que cobra uno del medio.'},
+     {t:'La mediana, que no se deja arrastrar por un valor raro.', ok:true, r:'<b>La mediana</b>, milord: 13,5 chelines, lo que cobra uno del medio, y vuestro sueldo no la mueve. La moda, 12, también valdría: es lo que más se cobra. La media, con vos dentro, dice 45, y eso no es el jornal de nadie. Cada resumen pierde algo; hay que elegir cuál.'},
+     {t:'El rango, que va de 12 a 200.', ok:false, r:'El rango dice cuánto se separan el menor y el mayor, milord, no lo típico: «de 12 a 200» describe la distancia entre un obrero y vos, que es mucha. Para el jornal típico, <b>la mediana</b>, 13,5.'}
+   ]},
+  {sala:'brybon', pre(){ Object.assign(brybon, {datos:'caldera', senala:null}); brybon.trampas = new Set(['corte']); },
+   t:'Brybon ha dibujado los accidentes de la caldera y dice que <b>«se han disparado»</b>. A mí me lo parece. Mira su gráfica al lado de la de Lady Cream y <b>señala la trampa</b>.',
+   ok: () => brybon.datos === 'caldera' && brybon.trampas.has('corte') && brybon.senala === 'corte',
+   bien:'<b>El eje cortado</b>, milord. El de Lady Cream empieza en cero y la línea va casi plana: de 13 a 17 en seis meses. El de Brybon empieza en doce, y los mismos seis números parecen una escalada. Los números son verdad; el dibujo miente con el tamaño. El antídoto: <b>mirar dónde empieza el eje</b>, siempre.',
+   mal(){ if(brybon.datos !== 'caldera') return 'La caldera, milord.'; if(!brybon.trampas.has('corte')) return 'Brybon tenía encendida la del eje, milord: volved a encenderla.'; if(!brybon.senala) return 'Señalad la trampa en la sala, milord: ¿cuál es?'; return 'Ésa no es, milord. Mirad el eje de la derecha: ¿dónde empieza?'; }},
+  {sala:'brybon', pre(){ Object.assign(brybon, {datos:'sacos', senala:null}); brybon.trampas = new Set(['ancho']); },
+   t:'Los sacos de carbón: la segunda semana entraron <b>el doble</b> que la primera, y Brybon dibuja el saco el doble de alto y el doble de ancho. ¿Cuántas veces más grande se ve?',
+   ops:[
+     {t:'El doble, que es lo que dicen los números.', ok:false, r:'Los números dicen el doble, milord, pero el dibujo no: el doble de alto por el doble de ancho es <b>cuatro veces</b> la superficie, y el ojo mira la superficie. Contad los cuadraditos: dos de lado ocupan cuatro; cuatro de lado, dieciséis.'},
+     {t:'Cuatro veces: el doble de alto por el doble de ancho.', ok:true, r:'<b>Cuatro veces</b>, milord. El lado cuenta dos veces, a lo alto y a lo ancho: dos por dos, cuatro. Por eso un pictograma honrado no agranda el dibujo: pone <b>más dibujos iguales</b>. Ocho sacos en vez de cuatro, y el ojo cuenta bien.'},
+     {t:'Ocho veces: alto, ancho y fondo.', ok:false, r:'El fondo se lo ha inventado el ojo, milord: en el papel no hay fondo, solo alto y ancho. Dos por dos, <b>cuatro veces</b>. Y ya son demasiadas.'}
+   ]},
+  {sala:'brybon', pre(){ Object.assign(brybon, {datos:'quejas', senala:null}); brybon.trampas = new Set(['suma']); },
+   t:'La última. Brybon preguntó a cuarenta obreros de qué se quejaban y dibujó una tarta que <b>suma ciento treinta por ciento</b>. ¿Qué ha pasado?',
+   ops:[
+     {t:'Ha contado mal: se ha pasado en treinta.', ok:false, r:'Ha contado bien, milord: 20 de jornada, 16 de salario, 10 de frío, 6 de comida, y son 52 marcas de 40 obreros. Lo que pasa es que <b>cada obrero podía marcar varias</b>: las quejas no son partes de un todo, y en sectores no van. En barras, sí: cuántos marcaron cada una.'},
+     {t:'Cada obrero marcó varias quejas: no son partes de un todo, y no van en sectores.', ok:true, r:'Eso es, milord. Un obrero que se queja del frío y de la jornada está en dos sectores a la vez, y la tarta se pasa de vuelta. Los sectores solo valen cuando cada individuo cae en <b>una parte y solo una</b>. Para esto, barras: veinte de cuarenta se quejan de la jornada. Y con esto, milord, ya no os tragáis ninguna.'},
+     {t:'Es normal: los porcentajes pueden sumar lo que quieran.', ok:false, r:'Los porcentajes de <b>partes de un todo</b> suman cien siempre, milord; es la comprobación de la carpeta. Si suman 130 es que no eran partes: cada obrero marcó varias quejas, y eso en sectores no se dibuja. Barras.'}
+   ]}
+];
+
+const RANGOS = [
+  {n:'Peticionario',           s:'el que trae el papel',        hasta:3,  fig:'sobre'},
+  {n:'Vocal',                  s:'con voz y con voto',          hasta:6,  fig:'mano'},
+  {n:'Secretario',             s:'lleva el acta',               hasta:9,  fig:'pluma'},
+  {n:'Tesorero',               s:'lleva la llave',              hasta:12, fig:'llave'},
+  {n:'Vicepresidente',         s:'con la banda',                hasta:15, fig:'banda'},
+  {n:'Presidente del comité',  s:'las quince reclamaciones',    hasta:99, fig:'mazo', oro:true}
+];
+const TELEGRAMAS = {
+  Vocal:'ASCENDIDO A VOCAL STOP CON VOZ Y CON VOTO STOP ENHORABUENA Y DEMÁS PALABRAS STOP BRYBON',
+  Secretario:'SECRETARIO STOP EL ACTA ES SUYA STOP ESCRIBA POCO Y TACHE MENOS STOP BRYBON',
+  Tesorero:'TESORERO STOP LA LLAVE ES SUYA STOP NO LA PIERDA STOP YO PERDÍ DOS STOP BRYBON',
+  Vicepresidente:'VICEPRESIDENTE STOP LA BANDA ES SUYA STOP QUEDA UN CARGO STOP NO ES EL MÍO STOP BRYBON',
+  'Presidente del comité':'PRESIDENTE STOP LORZA CEDE EL MAZO STOP TODAS ATENDIDAS STOP SIN PALABRAS STOP BRYBON'
+};
+function rangoDe(n){ return RANGOS.find(r => n < r.hasta) || RANGOS[RANGOS.length - 1]; }
+function pintaRango(){
+  const n = hechos.size, r = rangoDe(n), i = RANGOS.indexOf(r);
+  const desde = i ? RANGOS[i - 1].hasta : 0, tramo = Math.min(r.hasta, ENCARGOS.length) - desde;
+  $('rangoNom').textContent = r.n;
+  $('rangoSig').textContent = r.s;
+  $('rangoCuenta').textContent = n >= ENCARGOS.length ? 'comité cerrado · ' + n + ' de ' + ENCARGOS.length
+    : (n - desde) + ' de ' + tramo + ' para ' + (RANGOS[i + 1] ? RANGOS[i + 1].n.toLowerCase() : '');
+  $('rangoBarra').style.width = (n >= ENCARGOS.length ? 100 : Math.round((n - desde) / tramo * 100)) + '%';
+  $('atendidasT').textContent = n;
+  const e = $('rangoEscarapela'); e.innerHTML = '<svg viewBox="0 0 40 46" aria-hidden="true"></svg>';
+  escarapela(e.firstChild, 0, 0, 40, r.fig, r.oro ? {oro:true, borde:'var(--laton)'} : {});
+}
+
+let enc = 0, elegida = null;
+const hechos = new Set();
+const dichos = {};
+const huevos = new Set();
+const HUEVOS = ['abanico', 'ceja', 'buey', 'lorza', 'rosa', 'sueldo', 'mazo', 'acta'];
+const HUEVO_DICE = {
+  abanico:'el abanico de Lady Cream', ceja:'las dos cejas de Brybon', buey:'el buey de Galton', lorza:'la lorza',
+  rosa:'la rosa de Nightingale', sueldo:'el sueldo de Lord Lorza', mazo:'el mazo cedido', acta:'el acta bajo la puerta'
+};
+let ultimoRango = 'Peticionario';
+
+const GUARDADO = 'comite.turno.v1';
+const CADUCA = 4*60*60*1000;
+let t0 = Date.now();
+function guardaTurno(){
+  try{
+    localStorage.setItem(GUARDADO, JSON.stringify({
+      v:1, ts:Date.now(), t0, enc, hechos:[...hechos], huevos:[...huevos], pilladas:[...pilladas], nombre:$('selloNombre').value || '',
+      taller:{ac:taller.ac, racha:taller.racha, mejor:taller.mejor}, aj:AJ, propia:DATOS.propia.texto || ''
+    }));
+  }catch(e){}
+}
+function leeTurno(){
+  try{
+    const d = JSON.parse(localStorage.getItem(GUARDADO) || 'null');
+    if(!d || d.v !== 1 || !Array.isArray(d.hechos)) return null;
+    if(!(d.enc >= 0 && d.enc < ENCARGOS.length)) return null;
+    if(Date.now() - d.ts > CADUCA){ borraTurno(); return null; }
+    return d;
+  }catch(e){ return null; }
+}
+function borraTurno(){ try{ localStorage.removeItem(GUARDADO); }catch(e){} }
+const dicho = x => typeof x === 'function' ? x() : x;
+
+function pintaOpciones(){
+  const e = ENCARGOS[enc], caja = $('ops');
+  caja.innerHTML = ''; caja.hidden = !e.ops;
+  if(!e.ops) return;
+  e.ops.forEach((o, i) => {
+    const b = document.createElement('button');
+    b.className = 'op'; b.textContent = o.t;
+    b.setAttribute('aria-pressed', String(elegida === i));
+    b.addEventListener('click', () => { if(hechos.has(enc)) return; elegida = i; pintaOpciones(); });
+    caja.appendChild(b);
+  });
+}
+const CIERRE = '<b>Comité cerrado: quince reclamaciones atendidas, y el mazo es vuestro.</b> Todo lo de esta fábrica era contar y dibujar. Se cuenta en una tabla: cada individuo un papel, cada valor una fila, y las frecuencias que suman el total. '
+  + 'Se dibuja con una regla sola: cada número, un tamaño proporcional; barras para comparar, sectores para partes de un todo, líneas para el tiempo. Se lee al revés, contra el eje, y lo que no está escrito no se sabe. '
+  + 'Se resume con tres números que pierden cosas distintas: la media reparte, la mediana ordena, la moda cuenta. Y se desconfía: si el tamaño no va con el número, la gráfica miente, aunque los números sean verdad. '
+  + 'El acta ha pasado por debajo de la puerta. La puerta no se ha abierto. Pero se ha oído que alguien la recogía.';
+function pintaEncargo(){
+  const e = ENCARGOS[enc], ultimo = enc === ENCARGOS.length - 1, hecho = hechos.has(enc);
+  if(e.pre) e.pre();
+  muestraSala(e.sala);
+  elegida = hecho && e.ops ? e.ops.findIndex(o => o.ok) : null;
+  pintaOpciones();
+  $('encTxt').innerHTML = (ultimo && hecho) ? CIERRE : e.t;
+  $('cual').textContent = (ultimo && hecho) ? 'comité cerrado' : 'encargo ' + (enc + 1) + ' de ' + ENCARGOS.length;
+  $('atras').disabled = enc === 0;
+  $('comprobar').textContent = !hecho ? 'Comprobar' : (ultimo ? 'Empezar de nuevo' : 'Siguiente encargo →');
+  const inf = $('informe');
+  inf.hidden = !hecho;
+  if(hecho){ inf.className = 'panel informe encargo'; $('infTxt').innerHTML = dichos[enc] || (e.ops ? dicho(e.ops.find(o => o.ok).r) : dicho(e.bien)); }
+  pintaIndice(); pintaRango();
+}
+function revisa(){
+  const e = ENCARGOS[enc];
+  if(!e || e.ops || !hechos.has(enc)) return;
+  $('informe').hidden = false;
+}
+
+const dentroDe = svg => svg.replace(/^[\s\S]*?<svg[^>]*>/, '').replace(/<\/svg>\s*$/, '');
+const MONOCULO = '<circle cx="28.4" cy="16.6" r="4.6" fill="#DDEAF2" opacity=".55" stroke="#E0B24A" stroke-width="1.5"/>';
+const CORDON = '<path d="M32.6 18.2 Q35.4 24 32 29.4" fill="none" stroke="#2A2038" stroke-width="1.1"/>';
+const LORZA_BIEN = '<svg viewBox="0 -10 46 58" aria-hidden="true">' + dentroDe(CARA_LORZA)
+  + '<circle cx="28.4" cy="16.6" r="5.8" fill="none" stroke="#E0B24A" stroke-width="1.2" opacity=".8"/>'
+  + '<path d="M38 -2 l1.4 -4 l1.4 4 l4 1.4 l-4 1.4 l-1.4 4 l-1.4 -4 l-4 -1.4 Z" fill="#E0B24A"/><path d="M6 6 l1 -3 l1 3 l3 1 l-3 1 l-1 3 l-1 -3 l-3 -1 Z" fill="#E0B24A"/><path d="M35 8 l.8 -2.4 l.8 2.4 l2.4 .8 l-2.4 .8 l-.8 2.4 l-.8 -2.4 l-2.4 -.8 Z" fill="#E0B24A"/></svg>';
+const LORZA_MAL = '<svg viewBox="0 -10 46 58" aria-hidden="true">' + dentroDe(CARA_LORZA).replace(MONOCULO, '').replace(CORDON, '<path d="M32.6 18.2 Q37 24 34.2 31.6" fill="none" stroke="#2A2038" stroke-width="1.1"/>')
+  + '<circle cx="34.2" cy="35.6" r="4.6" fill="#DDEAF2" opacity=".55" stroke="#E0B24A" stroke-width="1.5"/></svg>';
+const LORZA_MAZO = '<svg viewBox="0 -12 46 60" aria-hidden="true">' + dentroDe(CARA_LORZA)
+  + '<path d="M36 34 Q42 26 40 12" fill="none" stroke="#2A2038" stroke-width="5" stroke-linecap="round"/><path d="M36 34 Q42 26 40 12" fill="none" stroke="#3A3350" stroke-width="3.2" stroke-linecap="round"/>'
+  + '<g transform="translate(40 8) rotate(-30)"><path d="M0 0 L0 -12" stroke="#2A2038" stroke-width="2.6" stroke-linecap="round"/><rect x="-7" y="-19" width="14" height="8" rx="2" fill="#7E3A4A" stroke="#2A2038" stroke-width="1.2"/></g></svg>';
+const CREAM_ABANICO = '<svg viewBox="0 0 46 52" aria-hidden="true">' + dentroDe(CARA_CREAM)
+  + '<g transform="translate(36 36)"><path d="M0 0 L-11 -8 A13.6 13.6 0 0 1 11 -8 Z" fill="#E8A9B4" stroke="#2A2038" stroke-width="1"/><path d="M0 0 L-8 -11 M0 0 L-3 -13 M0 0 L3 -13 M0 0 L8 -11" stroke="#2A2038" stroke-width=".7" opacity=".7"/></g></svg>';
+const CEJA_IZQ = '<path d="M15.4 13.6 Q18.4 12 21.2 13.8" stroke="#2A2038" stroke-width="1.7" fill="none" stroke-linecap="round"/>';
+function BRYBON_CEJA(k){
+  const t = Math.min(k, 6) / 6, y1 = 13.6 + 1 * t, y2 = 12 + 1.8 * t, y3 = 13.8 + 1.6 * t;
+  return '<svg viewBox="0 0 46 52" aria-hidden="true">' + dentroDe(CARA_BRYBON).replace(CEJA_IZQ, '<path d="M15.4 ' + y1.toFixed(1) + ' Q18.4 ' + y2.toFixed(1) + ' 21.2 ' + y3.toFixed(1) + '" stroke="#2A2038" stroke-width="1.7" fill="none" stroke-linecap="round"/>')
+    + (k >= 6 ? '<path d="M19 28.8 Q23 31.6 27 28.8" stroke="#2A2038" stroke-width="1.2" fill="none" stroke-linecap="round"/>' : '') + '</svg>';
+}
+$('asomoLado').innerHTML = CREAM_ABANICO;
+$('asomoEntero').innerHTML = LORZA_MAZO;
+
+const asomoReloj = {};
+function asoma(id, clase, contenido, ms){
+  const a = $(id); clearTimeout(asomoReloj[id]);
+  if(contenido) a.innerHTML = contenido;
+  const base = a.className.replace(/\s*\b(mira|falla)\b/g, '');
+  a.className = base; void a.offsetWidth;
+  a.className = base + ' ' + clase;
+  asomoReloj[id] = setTimeout(() => { a.className = base; }, ms);
+}
+function asomate(bien){ asoma('asomoArriba', bien ? 'mira' : 'mira falla', bien ? LORZA_BIEN : LORZA_MAL, 2400); }
+function asciende(){ asoma('asomoEntero', 'mira', LORZA_MAZO, 2800); }
+function sella(){
+  const inf = $('informe');
+  for(let i = 0; i < 2; i++){ const s = document.createElement('i'); s.className = 'lacreSello'; s.style.left = (56 + Math.random() * 30) + 'px'; s.style.top = (18 + Math.random() * 18) + 'px'; s.style.animationDelay = (i * .2) + 's'; inf.appendChild(s); setTimeout(() => s.remove(), 1200); }
+  const c = $('caraCream'); c.classList.add('brilla'); setTimeout(() => c.classList.remove('brilla'), 1000);
+}
+function papelitos(){
+  const p = $('pEncargo'); $('atendidas').classList.add('brilla'); setTimeout(() => $('atendidas').classList.remove('brilla'), 2000);
+  for(let i = 0; i < 36; i++){
+    const g = document.createElement('i'); g.className = 'papelito';
+    g.style.left = (Math.random() * 100) + '%'; g.style.top = '0'; g.style.animationDuration = (1.8 + Math.random() * 1.6) + 's'; g.style.animationDelay = (Math.random() * 1.1) + 's';
+    p.appendChild(g); setTimeout(() => g.remove(), 4200);
+  }
+  Ruido.mazo();
+}
+const ABANICO_DICE = [
+  'Se ha parado la cuenta, ¿verdad? Yo también me paro. Es el calor de la nave.',
+  'Cuarenta papeles. Los he contado tres veces. Salen cuarenta las tres.',
+  'Lord Brybon dice que las gráficas son opinión. Las tablas no, le digo yo.',
+  'Si no sabe por dónde seguir, cuente. Contar siempre se sabe.',
+  'Estas perlas son de verdad. Las manchas también.'
+];
+let quieto = null, ladoReloj = null;
+function ladoFuera(){ clearTimeout(ladoReloj); $('asomoLado').classList.remove('mira'); $('globoLado').classList.remove('mira'); }
+function abanicoAsoma(){
+  if(taller.enTaller || $('pEncargo').hidden || !$('tourCapa').hidden || !$('mAjustes').hidden || !$('mSello').hidden || document.hidden) return;
+  $('asomoLado').innerHTML = CREAM_ABANICO;
+  $('globoLado').textContent = ABANICO_DICE[Math.floor(Math.random() * ABANICO_DICE.length)];
+  $('asomoLado').classList.add('mira'); $('globoLado').classList.add('mira');
+  Ruido.abanico(); huevo('abanico');
+  ladoReloj = setTimeout(ladoFuera, 6000);
+}
+function armaQuieto(){ clearTimeout(quieto); ladoFuera(); quieto = setTimeout(abanicoAsoma, 60000); }
+['pointerdown', 'keydown', 'scroll'].forEach(ev => addEventListener(ev, armaQuieto, {passive:true}));
+const CEJA_DICE = ['Eso no cuenta.', 'Casualidad.', 'Vale, ésa sí.', 'Ya van cuatro.', 'Me quedan pocas.', 'Está bien. Tú ya no te lo tragas.'];
+function cejaAsoma(){
+  clearTimeout(quieto); clearTimeout(ladoReloj);
+  $('asomoLado').innerHTML = BRYBON_CEJA(pilladas.size);
+  $('globoLado').textContent = CEJA_DICE[Math.min(pilladas.size, 6) - 1] || CEJA_DICE[0];
+  $('asomoLado').classList.add('mira'); $('globoLado').classList.add('mira');
+  $('caraBrybon').innerHTML = BRYBON_CEJA(pilladas.size);
+  ladoReloj = setTimeout(ladoFuera, 4200);
+}
+$('caraLorza').addEventListener('click', () => {
+  const c = $('caraLorza'); Ruido.despierta(); Ruido.papel(2); c.classList.remove('ajusta'); void c.offsetWidth; c.classList.add('ajusta');
+  if(!huevos.has('lorza')){ $('encTxt').innerHTML += '<span class="murmullo" style="display:block;margin-top:6px;font-family:\'Playfair Display\',serif;font-style:italic;color:var(--tenue)">Lord Lorza se estira el chaleco: «Es la chistera, que pesa. Y el título, que también».</span>'; }
+  huevo('lorza');
+});
+const BRYBON_DICE = ['Yo habría puesto «se han disparado».', 'Con dos adjetivos más quedaba mejor.', 'Las cuentas son suyas. Las palabras, mías.', 'Un eje que empieza en cero es un eje sin ambición.', 'STOP.'];
+$('caraBrybon').addEventListener('click', () => {
+  const c = $('caraBrybon'); Ruido.despierta(); Ruido.papel(1); c.classList.remove('tiembla'); void c.offsetWidth; c.classList.add('tiembla');
+  $('infTxt').innerHTML += '<span class="murmullo" style="display:block;margin-top:6px;font-family:\'Playfair Display\',serif;font-style:italic;color:var(--tenue)">Lord Brybon, desde el borde: «' + elige(BRYBON_DICE) + '»</span>';
+});
+{ let toques = 0, reloj = null;
+  $('franja').addEventListener('click', () => { Ruido.despierta(); Ruido.papel(1); toques++; clearTimeout(reloj); reloj = setTimeout(() => { toques = 0; }, 1800);
+    if(toques >= 3){ toques = 0; abreRosa('la escarapela, tocada tres veces'); } }); }
+function huevo(nombre){
+  if(!HUEVO_DICE[nombre] || huevos.has(nombre)) return;
+  huevos.add(nombre); guardaTurno();
+}
+
+$('comprobar').addEventListener('click', () => {
+  const e = ENCARGOS[enc], inf = $('informe');
+  Ruido.despierta();
+  if(hechos.has(enc)){
+    if(enc < ENCARGOS.length - 1){ enc++; pintaEncargo(); }
+    else { hechos.clear(); enc = 0; ultimoRango = 'Peticionario'; pintaEncargo(); }
+    guardaTurno(); return;
+  }
+  let bien, dice;
+  if(e.ops){
+    if(elegida === null){ bien = false; dice = 'Elegid una, milord. «Ninguna» no se puede escribir en el acta.'; }
+    else { const o = e.ops[elegida]; bien = o.ok; dice = dicho(o.r);
+           if(!bien){ document.querySelectorAll('.op')[elegida].classList.add('fallada'); } }
+  }else{ bien = e.ok(); dice = bien ? dicho(e.bien) : dicho(e.mal); }
+  inf.hidden = false;
+  inf.className = 'panel informe encargo' + (bien ? '' : ' mal');
+  $('infTxt').innerHTML = dice;
+  asomate(bien);
+  if(bien){
+    hechos.add(enc); dichos[enc] = dice;
+    const r = rangoDe(hechos.size).n, sube = r !== ultimoRango;
+    if(sube){ ultimoRango = r; Ruido.asciende(); asciende(); if(hechos.size >= 15) setTimeout(papelitos, 300); } else Ruido.bien();
+    sella();
+    pintaEncargo(); inf.hidden = false;
+    $('infTxt').innerHTML = dice + (sube ? '<span class="telegrama">' + (TELEGRAMAS[r] || 'ASCENSO STOP') + '</span>' : '');
+    if(hechos.size >= ENCARGOS.length){ huevo('acta'); huevo('mazo'); }
+    guardaTurno();
+  } else Ruido.mal();
+});
+$('atras').addEventListener('click', () => { if(enc > 0){ enc--; pintaEncargo(); guardaTurno(); } });
+
+function pintaIndice(){
+  const s = $('ixSalas');
+  if(!s.dataset.puesto){
+    s.dataset.puesto = '1';
+    Object.keys(SALAS).forEach(k => {
+      const b = document.createElement('button'); b.className = 'b'; b.textContent = LEMAS[k][0];
+      b.addEventListener('click', () => { muestraSala(k); cierraPaneles(); $(SALAS[k]).scrollIntoView({behavior:'smooth', block:'start'}); });
+      s.appendChild(b);
+    });
+  }
+  const l = $('ixLista'); l.innerHTML = '';
+  ENCARGOS.forEach((e, i) => {
+    const b = document.createElement('button');
+    b.className = (hechos.has(i) ? 'hecho ' : '') + (i === enc ? 'actual' : '');
+    b.innerHTML = '<b>' + String(i + 1).padStart(2, '0') + '</b>' + LEMAS[e.sala][0] + ' · ' + e.t.replace(/<[^>]*>/g, '').slice(0, 52) + '…';
+    b.addEventListener('click', () => { enc = i; pintaEncargo(); cierraPaneles(); guardaTurno(); scrollTo({top:0, behavior:'smooth'}); });
+    l.appendChild(b);
+  });
+}
+const PANELES = {bIndice:'pIndice', bGlosario:'pGlosario', bDeudas:'pDeudas'};
+function cierraPaneles(){
+  Object.entries(PANELES).forEach(([b, p]) => { $(p).hidden = true; $(b).setAttribute('aria-pressed', 'false'); });
+  $('pRosa').hidden = true;
+}
+Object.entries(PANELES).forEach(([b, p]) => $(b).addEventListener('click', () => {
+  const abre = $(p).hidden; cierraPaneles();
+  if(abre){ $(p).hidden = false; $(b).setAttribute('aria-pressed', 'true'); if(p === 'pIndice') pintaIndice();
+            $(p).scrollIntoView({behavior:'smooth', block:'start'}); }
+}));
+$('ixCerrar').addEventListener('click', () => { cierraPaneles(); pintaEncargo(); scrollTo({top:0, behavior:'smooth'}); });
+$('ixTodo').addEventListener('click', () => { ENCARGOS.forEach((_, i) => hechos.add(i)); enc = ENCARGOS.length - 1; ultimoRango = rangoDe(hechos.size).n; pintaEncargo(); guardaTurno(); });
+{
+  let armado = false, reloj = 0;
+  const desarma = () => { armado = false; clearTimeout(reloj); $('ixCero').classList.remove('armado'); $('ixCero').textContent = 'Empezar de cero'; };
+  $('ixCero').addEventListener('click', () => {
+    if(!armado){ armado = true; $('ixCero').classList.add('armado'); $('ixCero').textContent = 'Pulsa otra vez para borrarlo';
+      clearTimeout(reloj); reloj = setTimeout(desarma, 5000); return; }
+    desarma(); borraTurno(); hechos.clear(); huevos.clear(); pilladas.clear(); enc = 0; taller.ac = 0; taller.racha = 0; taller.mejor = 0; ultimoRango = 'Peticionario'; t0 = Date.now();
+    $('caraBrybon').innerHTML = CARA_BRYBON;
+    pintaEncargo();
+  });
+}
+
+const GLOSARIO = [
+  ['población', 'todo lo que se podría contar', 'El conjunto entero del que se habla: todas las reclamaciones de la fábrica, todas las familias de los obreros. Casi nunca se tiene entero.'],
+  ['muestra', 'lo que hay en la carpeta', 'La parte de la población que se ha contado de verdad: los cuarenta papeles. De la muestra se saca lo que se dice de la población.'],
+  ['individuo', 'cada papel', 'Cada uno de los que se cuentan: una reclamación, un obrero, una familia. La muestra son muchos individuos.'],
+  ['variable', 'lo que se mira de cada uno', 'La pregunta que se le hace a cada individuo: el asunto de la queja, cuántos hijos, cuántas horas. Sus respuestas son los datos.'],
+  ['cualitativa', 'una palabra', 'La variable que no es un número: jornada, salario, frío, comida. Solo se puede contar cuántos hay de cada, y la moda es lo único que resume.'],
+  ['cuantitativa discreta', 'un número que se cuenta', 'La variable que es un número de uno en uno: hijos, accidentes, sacos. Entre dos valores seguidos no hay nada.'],
+  ['cuantitativa continua', 'un número que se mide', 'La variable que puede caer en cualquier sitio: horas, pesos, alturas. Se agrupa en tramos para contarla.'],
+  ['tramo', 'de ocho a diez', 'Un intervalo en el que se agrupan los valores de una variable continua. Los tramos van seguidos y no se solapan.'],
+  ['frecuencia absoluta', 'cuántos', 'Cuántos individuos tienen ese valor: catorce de jornada. Las absolutas suman el total, N.'],
+  ['frecuencia relativa', 'qué parte', 'La absoluta dividida entre el total: 14 de 40 es 0,35. Las relativas suman uno.'],
+  ['porcentaje', 'la relativa por cien', '0,35 es el 35 %. Los porcentajes suman cien. Es lo que entiende el director.'],
+  ['tabla de frecuencias', 'el recuento ordenado', 'Una fila por valor, con su frecuencia absoluta, la relativa y el porcentaje, y la fila del total al final. De ella sale toda gráfica.'],
+  ['gráfica de barras', 'la altura es la frecuencia', 'Una barra por valor, todas del mismo ancho, con la altura proporcional a la frecuencia. Para comparar. El eje empieza en cero.'],
+  ['gráfica de sectores', 'el ángulo es la parte', 'La vuelta entera es el total y cada valor se lleva su parte: 360 por la relativa. Solo para partes de un todo.'],
+  ['gráfica de líneas', 'el tiempo va debajo', 'Un punto por momento, unidos por una línea, para ver si sube o baja. La línea solo une: entre dos puntos no se sabe nada.'],
+  ['pictograma', 'cada dibujo vale unos cuantos', 'Dibujos iguales, uno por cada tantos. Más cantidad son más dibujos, no dibujos más grandes.'],
+  ['eje', 'la regla del dibujo', 'La línea con los números contra la que se lee la altura. Si no empieza en cero, las diferencias se exageran.'],
+  ['escala', 'cuánto vale cada trozo', 'Cuántas unidades caben en cada centímetro del eje. Estirarla o encogerla cambia lo que parece sin cambiar los números.'],
+  ['media', 'el reparto', 'Lo que tocaría a cada uno si el total se repartiera a partes iguales: sumar todo y dividir entre cuántos. Un valor raro la arrastra.'],
+  ['mediana', 'el del medio', 'Puestos en fila de menor a mayor, el que queda en medio; si son pares, la mitad entre los dos del medio. Los valores raros no la mueven.'],
+  ['moda', 'el más repetido', 'El valor que más veces sale. Puede haber dos, o ninguna. Es la única que vale para palabras.'],
+  ['rango', 'del menor al mayor', 'La diferencia entre el dato mayor y el menor. Dice cuánto se separan, no lo típico.'],
+  ['valor raro', 'el sueldo de Lord Lorza', 'Un dato muy alejado de los demás. Arrastra la media y deja la mediana casi quieta. Se llama también valor atípico.'],
+  ['chelín', 'la moneda del jornal', 'Una libra eran veinte chelines. Un obrero de la fábrica cobraba doce o trece a la semana; Lord Lorza, doscientos, dice él.'],
+  ['William Playfair', '1759–1823', 'Ingeniero escocés. Inventó la gráfica de barras en 1786 y la de sectores en 1801, para hablar de comercio y de deuda.'],
+  ['Florence Nightingale', '1820–1910', 'Enfermera y estadística. En 1858 dibujó la rosa de Crimea para que un ministro entendiera que los soldados morían más de enfermedad que de bala.'],
+  ['Francis Galton', '1822–1911', 'En una feria de 1906 recogió 787 apuestas sobre el peso de un buey. La mediana se quedó a nueve libras del peso real. Ninguno acertó; la mitad, sí.'],
+  ['comité', 'los tres de la puerta', 'Un grupo elegido para llevar una petición. Éste tiene presidente, cuentas y palabras; y el alumno sube de peticionario a presidente.']
+];
+$('glosas').innerHTML = GLOSARIO.map(([p, s, d]) => '<div class="glosa" data-p="' + p + '"><div><b>' + p + '</b><i>' + s + '</i></div><p>' + d + '</p></div>').join('');
+
+function abreRosa(por){
+  huevo('rosa');
+  cierraPaneles(); entraTaller(false); $('mAjustes').hidden = true; $('mSello').hidden = true;
+  pintaRosa2();
+  const p = $('pRosa'); p.hidden = false;
+  p.querySelector('.aviso').textContent = 'Esta sala se ha abierto por ' + por + '. No sale en el índice.';
+  p.scrollIntoView({behavior:'smooth', block:'start'});
+}
+{
+  let tecleado = '';
+  addEventListener('keydown', e => {
+    if(/^(INPUT|TEXTAREA)$/.test(document.activeElement.tagName) || e.key.length !== 1) return;
+    tecleado = (tecleado + e.key.toLowerCase()).slice(-8);
+    if(/rosa/.test(tecleado)){ tecleado = ''; abreRosa('la palabra «rosa», escrita'); }
+  });
+}
+
+const solTxt = e => typeof e.sol === 'string' ? e.sol : (Number.isInteger(e.sol) ? cifra(e.sol, 0) : cifra(e.sol, 2));
+const palabra = v => String(v).trim().toLowerCase().replace(/^si$/, 'sí');
+const PALABRAS = [['rojo', 'azul', 'verde'], ['té', 'café', 'agua'], ['lunes', 'martes', 'viernes'], ['pan', 'queso', 'fruta']];
+const TIPOS = {
+  recuento: {n:'Contar', sala:'carpeta', gen(){
+    const ps = elige(PALABRAS), n = al(8, 14), lista = Array.from({length:n}, () => elige(ps)), cual = elige(ps), f = lista.filter(x => x === cual).length;
+    return {t:'En la carpeta hay estos papeles: <b>' + lista.join(', ') + '</b>. ¿Cuántos dicen <b>' + cual + '</b>?', sol:f, ok:v => casi(v, f), exp:'Se cuentan a palotes: ' + cual + ' sale ' + f + (f === 1 ? ' vez' : ' veces') + ' de ' + n + '.', pon(){ ponPropia(lista.join(', ')); Object.assign(carpeta, {datos:'propia', N:n, contados:n}); }}; }},
+  porcentaje: {n:'Porcentaje', sala:'carpeta', gen(){
+    const N = elige([20, 25, 40, 50, 60, 80, 200]), f = elige([1, 2, 3, 4, 5, 6, 8, 10, 12, 15, 20].filter(x => x < N && (100 * x / N) % 1 === 0)), p = 100 * f / N;
+    return {t:'De <b>' + N + '</b> reclamaciones, <b>' + f + '</b> son de frío. ¿Qué <b>tanto por ciento</b> es?', sol:p, ok:v => casi(v, p), exp:f + ' de ' + N + ' es ' + cifra(f / N, 2) + ', y por cien, ' + cifra(p, 0) + ' %.', pon:null}; }},
+  grados: {n:'Grados', sala:'tablero', gen(){
+    const N = elige([20, 24, 30, 36, 40, 60, 72, 90, 120]), f = elige([1, 2, 3, 4, 5, 6, 8, 9, 10, 12, 15, 18, 20, 30].filter(x => x < N && (360 * x / N) % 1 === 0)), a = 360 * f / N;
+    return {t:'En una tarta de <b>' + N + '</b> obreros, <b>' + f + '</b> piden té. ¿Cuántos <b>grados</b> le tocan al té?', sol:a, ok:v => casi(v, a), exp:f + ' de ' + N + ' es ' + cifra(f / N, 3) + ' del total, y del total de la vuelta, 360, son ' + cifra(a, 0) + ' grados.', pon(){ Object.assign(tablero, {datos:'comedor', graf:'sectores'}); }}; }},
+  leer: {n:'Leer', sala:'lectura', gen(){
+    const k = elige(LECTURA_ORDEN), L = LECTURAS[k], i = al(0, L.pregs.length - 1), q = L.pregs[i], T = tabla(k);
+    return {t:'En ' + GRAFICAS[L.tipo] + ' de ' + DATOS[k].n + ' (' + T.filas.map(r => r.vt + ' ' + r.f).join(', ') + '): ' + q.t, sol:q.sol, ok:v => q.ok ? q.ok(v) : casi(v, q.sol), exp:q.exp, pon(){ Object.assign(lectura, {graf:k, nums:'con', preg:i, resp:'', ok:null, regla:null, sector:null}); }}; }},
+  medidas: {n:'Media, mediana, moda', sala:'reparto', gen(){
+    let v = [12, 12, 13, 14, 19]; for(let i = 0; i < 200; i++){ const a = al(6, 20), b = al(6, 20), c2 = al(6, 20), d = al(6, 20); const w = baraja([a, a, b, c2, d], i + 1);
+      if(new Set([a, b, c2, d]).size === 4 && (2 * a + b + c2 + d) % 5 === 0){ v = w; break; } }
+    const M = medidas(v), cual = elige(['media', 'mediana', 'moda']), sol = cual === 'media' ? M.media : cual === 'mediana' ? M.mediana : M.moda[0];
+    return {t:'Cinco jornales: <b>' + v.join(', ') + '</b>. ¿Cuál es la <b>' + cual + '</b>?', sol, ok:x => casi(x, sol), exp:cual === 'media' ? 'Suman ' + M.suma + ', entre cinco: ' + cifra(M.media, 2) + '.' : cual === 'mediana' ? 'En fila: ' + M.orden.join(', ') + '; el del medio es ' + cifra(M.mediana, 2) + '.' : 'El más repetido es ' + (M.moda.length ? M.moda[0] : 'ninguno') + ', ' + M.maxC + ' veces.', pon(){ ponPropia(v.join(', ')); Object.assign(reparto, {datos:'propia', vista:cual === 'media' ? 'repartir' : cual === 'mediana' ? 'fila' : 'repetidos', raro:false}); }}; }},
+  miente: {n:'¿Miente?', bool:true, gen(){
+    const q = elige([
+      {t:'Una gráfica de barras cuyo eje <b>empieza en doce</b> en vez de en cero.', sol:'sí', exp:'El eje cortado exagera las diferencias: los mismos números parecen una escalada.', pon(){ Object.assign(brybon, {datos:'caldera', senala:null}); brybon.trampas = new Set(['corte']); }, sala:'brybon'},
+      {t:'Una tarta con el total escrito al pie.', sol:'no', exp:'Es lo que debe llevar: con el total, cada parte se convierte en un número.', pon(){ Object.assign(lectura, {graf:'comedor', nums:'con', preg:0, resp:'', ok:null, regla:null, sector:null}); }, sala:'lectura'},
+      {t:'Un pictograma en el que el doble de sacos se dibuja con <b>un saco el doble de grande</b>.', sol:'sí', exp:'El doble de alto y de ancho es el cuádruple de superficie. Lo honrado son dos sacos iguales.', pon(){ Object.assign(brybon, {datos:'sacos', senala:null}); brybon.trampas = new Set(['ancho']); }, sala:'brybon'},
+      {t:'Una gráfica de líneas de los accidentes que solo enseña <b>de marzo a junio</b>.', sol:'sí', exp:'Los meses elegidos: de marzo a junio sube, pero de enero a marzo bajaba. Hay que preguntar qué falta.', pon(){ Object.assign(brybon, {datos:'caldera', senala:null}); brybon.trampas = new Set(['meses']); }, sala:'brybon'},
+      {t:'Una tarta cuyos sectores <b>suman el cien por cien</b>.', sol:'no', exp:'Es la comprobación: las partes de un todo suman el todo.', pon(){ Object.assign(tablero, {datos:'asuntos', graf:'sectores'}); }, sala:'tablero'},
+      {t:'Una tarta dibujada <b>en perspectiva</b>, como si se viera de lado.', sol:'sí', exp:'El sector de delante parece mayor porque se le ve el canto. La tarta honrada es plana.', pon(){ Object.assign(brybon, {datos:'comedor', senala:null}); brybon.trampas = new Set(['perspectiva']); }, sala:'brybon'},
+      {t:'Decir que el jornal típico es <b>la media</b> cuando hay un sueldo de doscientos en la lista.', sol:'sí', exp:'La media reparte también el sueldo raro y sube a 45; el jornal típico es la mediana, 13,5.', pon(){ Object.assign(reparto, {datos:'jornales', vista:'repartir', raro:true}); }, sala:'reparto'},
+      {t:'Una gráfica de barras con todas las barras <b>del mismo ancho</b> y el eje desde cero.', sol:'no', exp:'Es una gráfica honrada: la altura es la frecuencia y nada más.', pon(){ Object.assign(tablero, {datos:'asuntos', graf:'barras'}); }, sala:'tablero'},
+      {t:'Una tarta de <b>los accidentes de cada mes</b>.', sol:'sí', exp:'Los meses no son partes de un todo. Para el tiempo, líneas.', pon(){ Object.assign(tablero, {datos:'caldera', graf:'sectores'}); }, sala:'tablero'},
+      {t:'La rosa de Nightingale, con el radio proporcional a la <b>raíz</b> de los muertos.', sol:'no', exp:'Con la raíz, el área es proporcional a los muertos: es honrada. Con el radio proporcional a los muertos, mentiría.', pon:null}
+    ]);
+    return {t:q.t + ' ¿Miente?', sol:q.sol, ok:v => palabra(v) === q.sol, exp:q.exp, pon:q.pon, sala:q.sala};
+  }}
+};
+
+const taller = {tipo:'recuento', ej:null, ac:0, racha:0, mejor:0, enTaller:false, corregido:false};
+function pintaTipos(){
+  const c = $('tipos'); c.innerHTML = '';
+  Object.keys(TIPOS).forEach(k => {
+    const b = document.createElement('button'); b.className = 'b'; b.textContent = TIPOS[k].n;
+    b.setAttribute('aria-pressed', String(taller.tipo === k));
+    b.addEventListener('click', () => { taller.tipo = k; pintaTipos(); nuevoEjercicio(); });
+    c.appendChild(b);
+  });
+  $('tAc').textContent = taller.ac; $('tRacha').textContent = taller.racha; $('tMejor').textContent = taller.mejor;
+}
+function nuevoEjercicio(){
+  const T = TIPOS[taller.tipo];
+  taller.ej = T.gen(); taller.corregido = false;
+  $('ejer').innerHTML = taller.ej.t;
+  $('verTaller').hidden = true; $('verlo').hidden = true;
+  $('filaSiNo').hidden = !T.bool; $('filaResp').hidden = !!T.bool;
+  if(!T.bool){ const r = $('resp'); r.value = ''; r.focus(); }
+}
+function corrige(dado){
+  const v = dado !== undefined ? dado : $('resp').value;
+  if(!String(v).trim() || taller.corregido) return;
+  const bien = taller.ej.ok(v);
+  const ver = $('verTaller'); ver.hidden = false;
+  ver.className = 'veredicto' + (bien ? ' bien' : '');
+  if(bien){ taller.ac++; taller.racha++; taller.mejor = Math.max(taller.mejor, taller.racha); ver.innerHTML = '<b>Bien.</b> ' + taller.ej.exp; Ruido.bien();
+            if(taller.racha === 8){ Ruido.mazo(); ver.innerHTML += ' <i>Ocho seguidos. Lord Lorza da un golpe de mazo: «Que conste en acta».</i>'; } }
+  else { taller.racha = 0; ver.innerHTML = 'No. La respuesta era <b>' + solTxt(taller.ej) + '</b>. ' + taller.ej.exp; Ruido.mal(); }
+  taller.corregido = true; $('verlo').hidden = !taller.ej.pon; pintaTipos(); guardaTurno();
+}
+function verEnSala(){ const e = taller.ej; if(!e || !e.pon) return; e.pon(); const s = e.sala || TIPOS[taller.tipo].sala; muestraSala(s); $(SALAS[s]).scrollIntoView({behavior:'smooth', block:'start'}); }
+function entraTaller(dentro){
+  taller.enTaller = dentro; $('bTaller').setAttribute('aria-pressed', String(dentro));
+  $('pTaller').hidden = !dentro; $('pEncargo').hidden = dentro; $('informe').hidden = dentro || !hechos.has(enc);
+  cierraPaneles();
+  if(dentro){ pintaTipos(); nuevoEjercicio(); for(const k in SALAS) $(SALAS[k]).hidden = true; } else pintaEncargo();
+}
+$('bTaller').addEventListener('click', () => entraTaller(!taller.enTaller));
+$('corrige').addEventListener('click', () => corrige());
+$('bSi').addEventListener('click', () => corrige('sí'));
+$('bNo').addEventListener('click', () => corrige('no'));
+$('resp').addEventListener('keydown', e => { if(e.key === 'Enter'){ taller.corregido ? nuevoEjercicio() : corrige(); } });
+$('otro').addEventListener('click', nuevoEjercicio);
+$('verlo').addEventListener('click', verEnSala);
+$('hojaDiez').addEventListener('click', () => {
+  const claves = Object.keys(TIPOS); const lista = [];
+  for(let i = 0; i < 10; i++) lista.push(TIPOS[claves[i % claves.length]].gen());
+  const limpia = h => h.replace(/<[^>]+>/g, '');
+  $('hoja').innerHTML = '<h2>El comité de reclamaciones · hoja de práctica</h2>'
+    + '<div class="cab">Estadística y gráficos · Nombre: ____________________ · Fecha: __________</div>'
+    + '<ol>' + lista.map(e => '<li>' + limpia(e.t) + '</li>').join('') + '</ol>'
+    + '<div class="clave"><h2>Clave del profesor</h2><ol>' + lista.map(e => '<li><b>' + solTxt(e) + '</b> — ' + limpia(e.exp) + '</li>').join('') + '</ol></div>';
+  document.body.classList.add('imprimiendo');
+  const fuera = () => { document.body.classList.remove('imprimiendo'); removeEventListener('afterprint', fuera); };
+  addEventListener('afterprint', fuera);
+  setTimeout(() => { print(); setTimeout(fuera, 800); }, 60);
+});
+
+$('bAjustes').addEventListener('click', () => { pintaAjustes(); $('mAjustes').hidden = false; });
+$('ajCerrar').addEventListener('click', () => { $('mAjustes').hidden = true; });
+$('mAjustes').addEventListener('click', e => { if(e.target.id === 'mAjustes') $('mAjustes').hidden = true; });
+
+function textoSello(){
+  const n = hechos.size, r = rangoDe(n), min = Math.max(1, Math.round((Date.now() - t0) / 60000));
+  const f = new Date(), fecha = f.toLocaleDateString('es-ES') + ' ' + f.toLocaleTimeString('es-ES', {hour:'2-digit', minute:'2-digit'});
+  const estado = {v:1, h:[...hechos], t:[taller.ac, taller.racha, taller.mejor], e:[...huevos], p:[...pilladas], min};
+  const sello = 'CDR1.' + btoa(unescape(encodeURIComponent(JSON.stringify(estado)))).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+  const nombre = $('selloNombre').value.trim() || '(sin nombre)';
+  return 'EL COMITÉ DE RECLAMACIONES · acta\n'
+    + 'Comparece ' + nombre + '\n'
+    + 'Fecha: ' + fecha + '\n'
+    + 'Cargo: ' + r.n + ' · ' + r.s + '\n'
+    + 'Reclamaciones atendidas: ' + n + ' de ' + ENCARGOS.length + (n ? ' · ' + [...hechos].sort((a, b) => a - b).map(i => i + 1).join(' ') : '') + '\n'
+    + 'Trampas pilladas: ' + pilladas.size + ' de ' + Object.keys(TRAMPAS).length + '\n'
+    + 'Taller: ' + taller.ac + ' aciertos · racha ' + taller.racha + ' · mejor ' + taller.mejor + '\n'
+    + 'Hallazgos: ' + huevos.size + ' de ' + HUEVOS.length + (huevos.size ? ' · ' + [...huevos].map(h => HUEVO_DICE[h]).join(' · ') : '') + '\n'
+    + 'Tiempo en la fábrica: ' + min + ' min\n'
+    + 'Firman: Lord Lorza · Lady Cream · Lord Brybon\n'
+    + 'Sello de lacre: ' + sello;
+}
+function pintaSello(){ $('selloTexto').innerHTML = textoSello().replace(/</g, '&lt;').replace(/(Sello de lacre: .*)/, '<span class="sello">$1</span>'); }
+$('bSello').addEventListener('click', () => { pintaSello(); $('mSello').hidden = false; $('selloAviso').textContent = ''; });
+$('selloCerrar').addEventListener('click', () => { $('mSello').hidden = true; });
+$('mSello').addEventListener('click', e => { if(e.target.id === 'mSello') $('mSello').hidden = true; });
+$('selloNombre').addEventListener('input', () => { pintaSello(); guardaTurno(); });
+$('selloCopiar').addEventListener('click', async () => {
+  const t = textoSello();
+  try{
+    if(navigator.clipboard && navigator.clipboard.writeText){ await navigator.clipboard.writeText(t); $('selloAviso').textContent = 'copiado'; return; }
+  }catch(e){}
+  const r = document.createRange(); r.selectNodeContents($('selloTexto'));
+  const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+  $('selloAviso').textContent = 'seleccionado: copie con el sistema';
+});
+
+const PASOS = [
+  {id:'franja',   t:'Tu cargo', d:'Empiezas de peticionario, el que trae el papel. Cada tres reclamaciones subes un cargo: vocal, secretario, tesorero, vicepresidente. Con las quince, Lord Lorza te cede el mazo.'},
+  {id:'atendidas',t:'Las atendidas', d:'Una por reclamación atendida, con su sello de lacre. Con las quince, el acta pasa por debajo de la puerta del director.'},
+  {id:'pEncargo', t:'El encargo', d:'Lord Lorza pide, con prisa y sin saber de tablas. Se hace en la sala de abajo y se pulsa Comprobar. Contesta Lady Cream, con las cuentas. Lord Brybon pone las palabras desde el borde.'},
+  {sel:'.fila',   t:'Los mandos', d:'Lo que se puede tocar: los datos, cuántos papeles, qué gráfica, la pregunta, el gesto del reparto, las trampas de Brybon.'},
+  {sel:'.escena', t:'La escena', d:'La carpeta y la tabla, el tablero con la gráfica, la regla para leer, las columnas de monedas, las dos gráficas lado a lado.'},
+  {sel:'.lectura',t:'La lectura', d:'La definición primero, y luego lo que se ve, con la cuenta hecha al final. Lo que va en rojo es una trampa nombrada.'},
+  {id:'barra',    t:'La barra', d:'Taller para practicar libre, Salas para abrir cualquiera suelta, Glosario con las palabras del comité, Deudas con lo que se demuestra y lo que se dice, Aula para la pizarra, El acta para llevarse la sesión y Ajustes para el tema.'}
+];
+let paso = 0;
+function elDe(p){
+  if(p.id) return $(p.id);
+  const sala = document.querySelector(Object.values(SALAS).map(s => '#' + s + ':not([hidden])').join(', '));
+  return sala ? sala.querySelector(p.sel) : null;
+}
+function pintaPaso(){
+  const p = PASOS[paso], e = elDe(p);
+  if(!e){ paso++; if(paso >= PASOS.length){ cierraGuia(); return; } pintaPaso(); return; }
+  e.scrollIntoView({behavior:'smooth', block:'center'});
+  setTimeout(() => {
+    const r = e.getBoundingClientRect(), f = $('tourFoco');
+    f.style.top = (r.top - 6) + 'px'; f.style.left = (r.left - 6) + 'px'; f.style.width = (r.width + 12) + 'px'; f.style.height = (r.height + 12) + 'px';
+    const g = $('tourGlobo'); $('tourTit').textContent = p.t; $('tourTxt').textContent = p.d;
+    $('tourNum').textContent = (paso + 1) + ' de ' + PASOS.length;
+    $('tourSig').textContent = paso === PASOS.length - 1 ? 'Terminar' : 'Siguiente';
+    const abajo = r.bottom + 12, alto = g.offsetHeight || 140;
+    g.style.top = (abajo + alto < innerHeight - 8 ? abajo : Math.max(8, r.top - alto - 12)) + 'px';
+    g.style.left = Math.min(Math.max(12, r.left), innerWidth - (g.offsetWidth || 320) - 12) + 'px';
+    g.focus();
+  }, 320);
+}
+function abreGuia(){ entraTaller(false); cierraPaneles(); paso = 0; $('tourCapa').hidden = false; pintaPaso(); }
+function cierraGuia(){ $('tourCapa').hidden = true; }
+$('bGuia').addEventListener('click', abreGuia);
+$('tourSig').addEventListener('click', e => { e.stopPropagation(); paso++; if(paso >= PASOS.length) cierraGuia(); else pintaPaso(); });
+$('tourSalir').addEventListener('click', e => { e.stopPropagation(); cierraGuia(); });
+$('tourCapa').addEventListener('click', e => { if(e.target.id === 'tourCapa') cierraGuia(); });
+addEventListener('keydown', e => { if(e.key === 'Escape'){ cierraGuia(); $('mAjustes').hidden = true; $('mSello').hidden = true; } });
+
+{
+  const g = $('bootFabrica'), rapido = matchMedia('(prefers-reduced-motion: reduce)').matches, d = s => rapido ? 0 : s;
+  el(g, 'rect', {x:0, y:70, width:300, height:110, fill:'#4A3A3A'});
+  for(let f = 0; f < 11; f++) for(let c = 0; c < 15; c++) el(g, 'rect', {x:c * 20 + (f % 2 ? 10 : 0) - 10, y:70 + f * 10, width:19, height:9, fill:f % 3 ? '#5A4545' : '#553F3F', opacity:.6});
+  el(g, 'path', {d:'M0 70 L0 40 L60 30 L60 70 L60 40 L120 30 L120 70 L120 40 L180 30 L180 70 L180 40 L240 30 L240 70 L240 40 L300 30 L300 70 Z', fill:'#3A2E2E', stroke:'#9AA0AA', 'stroke-width':1.2, 'stroke-linejoin':'round'});
+  [[46, 36], [106, 36], [166, 36], [226, 36], [286, 36]].forEach(([x, y]) => el(g, 'rect', {x, y:y - 2, width:12, height:24, fill:'#DDB35C', opacity:.5}));
+  el(g, 'rect', {x:250, y:6, width:16, height:36, fill:'#3A2E2E', stroke:'#9AA0AA', 'stroke-width':1});
+  for(let i = 0; i < 3; i++) el(g, 'circle', {cx:258, cy:4, r:7 + i * 2, fill:'#B8AAA0', class:'humo', style:'animation-delay:' + d(i * .8) + 's'});
+  el(g, 'rect', {x:118, y:110, width:64, height:70, rx:3, fill:'#1E1B1B', stroke:'#9AA0AA', 'stroke-width':1.2});
+  el(g, 'path', {d:'M150 110 V180', stroke:'#9AA0AA', 'stroke-width':1});
+  el(g, 'circle', {cx:144, cy:146, r:2, fill:'#DDB35C'}); el(g, 'circle', {cx:156, cy:146, r:2, fill:'#DDB35C'});
+  el(g, 'text', {x:150, y:104, 'text-anchor':'middle', 'font-family':"'Space Mono',monospace", 'font-size':7, 'letter-spacing':2, fill:'#B8AAA0'}, 'DIRECCIÓN');
+  [[CARA_CREAM, 92, .5], [CARA_BRYBON, 162, .9], [CARA_LORZA, 127, 1.3]].forEach(([cara, x, t]) => {
+    const pos = el(g, 'g', {transform:'translate(' + x + ' 132)'});
+    const gg = el(pos, 'g', {class:'llega', style:'animation-delay:' + d(t) + 's'});
+    gg.innerHTML = dentroDe(cara);
+  });
+  { const pos = el(g, 'g', {transform:'translate(112 166)'}); el(pos, 'rect', {x:0, y:0, width:26, height:16, rx:2, fill:'#8E5A67', stroke:'#EFE7D6', 'stroke-width':1, class:'llega', style:'animation-delay:' + d(1.5) + 's'}); }
+  const alturas = [14, 12, 10, 4], bx = 214;
+  for(let i = 0; i < 10; i++) el(g, 'rect', {x:bx + 4 + (i * 37) % 74, y:80 + (i * 13) % 40, width:10, height:7, fill:'#EFE7D6', class:'papel', style:'animation-delay:' + d(1.8 + i * .07) + 's'});
+  alturas.forEach((h, i) => {
+    const x = bx + i * 21, y = 178 - h * 4.4;
+    el(g, 'rect', {x, y, width:16, height:h * 4.4, fill:['#C98A98', '#DDB35C', '#7BAA92', '#7D9BC0'][i], class:'barraB', style:'transform-box:fill-box;animation-delay:' + d(2.4 + i * .12) + 's'});
+    el(g, 'text', {x:x + 8, y:y - 4, 'text-anchor':'middle', 'font-family':"'Space Mono',monospace", 'font-size':8, fill:'#EFE7D6', class:'rotulo', style:'animation-delay:' + d(2.9) + 's'}, h);
+  });
+  el(g, 'text', {x:150, y:202, 'text-anchor':'middle', 'font-family':"'Playfair Display',serif", 'font-size':11, 'font-weight':700, fill:'#EFE7D6', class:'rotulo', style:'animation-delay:' + d(3) + 's'}, '40 reclamaciones · 4 asuntos');
+  const lineas = ['carpeta', 'tablero', 'interrogatorio', 'reparto', 'la gráfica de Brybon'];
+  $('bootLista').innerHTML = lineas.map((l, i) => '<span style="animation-delay:' + d(.3 + i * .4) + 's">' + l + '</span>').join('');
+  const fuera = () => { const b = $('boot'); if(!b || b.classList.contains('fuera')) return; b.classList.add('fuera'); setTimeout(() => b.remove(), 600); };
+  $('boot').addEventListener('click', fuera);
+  setTimeout(fuera, rapido ? 300 : 3800);
+}
+
+$('ixDiag').addEventListener('click', () => {
+  const d = $('diag'); d.hidden = false; const li = [];
+  const di = (t, ok) => li.push('<div class="' + (ok ? 'ok' : 'ko') + '">' + (ok ? '✓ ' : '✗ ') + t + '</div>');
+  const TA = tabla('asuntos', 40);
+  di('las cuarenta reclamaciones cuentan jornada 14, salario 12, frío 10, comida 4', TA.filas.map(r => r.f).join(',') === '14,12,10,4' && TA.N === 40);
+  di('las absolutas suman N, las relativas 1 y los porcentajes 100, en todos los juegos', ['asuntos', 'hijos', 'horas', 'comedor', 'caldera', 'quejas'].every(k => { const T = tabla(k); const fr = T.filas.reduce((s, r) => s + r.fr, 0), p = T.filas.reduce((s, r) => s + r.pct, 0); return k === 'quejas' ? p > 100 : Math.abs(fr - 1) < 1e-9 && Math.abs(p - 100) < 1e-9 && T.sumaF === T.N; }));
+  di('el frío se lleva 90 grados, y los cuatro sectores suman 360', Math.abs(TA.filas[2].ang - 90) < 1e-9 && Math.abs(TA.filas.reduce((s, r) => s + r.ang, 0) - 360) < 1e-9);
+  di('el comedor: 60 obreros y el té es un cuarto', tabla('comedor').N === 60 && Math.abs(tabla('comedor').filas[0].fr - .25) < 1e-9);
+  di('las horas del turno caen todas en un tramo, y solo en uno', tabla('horas').sumaF === DATOS.horas.valores.length);
+  di('la caldera: junio 17 es el mayor y marzo 13 el menor', (() => { const f = tabla('caldera').filas; return Math.max(...f.map(r => r.f)) === 17 && f[5].f === 17 && Math.min(...f.map(r => r.f)) === 13 && f[2].f === 13; })());
+  di('la carpeta propia entiende palabras y números: «rojo, azul, azul» y «7, 8, 8, 6»', (() => { const g = Object.assign({}, DATOS.propia); ponPropia('rojo, azul, azul'); const a = DATOS.propia.tipo === 'cual' && tabla('propia').filas[1].f === 2; ponPropia('7, 8, 8, 6'); const b = DATOS.propia.tipo === 'disc' && tabla('propia').N === 4; ponPropia('1.5, 2.5, 3.5, 4.5, 5.5, 6.5, 7.5'); const c = DATOS.propia.tipo === 'cont' && tabla('propia').sumaF === 7; ponPropia(g.texto || ''); return a && b && c; })());
+  const MJ = medidas([12, 12, 13, 14, 19]), MJ2 = medidas([12, 12, 13, 14, 19, 200]);
+  di('los jornales: media 14, mediana 13, moda 12, rango 7', MJ.media === 14 && MJ.mediana === 13 && MJ.moda.join() === '12' && MJ.rango === 7);
+  di('con el sueldo de Lord Lorza: media 45 y mediana 13,5', MJ2.media === 45 && MJ2.mediana === 13.5);
+  di('la mediana de un número par de datos es la mitad entre los dos del medio; sin repetidos no hay moda', medidas([1, 2, 3, 4]).mediana === 2.5 && medidas([1, 2, 3]).moda.length === 0 && medidas([1, 1, 2, 2]).moda.join() === '1,2');
+  di('cada pregunta del interrogatorio acepta su respuesta y rechaza basura', LECTURA_ORDEN.every(k => LECTURAS[k].pregs.every(q => { const ok = q.ok ? q.ok(q.sol) : casi(q.sol, q.sol); const mal = q.ok ? !q.ok('zzz') : !casi('999999', q.sol); return ok && mal; })));
+  di('las respuestas numéricas del interrogatorio salen de la tabla: 4, 90, 16, 15, 10, 2, 115, 30', (() => { const c = tabla('caldera').filas.map(r => r.f), co = tabla('comedor'), s = tabla('sacos').filas.map(r => r.f), h = tabla('hijos'); return Math.max(...c) - Math.min(...c) === 4 && c.reduce((a, b) => a + b) === 90 && c[3] === 16 && co.filas[0].f === 15 && tabla('asuntos').filas[2].f === 10 && s[1] / s[0] === 2 && s.reduce((a, b) => a + b) === 115 && h.N === 30; })());
+  di('cada trampa vale para algún juego de datos, y cada juego de Brybon tiene alguna trampa', Object.keys(TRAMPAS).every(t => TRAMPAS[t].para.every(k => DATOS[k])) && BRYBON_DATOS.every(k => trampasDe(k).length));
+  di('las quejas marcadas suman el 130 % de los cuarenta obreros', Math.abs(tabla('quejas').filas.reduce((s, r) => s + r.pct, 0) - 130) < 1e-9);
+  di('la ceja de Brybon baja en seis pasos y sonríe con la sexta', BRYBON_CEJA(0) !== BRYBON_CEJA(3) && /Q23 31.6/.test(BRYBON_CEJA(6)) && !/Q23 31.6/.test(BRYBON_CEJA(5)));
+  di('el monóculo se cae en el asomo del fallo y brilla en el del acierto', !LORZA_MAL.includes(MONOCULO) && LORZA_MAL.includes('cy="35.6"') && LORZA_BIEN.includes('r="5.8"'));
+  di('la rosa: doce meses, y en enero de 1855 2761 muertos de enfermedad', CRIMEA.length === 12 && CRIMEA[9][1] === 2761);
+  di('la escarapela dibuja sus seis figuras', ['sobre', 'mano', 'pluma', 'llave', 'banda', 'mazo'].every(f => { const s = document.createElementNS(NS, 'svg'); escarapela(s, 0, 0, 40, f); return s.querySelectorAll('*').length > 4; }));
+  di('las cifras se escriben a la española: 1.024 · 7,5 · −3', cifra(1024, 0) === '1.024' && cifra(7.5, 1) === '7,5' && cifra(-3, 0) === '−3');
+  di('los palotes van de cinco en cinco', (() => { const s = document.createElementNS(NS, 'svg'); palotes(s, 0, 0, 7, 'red'); return s.querySelectorAll('path').length === 7; })());
+  let ok6 = true, n6 = 0; const gp = DATOS.propia.texto || '';
+  for(const k in TIPOS) for(let i = 0; i < 80; i++){ const e = TIPOS[k].gen(); n6++;
+    const sol = typeof e.sol === 'string' ? e.sol : String(e.sol).replace('.', ',');
+    if(!e.ok(sol) || e.ok('999999999') || e.ok('') || !e.t || !e.exp) ok6 = false; }
+  di('los ' + Object.keys(TIPOS).length + ' generadores del taller aceptan su solución y rechazan basura (' + n6 + ' pruebas)', ok6);
+  { let ok7 = true; const g = [{...carpeta}, {...tablero}, {...lectura}, {...reparto}, {...brybon, trampas:new Set(brybon.trampas)}];
+    for(let i = 0; i < 30; i++) for(const k in TIPOS){ const e = TIPOS[k].gen(); if(e.pon) e.pon();
+      acotaCarpeta(); if(!DATOS[carpeta.datos] || carpeta.N > DATOS[carpeta.datos].valores.length || !DATOS[tablero.datos] || !GRAFICAS[tablero.graf] || !LECTURAS[lectura.graf] || !LECTURAS[lectura.graf].pregs[lectura.preg] || !DATOS[reparto.datos] || !VISTAS[reparto.vista] || !DATOS[brybon.datos]) ok7 = false; }
+    Object.assign(carpeta, g[0]); Object.assign(tablero, g[1]); Object.assign(lectura, g[2]); Object.assign(reparto, g[3]); Object.assign(brybon, g[4]); ponPropia(gp);
+    di('«verlo en la sala» deja los mandos en valores que existen (180 pruebas)', ok7); }
+  di('los ' + ENCARGOS.length + ' encargos apuntan a una sala que existe', ENCARGOS.every(e => SALAS[e.sala]));
+  di('cada encargo de opciones tiene UNA correcta, y todas explican', ENCARGOS.filter(e => e.ops).every(e => e.ops.filter(o => o.ok).length === 1 && e.ops.every(o => o.r && dicho(o.r).length > 20)));
+  di('cada encargo de manipulativo trae pre, bien y mal', ENCARGOS.filter(e => !e.ops).every(e => e.pre && e.bien && e.mal));
+  let ok8 = true; { const g = [{...carpeta}, {...tablero}, {...lectura}, {...reparto}, {...brybon, trampas:new Set(brybon.trampas)}];
+    ENCARGOS.forEach(e => { if(e.ops) return; e.pre(); if(e.ok()) ok8 = false; });
+    Object.assign(carpeta, g[0]); Object.assign(tablero, g[1]); Object.assign(lectura, g[2]); Object.assign(reparto, g[3]); Object.assign(brybon, g[4]); }
+  di('ningún encargo de manipulativo está resuelto nada más abrirlo', ok8);
+  di('las ' + Object.keys(SALAS).length + ' salas tienen rótulo y pintor', Object.keys(SALAS).every(k => LEMAS[k] && PINTA[k]));
+  di('los cargos cubren las ' + ENCARGOS.length + ' reclamaciones y acaban en el mazo', rangoDe(0).n === 'Peticionario' && rangoDe(ENCARGOS.length).n === 'Presidente del comité' && rangoDe(7).n === 'Secretario' && rangoDe(12).n === 'Vicepresidente');
+  di('los ' + HUEVOS.length + ' hallazgos tienen su frase, y los ascensos su telegrama', HUEVOS.every(h => HUEVO_DICE[h]) && RANGOS.slice(1).every(r => TELEGRAMAS[r.n]));
+  d.innerHTML = li.join('');
+  pintaEncargo();
+});
+
+Object.keys(SALAS).forEach(k => {
+  const pan = $(SALAS[k]), [nom, lema] = LEMAS[k];
+  const rot = document.createElement('div'); rot.className = 'salaRot';
+  rot.innerHTML = '<b>' + nom + '</b><span>' + lema + '</span>'; pan.insertBefore(rot, pan.firstChild);
+});
+{
+  const d = leeTurno();
+  if(d){
+    enc = d.enc; d.hechos.forEach(i => { if(i >= 0 && i < ENCARGOS.length) hechos.add(i); });
+    (d.huevos || []).forEach(h => { if(HUEVO_DICE[h]) huevos.add(h); });
+    (d.pilladas || []).forEach(t => { if(TRAMPAS[t]) pilladas.add(t); });
+    if(pilladas.size) $('caraBrybon').innerHTML = BRYBON_CEJA(pilladas.size);
+    const t = d.taller || {}; taller.ac = t.ac|0; taller.racha = t.racha|0; taller.mejor = t.mejor|0;
+    if(d.aj) Object.keys(AJ).forEach(k => { if(d.aj[k] !== undefined) AJ[k] = d.aj[k]; });
+    if(d.nombre) $('selloNombre').value = d.nombre;
+    if(d.propia){ ponPropia(d.propia); $('propiaTxt').value = d.propia; }
+    t0 = d.t0 || Date.now();
+    ultimoRango = rangoDe(hechos.size).n;
+  }
+  aplicaAjustes();
+  pintaEncargo();
+  armaQuieto();
+  document.addEventListener('pointerdown', () => Ruido.despierta(), {once:true});
+}
+
+{
+  const rej = document.createElement('div'); rej.className = 'aulaRejilla';
+  const izq = document.createElement('div'); izq.className = 'colIzq';
+  const der = document.createElement('div'); der.className = 'colDer';
+  const enc = $('pEncargo');
+  enc.parentNode.insertBefore(rej, enc);
+  rej.appendChild(izq); rej.appendChild(der);
+  izq.appendChild(enc);
+  const inf = $('informe'); if(inf) izq.appendChild(inf);
+  Object.values(SALAS).forEach(id => { const p = $(id); if(p) der.appendChild(p); });
+  const pie = document.querySelector('footer.pie'), marca = document.createComment('pie');
+  if(pie) pie.before(marca);
+  const muda = si => { if(!pie) return; if(si) izq.appendChild(pie); else marca.after(pie); };
+  const pinta = () => {
+    const si = document.body.dataset.aula === 'si';
+    muda(si && innerWidth >= 1100);
+    const b = $('bAula');
+    if(b){ b.setAttribute('aria-pressed', String(si)); b.textContent = si ? 'Salir del aula' : 'Aula'; }
+  };
+  window.pintaAula = pinta;
+  addEventListener('resize', pinta);
+  $('bAula').addEventListener('click', () => { AJ.vista = AJ.vista === 'aula' ? 'normal' : 'aula'; aplicaAjustes(); guardaTurno(); });
+  pinta();
+}
+
+</script>
+</body></html>
